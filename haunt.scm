@@ -9,6 +9,7 @@
 (use-modules (haunt site)
              (haunt reader)
              (haunt reader commonmark)
+             (haunt post)
              (haunt page)
              (haunt html)
              (haunt utils)
@@ -17,7 +18,104 @@
              (haunt builder atom)
              (ice-9 match)
              (srfi srfi-1)
+             (srfi srfi-19)
              (guix-hpc))
+
+(define (base-url location)
+  (string-append "" location))
+
+(define (image-url location)
+  (string-append "/static/images" location))
+
+(define (css-url location)
+  (string-append "/static/css" location))
+
+(define (post-url post site)
+  "Return the URL of POST, a Haunt blog post, for SITE."
+  (base-url (string-append "" (site-post-slug site post) ".html")))
+
+(define (base-layout body)
+  `((doctype "html")
+    (html (@ (lang "en"))
+          (head
+           (meta (@ (http-equiv "Content-Type") (content "text/html; charset=utf-8")))
+           (link (@ (rel "icon")
+                    (type "image/x-icon")
+                    (href ,(image-url "/favicon.png"))))
+           (link (@ (rel "stylesheet")
+                    (href ,(css-url "/main.css"))
+                    (type "text/css")
+                    (media "screen")))
+           (title "GuixHPC"))
+	  (body
+           (div (@ (id "header"))
+                (div (@ (id "header-inner")
+                        (class "width-control"))
+                     (img (@ (class "logo")
+                             (src ,(image-url "/logo.png"))))))
+           (div (@ (id "menubar")
+                   (class "width-control"))
+                (ul
+                 (li (a (@ (href "#")) "What"))
+                 (li (a (@ (href "#")) "Who"))
+                 (li (a (@ (href "#")) "Where"))
+                 (li (a (@ (href ,(base-url "/news/feed.xml")))
+                        (img (@ (alt "Atom feed")
+                                (src ,(image-url "/feed.png"))))))))
+
+           (div (@ (id "content")
+                   (class "width-control"))
+                (div (@ (id "content-inner"))
+                     (article ,body)))
+
+           (div (@ (id "collaboration"))
+                (div (@ (id "collaboration-inner")
+                        (class "width-control"))
+                     (p "GuixHPC is a collaboration between:")
+                     (div (@ (class "members"))
+                          (ul
+                           (li (img (@ (alt "MDC")
+                                       (src ,(image-url "/mdc.png")))))
+                           (li (img (@ (alt "Inria")
+                                       (src ,(image-url "/inria.png")))))
+                           (li (img (@ (alt "UMC Utrecht")
+                                       (src ,(image-url "/umcutrecht.png")))))))))
+           (div (@ (id "footer-box")
+                   (class "width-control"))
+                (p "Made with " (span (@ (class "metta")) "♥") " by humans and "
+                   "powered by " (a (@ (href "https://www.gnu.org/software/guile"))
+                                    "GNU Guile") "."))))))
+
+(define* (post->sxml post #:key post-uri)
+  "Return the SXML for POST."
+  `(div (@ (class "post"))
+        (h2 (@ (class "title"))
+            ,(if post-uri
+                 `(a (@ (href ,post-uri))
+                     ,(post-ref post 'title))
+                 (post-ref post 'title)))
+        (div (@ (class "post-about"))
+             ,(post-ref post 'author)
+             " — " ,(date->string (post-date post) "~B ~e, ~Y"))
+        (hr)
+        (div (@ (class "post-body"))
+             ,(post-sxml post))))
+
+(define (page->sxml site title posts prefix)
+  "Return the SXML for the news page of SITE, containing POSTS."
+  `((div (@ (class "header"))
+         (div (@ (class "post-list"))
+              ,@(map (lambda (post)
+                       (post->sxml post #:post-uri (post-url post site)))
+                     posts)))))
+
+(define %hpc-haunt-theme
+  ;; Theme for the rendering of the news pages.
+  (theme #:name "GuixHPC"
+         #:layout (lambda (site title body)
+                    (base-layout body))
+         #:post-template post->sxml
+         #:collection-template page->sxml))
 
 (define %local-test?
   ;; True when we're testing locally, as opposed to producing things to
@@ -27,8 +125,7 @@
 
 (when %local-test?
   ;; The URLs produced in these pages are only meant for local consumption.
-  (format #t "~%Producing Web pages for local tests *only*!~%~%")
-  (current-url-root ""))
+  (format #t "~%Producing Web pages for local tests *only*!~%~%"))
 
 (site #:title
       "Guix HPC — Reproducible software deployment for high-performance computing"
@@ -38,16 +135,14 @@
         (email  . "guix-devel@gnu.org"))
       #:readers (list commonmark-reader)
       #:builders
-      (cons* (blog ;; #:theme %news-haunt-theme
-              ;; #:prefix "news"
-              )
+      (cons* (blog #:theme %hpc-haunt-theme)
 
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
              ;; hence this #:blog-prefix.
              (atom-feed #:file-name "news/feed.xml"
                         #:blog-prefix "https://hpc.guixsd.org")
 
-             ;; (static-directory "static")
+             (static-directory "static")
 
              (map (lambda (page)
                     (lambda (site posts)
