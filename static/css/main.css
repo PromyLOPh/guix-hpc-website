@@ -80,7 +80,7 @@ code {
 #collaboration {
     border-top: solid 3pt #aaaaaa;
     border-bottom: solid 3pt #aaaaaa;
-    background: #bbbbbb;
+    background: #ffffff;
     width: 100%;
     bottom: 0px;
 }
@@ -91,13 +91,13 @@ code {
 #collaboration .members li { display: inline-block; padding: 0px 10px; 0px 0px; }
 
 .post {
-    background: #eeeeee;
+    background: #ffffff;
     padding: 10px;
     -webkit-border-radius: 4pt;
     -moz-border-radius: 4pt;
     border-radius: 4pt;
     margin-bottom: 25px;
-    border: solid 2px #aaaaaa;
+    border: solid 2px #cccccc;
 }
 
 hr {
