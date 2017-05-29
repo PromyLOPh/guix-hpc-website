@@ -109,7 +109,14 @@ hr {
     border: none;
 }
 
+.post h1 { color: #433; }
 .post h2 { padding: 0pt; margin: 0pt; }
+
+.post-about {
+    color: #4D4D4D;
+    font-size: 0.9em;
+    padding-top: 1em;
+}
 
 #menubar ul { display: inline-block; padding: 0pt; margin: 0pt; }
 #menubar li {
