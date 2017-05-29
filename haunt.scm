@@ -21,18 +21,18 @@
              (srfi srfi-19)
              (guix-hpc))
 
-(define (base-url location)
-  (string-append "" location))
+(define (base-url . location)
+  (string-concatenate (cons "" location)))
 
 (define (image-url location)
-  (string-append "/static/images" location))
+  (base-url "static/images" location))
 
 (define (css-url location)
-  (string-append "/static/css" location))
+  (base-url "static/css" location))
 
 (define (post-url post site)
   "Return the URL of POST, a Haunt blog post, for SITE."
-  (base-url (string-append "" (site-post-slug site post) ".html")))
+  (base-url (site-post-slug site post) ".html"))
 
 (define (base-layout body)
   `((doctype "html")
