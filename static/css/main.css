@@ -159,8 +159,20 @@ h1 {
     padding: 0pt;
 }
 
-a { color: #000000; outline : none; }
-a:visited { color: #000000; }
+.title a { border: none; }
+a {
+    color: #000000;
+    outline: none;
+    border-style: none none dashed none;
+    border-width: thin;
+    text-decoration: none;
+}
+a:visited {
+    color: #433;
+    border-style: none none solid none;
+    border-width: thin;
+    text-decoration: none;
+}
 a img { outline : none; }
 img { border: none; }
 
