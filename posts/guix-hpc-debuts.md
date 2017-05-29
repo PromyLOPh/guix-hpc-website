@@ -75,7 +75,7 @@ results that are publish depend in large part on the software.
 you name it!”  It is true that “containers”, or, more accurately,
 [“application bundles”](https://en.wikipedia.org/wiki/Application_bundle),
 solve part of the reproducibility problem.  Without them, users would
-may build applications by themselves, and, inevitably, their software
+build applications by themselves, and, inevitably, their software
 environment would be vastly different from yours: different version of
 the application, different compiler versions, different libraries,
 different compilation options, and so on.  Conversely, an application
