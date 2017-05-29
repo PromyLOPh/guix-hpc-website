@@ -97,7 +97,7 @@ But is bit-for-bit reproducibility all that a researcher cares about?
 Don’t researchers want to go _beyond_ reproducing the exact same bits?
 Of course they do.  To pick a concrete example, one of the teams at
 Inria develops [StarPU](http://starpu.gforge.inria.fr/), a run-time
-system to schedule computational talks on CPUs, GPUs, and accelerators.
+system to schedule computational tasks on CPUs, GPUs, and accelerators.
 The team next-door develops linear algebra software such as
 [Chameleon](https://gitlab.inria.fr/solverstack/chameleon/) that relies
 on StarPU to get good performance.  Researchers working on scheduling in
@@ -173,10 +173,10 @@ bits.  That’s a good property to have!
 # Stay tuned!
 
 Truth to be said, to our knowledge, Guix is currently deployed only on a
-handful of supercomputers todays: the MDC runs it, so does UMC Utrecht,
+handful of supercomputers today: the MDC runs it, so does UMC Utrecht,
 Inria’s research center in Bordeaux will deploy it on its cluster in the
 coming months, and a look at the activity on the `guix-devel` mailing
-lists suggests that several other HPC deployments are actively used in
+list suggests that several other HPC deployments are actively used in
 academic contexts.  There are several reasons why there aren’t more Guix
 deployments on HPC clusters.  One of them is that Guix is only 4 years
 old, and it was not specifically written as a tool for HPC and research
