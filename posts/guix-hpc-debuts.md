@@ -1,5 +1,5 @@
 title: Guix-HPC debut!
-author: Ludovic Courtès, Roel Janssen, Ricardo Wurmus
+author: Ludovic Courtès, Roel Janssen, Pjotr Prins, Ricardo Wurmus
 date: 2017-05-15 14:00
 ---
 
