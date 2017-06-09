@@ -61,11 +61,11 @@ research article by its
 [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier),
 researchers should be able to unambiguously refer to software artifacts.
 Likewise, just like researchers should publish the data they rely on in
-published articles, so that their peers can assess and question their
+their articles so that their peers can assess and question their
 work, they should publish the software that led to a particular result.
 This necessity is particular acute in areas such as numerical simulation
 or the development of run-time systems or compilers for HPC, since the
-results that are publish depend in large part on the software.
+results that are published depend in large part on software.
 
 # Containers to the rescue?
 
