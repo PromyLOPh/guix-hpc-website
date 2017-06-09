@@ -186,8 +186,9 @@ The other reason is the fact that, to achieve build isolation,
 usually only available to system administrators.
 
 The Guix-HPC effort will attempt to address this, both through technical
-means (more on that later) and by discussing and raising awareness of
-the reproducibility and deployment situation in the HPC community.  We
+means (more on that later), by discussing and raising awareness of
+the reproducibility and deployment situation in the HPC community, and
+by giving talks and running training sessions.  We
 will also work on improving the user experience and workflows for
 researchers using Guix with HPC and reproducibility in mind.
 
@@ -197,3 +198,6 @@ We’ll also describe concrete actions we’ve identified to achieve these
 goals.  So please stay tuned, and share your ideas, comments, and
 criticism with us on the
 [`guix-devel` mailing list](https://www.gnu.org/software/guix/about/#contact)!
+If you are already using Guix and would like to join the effort, or if
+you have questions about training sessions or deployment on your
+cluster, please email us on the `guix-hpc@gnu.org` private alias.
