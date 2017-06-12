@@ -7,7 +7,7 @@ Guix-HPC is a joint software development project between
 and [UMC Utrecht](http://www.umcutrecht.nl/en/-1).  Guix-HPC an effort
 to optimize [GNU Guix](https://gnu.org/s/guix) for reproducible
 scientific workflows in high-performance computing (HPC).  See our
-[introductory article](/news/guix-hpc-debut.html) for an overview.
+[introductory article](/guix-hpc-debut.html) for an overview.
 
 If you are using Guix in an HPC context at your workplace, or if you
 would like to find ways to address your own HPC use cases, please

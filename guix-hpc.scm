@@ -6,13 +6,16 @@
 (define-module (guix-hpc)
   #:use-module (haunt page)
   #:use-module (haunt site)
-  #:use-module (sxml simple)
+  #:use-module (haunt html)
   #:use-module (haunt reader)
   #:use-module (haunt reader commonmark)
+  #:use-module (srfi srfi-11)
   #:export (base-url
             image-url
             css-url
             post-url
+
+            base-layout
 
             static-pages))
 
@@ -30,6 +33,61 @@
   (base-url (site-post-slug site post) ".html"))
 
 
+(define* (base-layout body #:key (title "Guix-HPC"))
+  `((doctype "html")
+    (html (@ (lang "en"))
+          (head
+           (meta (@ (http-equiv "Content-Type")
+                    (content "text/html; charset=utf-8")))
+           (link (@ (rel "icon")
+                    (type "image/x-icon")
+                    (href ,(image-url "/favicon.png"))))
+           (link (@ (rel "stylesheet")
+                    (href ,(css-url "/main.css"))
+                    (type "text/css")
+                    (media "screen")))
+           (title ,title))
+	  (body
+           (div (@ (id "header"))
+                (div (@ (id "header-inner")
+                        (class "width-control"))
+                     (img (@ (class "logo")
+                             (src ,(image-url "/logo.png"))))))
+           (div (@ (id "menubar")
+                   (class "width-control"))
+                (ul
+                 (li (a (@ (href ,(base-url "about.html")))
+                        "About"))
+                 (li (a (@ (href "#")) "Who"))
+                 (li (a (@ (href "#")) "Where"))
+                 (li (a (@ (href ,(base-url "/news/feed.xml")))
+                        (img (@ (alt "Atom feed")
+                                (src ,(image-url "/feed.png"))))))))
+
+           (div (@ (id "content")
+                   (class "width-control"))
+                (div (@ (id "content-inner"))
+                     (article ,body)))
+
+           (div (@ (id "collaboration"))
+                (div (@ (id "collaboration-inner")
+                        (class "width-control"))
+                     (p "GuixHPC is a collaboration between:")
+                     (div (@ (class "members"))
+                          (ul
+                           (li (img (@ (alt "MDC")
+                                       (src ,(image-url "/mdc.png")))))
+                           (li (img (@ (alt "Inria")
+                                       (src ,(image-url "/inria.png")))))
+                           (li (img (@ (alt "UMC Utrecht")
+                                       (src ,(image-url "/umcutrecht.png")))))))))
+           (div (@ (id "footer-box")
+                   (class "width-control"))
+                (p "Made with " (span (@ (class "metta")) "♥") " by humans and "
+                   "powered by " (a (@ (href "https://www.gnu.org/software/guile"))
+                                    "GNU Guile") "."))))))
+
+
 (define %cwd
   (and=> (assq-ref (current-source-location) 'filename)
          dirname))
@@ -37,8 +95,18 @@
 (define read-markdown
   (reader-proc commonmark-reader))
 
+(define (read-markdown-page file)
+  "Read the CommonMark page from FILE.  Return its final SXML
+representation."
+  (let-values (((meta body)
+                (read-markdown (string-append %cwd "/" file))))
+    (base-layout `(div (@ (class "post"))
+                       (div (@ (class "post-body")) ,body))
+                 #:title (string-append "Guix-HPC — "
+                                        (assoc-ref meta 'title)))))
+
 (define (about-page)
-  (read-markdown (string-append %cwd "/about.md")))
+  (read-markdown-page "about.md"))
 
 (define (static-pages)
-  (list (make-page "about.html" (about-page) sxml->xml)))
+  (list (make-page "about.html" (about-page) sxml->html)))
