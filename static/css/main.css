@@ -59,7 +59,7 @@ code {
 
 #header .logo {
     padding: 10px;
-    float: left;
+    display: block;
 }
 
 #header .baseline {
@@ -89,7 +89,7 @@ code {
 
 @media screen and (min-width: 640px) {
     #header .baseline {
-	display: inline-block;
+	display: block;
     }
     #header {
 	height: 110px;
