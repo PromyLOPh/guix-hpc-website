@@ -72,7 +72,7 @@
            (div (@ (id "collaboration"))
                 (div (@ (id "collaboration-inner")
                         (class "width-control"))
-                     (p "GuixHPC is a collaboration between:")
+                     (p "Guix-HPC is a collaboration between:")
                      (div (@ (class "members"))
                           (ul
                            (li (img (@ (alt "MDC")
@@ -83,9 +83,8 @@
                                        (src ,(image-url "/umcutrecht.png")))))))))
            (div (@ (id "footer-box")
                    (class "width-control"))
-                (p "Made with " (span (@ (class "metta")) "♥") " by humans and "
-                   "powered by " (a (@ (href "https://www.gnu.org/software/guile"))
-                                    "GNU Guile") "."))))))
+                (p (a (@ (href "https://gitlab.inria.fr/guix-hpc/website"))
+                      "Source of this site")))))))
 
 
 (define %cwd
