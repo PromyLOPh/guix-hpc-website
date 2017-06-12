@@ -172,6 +172,7 @@ a {
     outline: none;
     border-style: none none dashed none;
     border-width: thin;
+    border-color: #ffbf2d;
     text-decoration: none;
 }
 a:visited {
