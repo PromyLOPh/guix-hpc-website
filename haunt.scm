@@ -33,7 +33,7 @@
                     (href ,(css-url "/main.css"))
                     (type "text/css")
                     (media "screen")))
-           (title "GuixHPC"))
+           (title "Guix-HPC"))
 	  (body
            (div (@ (id "header"))
                 (div (@ (id "header-inner")
@@ -43,7 +43,8 @@
            (div (@ (id "menubar")
                    (class "width-control"))
                 (ul
-                 (li (a (@ (href "#")) "What"))
+                 (li (a (@ (href ,(base-url "about.html")))
+                        "About"))
                  (li (a (@ (href "#")) "Who"))
                  (li (a (@ (href "#")) "Where"))
                  (li (a (@ (href ,(base-url "/news/feed.xml")))
