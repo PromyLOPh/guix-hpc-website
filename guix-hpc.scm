@@ -52,7 +52,9 @@
                 (div (@ (id "header-inner")
                         (class "width-control"))
                      (img (@ (class "logo")
-                             (src ,(image-url "/logo.png"))))))
+                             (src ,(image-url "/logo.png"))))
+                     (div (@ (class "baseline"))
+                          "Reproducible software deployment for high-performance computing.")))
            (div (@ (id "menubar")
                    (class "width-control"))
                 (ul

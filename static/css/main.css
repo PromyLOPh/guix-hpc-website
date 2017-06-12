@@ -62,6 +62,16 @@ code {
     float: left;
 }
 
+#header .baseline {
+    color: #eee;
+    font-size: 11pt;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: none;  /* overridden below */
+    padding: 10px;
+    padding-top: 2px;
+}
+
 #header .members {
     float: right;
 }
@@ -76,6 +86,16 @@ code {
     margin: auto;
     padding: 0px;
 }
+
+@media screen and (min-width: 640px) {
+    #header .baseline {
+	display: inline-block;
+    }
+    #header {
+	height: 110px;
+    }
+}
+
 
 #collaboration {
     border-top: solid 3pt #aaaaaa;
