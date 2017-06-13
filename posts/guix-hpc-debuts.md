@@ -72,7 +72,12 @@ results that are published depend in large part on software.
 “Look, we have a solution!”, I hear you say.  “Just use containers!
 [Docker](https://docker.com), [Singularity](http://singularity.lbl.gov),
 [Shifter](http://www.nersc.gov/research-and-development/user-defined-images/),
-you name it!”  It is true that “containers”, or, more accurately,
+you name it!”  “Even Nature
+[had an article](http://www.nature.com/news/software-simplified-1.22059)
+explaining how containers ‘can boost the reproducibility of data-driven
+research’!”
+
+It is true that “containers”, or, more accurately,
 [“application bundles”](https://en.wikipedia.org/wiki/Application_bundle),
 solve part of the reproducibility problem.  Without them, users would
 build applications by themselves, and, inevitably, their software
