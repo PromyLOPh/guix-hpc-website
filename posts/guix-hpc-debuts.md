@@ -145,6 +145,9 @@ quite they way you’d like; and so on.  In other words, there’s a lack of
 flexibility.
 
 This problem has been recognized over the year by the HPC community.
+For example, the
+[Strategic Research Agenda of the European Technology Platform for HPC](http://www.etp4hpc.eu/en/sra.html),
+Section 5.2.3, calls for more “flexible execution contexts” on clusters.
 The main answers to that, in addition to containers, which are still
 mostly unavailable on HPC systems, has been to develop custom package
 managers such as [EasyBuild](http://hpcugent.github.io/easybuild/) and
