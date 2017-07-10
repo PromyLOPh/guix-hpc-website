@@ -10,7 +10,7 @@ in high-performance computing (HPC).  Guix-HPC is a joint effort between
 [Inria](https://www.inria.fr/en), the
 [Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/),
 and [UMC Utrecht](http://www.umcutrecht.nl/en/-1).  Ludovic Courtès,
-Ricardo Wurmus, and Roel Janssen are driving the effort in each of these
+Ricardo Wurmus, Roel Janssen, and Pjotr Prins are driving the effort in each of these
 institutes, each one focusing specific areas of interest within this
 overall Guix-HPC effort.  Our institutes have in common that they are
 users of HPC, and that, as scientific research institutes, they have an
