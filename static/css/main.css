@@ -104,7 +104,7 @@ code {
     width: 100%;
     bottom: 0px;
 }
-#collaboration-inner { margin: auto auto 25px auto; }
+#collaboration-inner { margin: 10px auto 10px auto; }
 #collaboration .members { text-align: center; }
 #collaboration p { padding: 0px 10px 0px 10px; }
 #collaboration .members ul { display: inline-block; padding: 0pt; margin: 0pt; }

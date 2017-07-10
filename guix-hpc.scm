@@ -72,7 +72,6 @@
            (div (@ (id "collaboration"))
                 (div (@ (id "collaboration-inner")
                         (class "width-control"))
-                     (p "Guix-HPC is a collaboration between:")
                      (div (@ (class "members"))
                           (ul
                            (li (img (@ (alt "MDC")
