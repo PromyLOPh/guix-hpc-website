@@ -60,8 +60,6 @@
                 (ul
                  (li (a (@ (href ,(base-url "about.html")))
                         "About"))
-                 (li (a (@ (href "#")) "Who"))
-                 (li (a (@ (href "#")) "Where"))
                  (li (a (@ (href ,(base-url "/news/feed.xml")))
                         (img (@ (alt "Atom feed")
                                 (src ,(image-url "/feed.png"))))))))
