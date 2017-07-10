@@ -1,6 +1,7 @@
 title: Guix-HPC debut!
 author: Ludovic Courtès, Roel Janssen, Pjotr Prins, Ricardo Wurmus
 date: 2017-05-15 14:00
+tags: kickoff reproducibility containers singularity shifter easybuild spack
 ---
 
 This post marks the debut of Guix-HPC, an effort to optimize
