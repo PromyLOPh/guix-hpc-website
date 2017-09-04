@@ -43,7 +43,9 @@ We believe that a prerequisite of reproducible science are _reproducible
 software environments_.  Of course it takes more than reproducible
 software environments to achieve reproducible scientific workflows—for
 instance, reproducible numerical recipes and deterministic parallel
-programs are crucial in HPC.
+programs are crucial in HPC.  Yet, getting code that accompanies
+research papers to build, when available, is often difficult, as shown
+by [this 2015 study](http://reproducibility.cs.arizona.edu/)
 
 In fact there’s a whole spectrum of initiatives around reproducibility:
 at one end of the spectrum, efforts like
