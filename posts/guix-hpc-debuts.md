@@ -9,7 +9,7 @@ This post marks the debut of Guix-HPC, an effort to optimize
 in high-performance computing (HPC).  Guix-HPC is a joint effort between
 [Inria](https://www.inria.fr/en), the
 [Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/),
-and [UMC Utrecht](http://www.umcutrecht.nl/en/-1).  Ludovic Courtès,
+and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/).  Ludovic Courtès,
 Ricardo Wurmus, Roel Janssen, and Pjotr Prins are driving the effort in each of these
 institutes, each one focusing specific areas of interest within this
 overall Guix-HPC effort.  Our institutes have in common that they are
@@ -182,7 +182,7 @@ bits.  That’s a good property to have!
 # Stay tuned!
 
 Truth to be said, to our knowledge, Guix is currently deployed only on a
-handful of supercomputers today: the MDC runs it, so does UMC Utrecht,
+handful of supercomputers today: the MDC runs it, so does the UBC,
 Inria’s research center in Bordeaux will deploy it on its cluster in the
 coming months, and a look at the activity on the `guix-devel` mailing
 list suggests that several other HPC deployments are actively used in
