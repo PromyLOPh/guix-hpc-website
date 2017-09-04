@@ -16,7 +16,7 @@ and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/).
 
 # Talks & Papers
 
-The following talks and papers cover our motivation for Guix-HPC:
+The material below covers our work and motivation for Guix-HPC:
 
   - [_Reproducible and user-controlled software management in HPC with GNU Guix_](https://www.youtube.com/watch?v=cH6wCL6GeOQ&list=PLir-OOQiOhXZX_2zmUJz0fx8RLALi3tkK&index=26) ([PDF](https://www.gnu.org/software/guix/guix-bosc-20170724.pdf)),
     [BOSC](https://www.open-bio.org/wiki/BOSC_2017_Schedule), July 2017
@@ -32,10 +32,36 @@ The following talks and papers cover our motivation for Guix-HPC:
 	in Parallel Computing ([RepPar](http://www.reppar.org/2015/)),
 	Aug. 2015
 
+# Code
+
+Most of the code developed for Guix-HPC aims to consolidate [the code
+base](https://git.savannah.gnu.org/cgit/guix.git/)
+and [package collection](https://gnu.org/software/guix/packages) of Guix
+proper, and thus be pushed upstream.  This has already given rise to a
+large collection of bioinformatics, algebra, and R packages, as well as
+features to simplify Guix deployment on clusters.
+
+Some auxiliary tools and package sets are maintained elsewhere, or kept
+in a staging area until they are mature enough to be submitted for
+inclusion in Guix:
+
+  - The [Guix Workflow Language](https://www.guixwl.org/), a lightweight
+    framework implementing reproducible computational pipelines.
+  - [hpcguix-web](https://github.com/UMCUGenetics/hpcguix-web) is a web
+    interface that allows users to search for packages and guides them
+    the installation and the job submission process.
+  - The [Guix-HPC repository](https://gitlab.inria.fr/guix-hpc/guix-hpc)
+    currently contains packages for HPC tools and run-time support
+    and linear algebra libraries developed by research teams
+    at [Inria Bordeaux](https://www.inria.fr/en/centre/bordeaux).
+
+All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
+that you are welcome to use and contribute to!
+
 # Join us!
 
 If you are using Guix in an HPC context at your workplace, or if you
-would like to find ways to address your own HPC use cases, or if you are
+would like to discuss ways to address your own HPC use cases, or if you are
 an HPC vendor interested in improving the software deployment experience
 for your users, please consider joining us!  Email us at
 `guix-hpc@gnu.org`.
