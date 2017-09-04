@@ -23,6 +23,9 @@ The following talks and papers cover our motivation for Guix-HPC:
   - [_Optimized and Reproducible HPC Deployment_](https://archive.fosdem.org/2017/schedule/event/hpc_deployment_guix/),
 	[FOSDEM](https://fosdem.org/2017),
 	Feb. 2017
+  - [_Workflow Management with GNU Guix_](https://archive.fosdem.org/2017/schedule/event/guixworkflowmanagement/),
+	[FOSDEM](https://fosdem.org/2017),
+	Feb. 2017
   - [_Reproducible and User-Controlled Software Environments in HPC with Guix_](https://hal.inria.fr/hal-01161771/en)
     ([slides](https://www.gnu.org/software/guix/guix-reppar-20150825.pdf)),
 	paper presented at the 2nd International Workshop on Reproducibility
