@@ -14,7 +14,7 @@ Ricardo Wurmus, Roel Janssen, and Pjotr Prins are driving the effort in each of 
 institutes, each one focusing specific areas of interest within this
 overall Guix-HPC effort.  Our institutes have in common that they are
 users of HPC, and that, as scientific research institutes, they have an
-interest in using reproducible methodologies for carry out their
+interest in using reproducible methodologies to carry out their
 research.
 
 Our goals are really twofold: reproducible scientific workflows, and HPC
