@@ -58,6 +58,19 @@ inclusion in Guix:
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
 
+# Cluster Deployments
+
+Here are deployments of Guix on clusters and contact information:
+
+  - [Max Delbrück Center for Molecular Medicine](https://www.mdc-berlin.de) (Germany)
+      - 250-node cluster + workstations
+      - contact: Ricardo Wurmus
+  - [Utrecht Bioinformatics Center](https://ubc.uu.nl) (The Netherlands)
+      - 68-node cluster (1,000+ cores)
+      - contact: Roel Janssen
+
+If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
+
 # Join us!
 
 If you are using Guix in an HPC context at your workplace, or if you
