@@ -54,6 +54,12 @@ inclusion in Guix:
     currently contains packages for HPC tools and run-time support
     and linear algebra libraries developed by research teams
     at [Inria Bordeaux](https://www.inria.fr/en/centre/bordeaux).
+  - The [Guix-BIMSB repository](https://github.com/BIMSBbioinfo/guix-bimsb)
+    currently contains packages for bioinformatics tools and package
+    variants used at the
+    [Berlin Institute for Medical Systems Biology](https://www.mdc-berlin.de/bimsb)
+    of the
+    [Max Delbrück Center for Molecular Medicine](https://www.mdc-berlin.de).
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
