@@ -21,6 +21,9 @@
              (srfi srfi-19)
              (guix-hpc))
 
+(define %web-site-title
+  "Guix-HPC — Reproducible software deployment for high-performance computing")
+
 (define* (post->sxml post #:key post-uri)
   "Return the SXML for POST."
   `(div (@ (class "post"))
@@ -46,9 +49,9 @@
 
 (define %hpc-haunt-theme
   ;; Theme for the rendering of the news pages.
-  (theme #:name "GuixHPC"
+  (theme #:name "Guix-HPC"
          #:layout (lambda (site title body)
-                    (base-layout body))
+                    (base-layout body #:title %web-site-title))
          #:post-template post->sxml
          #:collection-template page->sxml))
 
@@ -62,8 +65,7 @@
   ;; The URLs produced in these pages are only meant for local consumption.
   (format #t "~%Producing Web pages for local tests *only*!~%~%"))
 
-(site #:title
-      "Guix HPC — Reproducible software deployment for high-performance computing"
+(site #:title %web-site-title
       #:domain "//hpc.guixsd.org/"
       #:default-metadata
       '((author . "Guix-HPC Contributors")
