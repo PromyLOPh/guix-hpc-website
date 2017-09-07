@@ -74,6 +74,9 @@ Here are deployments of Guix on clusters and contact information:
   - [Utrecht Bioinformatics Center](https://ubc.uu.nl) (The Netherlands)
       - 68-node cluster (1,000+ cores)
       - contact: Roel Janssen
+  - [Australian Centre for Ecogenomics](http://ecogenomic.org/) (Australia)
+      - 21-node cluster (~1,000 cores)
+      - contact: Ben Woodcroft
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 
