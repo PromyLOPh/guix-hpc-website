@@ -124,7 +124,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Occasionally you’ll want to customize the way packages are
 built.
 [From the command line](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html),
-you can make apply transformations, such as replacing one dependency
+you can apply transformations, such as replacing one dependency
 with another one in the dependency graph.  The example below replaces
 `openmpi` with `openmpi-thread-multiple` in the dependency graph of
 `mumps-openmpi`:
