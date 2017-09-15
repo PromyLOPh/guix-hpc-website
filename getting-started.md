@@ -1,3 +1,6 @@
+title: Reproducible software deployment for high-performance computing.
+---
+
 [GNU Guix](https://www.gnu.org/software/guix/) is a *transactional*
 package manager, with support for *per-user* package installations.
 Users can install their own packages without interfering with each
@@ -187,6 +190,8 @@ just
 [add it to `$GUIX_PACKAGE_PATH`](https://www.gnu.org/software/guix/manual/html_node/Package-Modules.html).
 
 # Joining
+
+Learn more about on-going Guix-HPC developments [on our blog](/blog).
 
 [Guix-HPC](/about.html)
 and [GNU Guix](https://www.gnu.org/software/guix/) are collaborative

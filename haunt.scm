@@ -72,11 +72,12 @@
         (email  . "guix-devel@gnu.org"))
       #:readers (list commonmark-reader)
       #:builders
-      (cons* (blog #:theme %hpc-haunt-theme)
+      (cons* (blog #:theme %hpc-haunt-theme
+                   #:prefix "blog")
 
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
              ;; hence this #:blog-prefix.
-             (atom-feed #:file-name "news/feed.xml"
+             (atom-feed #:file-name "blog/feed.xml"
                         #:blog-prefix "https://hpc.guixsd.org")
 
              (static-directory "static")

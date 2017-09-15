@@ -23,14 +23,14 @@
   (string-concatenate (cons "" location)))
 
 (define (image-url location)
-  (base-url "static/images" location))
+  (base-url "/static/images" location))
 
 (define (css-url location)
-  (base-url "static/css" location))
+  (base-url "/static/css" location))
 
 (define (post-url post site)
   "Return the URL of POST, a Haunt blog post, for SITE."
-  (base-url (site-post-slug site post) ".html"))
+  (base-url "/blog/" (site-post-slug site post) ".html"))
 
 
 (define* (base-layout body #:key (title "Guix-HPC"))
@@ -58,9 +58,11 @@
            (div (@ (id "menubar")
                    (class "width-control"))
                 (ul
-                 (li (a (@ (href ,(base-url "about.html")))
+                 (li (a (@ (href ,(base-url "/about.html")))
                         "About"))
-                 (li (a (@ (href ,(base-url "/news/feed.xml")))
+                 (li (a (@ (href ,(base-url "/blog")))
+                        "Blog"))
+                 (li (a (@ (href ,(base-url "/blog/feed.xml")))
                         (img (@ (alt "Atom feed")
                                 (src ,(image-url "/feed.png"))))))))
 
@@ -103,8 +105,10 @@ representation."
                  #:title (string-append "Guix-HPC — "
                                         (assoc-ref meta 'title)))))
 
-(define (about-page)
-  (read-markdown-page "about.md"))
-
 (define (static-pages)
-  (list (make-page "about.html" (about-page) sxml->html)))
+  (define (markdown-page html md)
+    (make-page html (read-markdown-page md)
+               sxml->html))
+
+  (list (markdown-page "about.html" "about.md")
+        (markdown-page "index.html" "getting-started.md")))
