@@ -100,10 +100,13 @@ Sometimes all you want is to try out a program without installing it in
 your profile.  That’s
 where
 [`guix environment`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-environment.html) comes
-in.  To create an environment containing Python 3.x and NumPy, run:
+in.  To create an environment containing Python 3.x, NumPy, and
+scikit-learn, run:
 
 ```
-$ guix environment --ad-hoc python@3 python-numpy
+$ python3
+bash: python3: Command not found
+$ guix environment --ad-hoc python@3 python-numpy python-scikit-learn
 The following derivations will be built:
    /gnu/store/2g3mj1xdlq2rj8j0crl4sa68bqhmfsmd-profile.drv
    /gnu/store/wd0ma3xjq25w2qcnn3x0dgjyrck3dnk0-info-dir.drv
@@ -116,7 +119,8 @@ Python 3.5.3 (default, Jan  1 1970, 00:00:01)
 [GCC 5.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy
->>> 
+>>> import sklearn
+>>>
 ```
 
 # Customizing Packages
