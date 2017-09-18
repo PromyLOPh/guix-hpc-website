@@ -15,6 +15,9 @@
 (define guile-commonmark
   (specification->package "guile-commonmark"))
 
+(define guile-syntax-highlight
+  (specification->package "guile-syntax-highlight"))
+
 (define source
   (local-file "." "guix-hpc-web"
               #:recursive? #t
@@ -29,8 +32,12 @@
 
       ;; For Haunt.
       (setenv "GUILE_LOAD_PATH"
-              #+(file-append guile-commonmark
-                             "/share/guile/site/2.2"))
+              (string-append
+               #+(file-append guile-commonmark
+                              "/share/guile/site/2.2")
+               ":"
+               #+(file-append guile-syntax-highlight
+                              "/share/guile/site/2.2")))
 
       ;; So we can read/write UTF-8 files.
       (setenv "GUIX_LOCPATH"

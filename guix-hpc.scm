@@ -2,6 +2,7 @@
 ;;; those of the GNU GPL version 3 or (at your option) any later version.
 ;;;
 ;;; Copyright © 2017 Inria
+;;; Copyright © 2017 Ludovic Courtès
 
 (define-module (guix-hpc)
   #:use-module (haunt post)
@@ -10,6 +11,10 @@
   #:use-module (haunt html)
   #:use-module (haunt reader)
   #:use-module (haunt reader commonmark)
+  #:use-module (syntax-highlight)
+  #:use-module (syntax-highlight scheme)
+  #:use-module (syntax-highlight lexers)
+  #:use-module (ice-9 match)
   #:use-module (srfi srfi-11)
   #:use-module (srfi srfi-19)
   #:export (base-url
@@ -17,6 +22,7 @@
             css-url
             post-url
 
+            syntax-highlight
             base-layout
 
             static-pages))
@@ -42,6 +48,38 @@
               ;; There's an implicit "/index.html" here.
               "/" (site-post-slug site post))))
 
+
+;;;
+;;; Syntax highlighting (stolen from Guix's web site.)
+;;;
+
+(define %default-special-prefixes
+  '("define" "syntax"))
+
+(define lex-scheme/guix
+  ;; Specialized lexer for the Scheme we use in Guix.
+  ;; TODO: Add #~, #$, etc.
+  (make-scheme-lexer (cons* "with-imported-modules"
+                            "gexp" "ungexp"
+                            "ungexp-native" "ungexp-splicing"
+                            "ungexp-native-splicing"
+                            "mlet" "mlet*"
+                            "match"
+                            %default-special-symbols)
+                     %default-special-prefixes))
+
+(define (syntax-highlight sxml)
+  "Recurse over SXML and syntax-highlight code snippets."
+  (match sxml
+    (('code ('@ ('class "language-scheme")) code-snippet)
+     `(code ,(highlights->sxml
+              (highlight lex-scheme/guix code-snippet))))
+    ((tag ('@ attributes ...) body ...)
+     `(,tag (@ ,@attributes) ,@(map syntax-highlight body)))
+    ((tag body ...)
+     `(,tag ,@(map syntax-highlight body)))
+    ((? string? str)
+     str)))
 
 (define* (base-layout body #:key (title "Guix-HPC"))
   `((doctype "html")
@@ -111,7 +149,8 @@ representation."
   (let-values (((meta body)
                 (read-markdown (string-append %cwd "/" file))))
     (base-layout `(div (@ (class "post"))
-                       (div (@ (class "post-body")) ,body))
+                       (div (@ (class "post-body"))
+                            ,(syntax-highlight body)))
                  #:title (string-append "Guix-HPC — "
                                         (assoc-ref meta 'title)))))
 

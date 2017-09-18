@@ -38,7 +38,7 @@
              " — " ,(date->string (post-date post) "~B ~e, ~Y"))
         (hr)
         (div (@ (class "post-body"))
-             ,(post-sxml post))))
+             ,(syntax-highlight (post-sxml post)))))
 
 (define (page->sxml site title posts prefix)
   "Return the SXML for the news page of SITE, containing POSTS."
