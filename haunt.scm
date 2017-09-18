@@ -19,6 +19,7 @@
              (ice-9 match)
              (srfi srfi-1)
              (srfi srfi-19)
+             (srfi srfi-26)
              (guix-hpc))
 
 (define %web-site-title
@@ -47,6 +48,11 @@
                        (post->sxml post #:post-uri (post-url post site)))
                      posts)))))
 
+(define (post->page post site)
+  (make-page (string-append (post-url post site) "/index.html")
+             (render-post %hpc-haunt-theme site post)
+             sxml->html))
+
 (define %hpc-haunt-theme
   ;; Theme for the rendering of the news pages.
   (theme #:name "Guix-HPC"
@@ -72,8 +78,18 @@
         (email  . "guix-devel@gnu.org"))
       #:readers (list commonmark-reader)
       #:builders
-      (cons* (blog #:theme %hpc-haunt-theme
-                   #:prefix "blog")
+      (cons* (lambda (site posts)
+               ;; Pages for each post.
+               (map (cut post->page <> site) posts))
+
+             (lambda (site posts)
+               ;; The main collection.
+               (make-page
+                "/blog/index.html"
+                (render-collection %hpc-haunt-theme site
+                                   %web-site-title
+                                   posts "/blog")
+                sxml->html))
 
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
              ;; hence this #:blog-prefix.

@@ -4,12 +4,14 @@
 ;;; Copyright © 2017 Inria
 
 (define-module (guix-hpc)
+  #:use-module (haunt post)
   #:use-module (haunt page)
   #:use-module (haunt site)
   #:use-module (haunt html)
   #:use-module (haunt reader)
   #:use-module (haunt reader commonmark)
   #:use-module (srfi srfi-11)
+  #:use-module (srfi srfi-19)
   #:export (base-url
             image-url
             css-url
@@ -30,7 +32,15 @@
 
 (define (post-url post site)
   "Return the URL of POST, a Haunt blog post, for SITE."
-  (base-url "/blog/" (site-post-slug site post) ".html"))
+  (let ((date (post-date post)))
+    (base-url "/blog/"
+              (number->string (date-year date))
+              "/"
+              (string-pad (number->string (date-month date))
+                          2 #\0)
+
+              ;; There's an implicit "/index.html" here.
+              "/" (site-post-slug site post))))
 
 
 (define* (base-layout body #:key (title "Guix-HPC"))
