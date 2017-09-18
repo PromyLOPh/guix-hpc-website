@@ -43,6 +43,18 @@ body,html {
     font-family: 'Roboto', sans-serif;
 }
 
+pre {
+    border-style: none;
+    border-radius: 0.3em;
+    background-color: #F2EFE4;
+    border-width: thin;
+    color: #423;
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: left;
+    font-family: fixed-width;
+}
+
 code {
     font-family: 'FiraMono', monospace;
 }
