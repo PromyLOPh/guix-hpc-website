@@ -68,7 +68,7 @@
            (div (@ (id "menubar")
                    (class "width-control"))
                 (ul
-                 (li (a (@ (href ,(base-url "/about.html")))
+                 (li (a (@ (href ,(base-url "/about")))
                         "About"))
                  (li (a (@ (href ,(base-url "/blog")))
                         "Blog"))
@@ -120,5 +120,5 @@ representation."
     (make-page html (read-markdown-page md)
                sxml->html))
 
-  (list (markdown-page "about.html" "about.md")
+  (list (markdown-page "about/index.html" "about.md")
         (markdown-page "index.html" "getting-started.md")))
