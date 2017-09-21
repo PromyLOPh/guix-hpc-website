@@ -59,6 +59,7 @@ pre {
     padding: 10px;
     text-align: left;
     font-family: fixed-width;
+    overflow-x: auto;
     margin-bottom: 0.8rem;
 }
 
