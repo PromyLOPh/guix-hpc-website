@@ -28,7 +28,7 @@
 (define* (post->sxml post #:key post-uri)
   "Return the SXML for POST."
   `(div (@ (class "post"))
-        (h2 (@ (class "title"))
+        (h1 (@ (class "title"))
             ,(if post-uri
                  `(a (@ (href ,post-uri))
                      ,(post-ref post 'title))
