@@ -40,9 +40,7 @@
 /*#ffbf2d*/
 
 body,html {
-    background-image: url('/static/images/background.png');
-    background-repeat: repeat-x;
-    background-color: #eeeeee;
+    background-color: #fff;
     width: 100%;
     height: 100%;
     line-height: 1.4em;
@@ -135,11 +133,7 @@ code {
 .post {
     background: #ffffff;
     padding: 10px;
-    -webkit-border-radius: 4pt;
-    -moz-border-radius: 4pt;
-    border-radius: 4pt;
     margin-bottom: 25px;
-    border: solid 2px #cccccc;
 }
 
 hr {
@@ -190,10 +184,6 @@ hr {
 #content {
     margin: auto;
     padding: 0px;
-}
-
-#content-inner {
-    padding: 10px;
 }
 
 #footer-box {
