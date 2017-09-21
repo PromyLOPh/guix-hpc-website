@@ -81,7 +81,7 @@
     ((? string? str)
      str)))
 
-(define* (base-layout body #:key (title "Guix-HPC"))
+(define* (base-layout body #:key (title "Guix-HPC") (meta '()))
   `((doctype "html")
     (html (@ (lang "en"))
           (head
@@ -95,13 +95,18 @@
                     (type "text/css")
                     (media "screen")))
            (title ,title))
-	  (body
-           (div (@ (id "header"))
+          (body
+           (div (@ (id "header")
+                   ,@(if (assoc-ref meta 'frontpage)
+                         '((class "frontpage"))
+                         '()))
                 (div (@ (id "header-inner")
                         (class "width-control"))
                      (a (@ (href ,(base-url "/")))
                         (img (@ (class "logo")
-                                (src ,(image-url "/logo.png")))))
+                                (src ,(image-url (if (assoc-ref meta 'frontpage)
+                                                     "/logo.png"
+                                                     "/logo-small.png"))))))
                      (div (@ (class "baseline"))
                           "Reproducible software deployment for high-performance computing.")))
            (div (@ (id "menubar")
@@ -153,7 +158,8 @@ representation."
                        (div (@ (class "post-body"))
                             ,(syntax-highlight body)))
                  #:title (string-append "Guix-HPC — "
-                                        (assoc-ref meta 'title)))))
+                                        (assoc-ref meta 'title))
+                 #:meta meta)))
 
 (define (static-pages)
   (define (markdown-page html md)

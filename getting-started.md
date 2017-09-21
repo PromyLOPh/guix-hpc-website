@@ -1,4 +1,5 @@
 title: Reproducible software deployment for high-performance computing.
+frontpage: yes
 ---
 
 [GNU Guix](https://www.gnu.org/software/guix/) is a *transactional*

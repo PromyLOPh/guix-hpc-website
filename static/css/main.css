@@ -84,18 +84,14 @@ p + p {
 
 #header {
     background: #333333;
+    height: 90px;
     width: 100%;
     box-shadow: 0 3px 8px #ccc;
-    margin-bottom: 1em;
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
 }
 
 #header .logo {
-    margin: 0 auto;
+    padding: 10px;
     display: block;
-    max-width: 100%;
 }
 
 #header .baseline {
@@ -105,11 +101,38 @@ p + p {
     font-weight: bold;
     display: none;  /* overridden below */
     padding: 10px;
-    padding-top: 1rem;
+    padding-top: 2px;
 }
 
 #header .members {
     float: right;
+}
+
+@media screen and (min-width: 640px) {
+    #header .baseline {
+	display: block;
+    }
+    #header {
+        height: 110px;
+    }
+}
+
+#header.frontpage {
+    height: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+#header.frontpage .logo {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#header.frontpage .baseline {
+    padding-top: 1rem;
 }
 
 #menubar {
@@ -121,12 +144,6 @@ p + p {
 #header-inner {
     margin: auto;
     padding: 0px;
-}
-
-@media screen and (min-width: 640px) {
-    #header .baseline {
-	display: block;
-    }
 }
 
 
