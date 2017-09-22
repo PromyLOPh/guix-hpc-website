@@ -3,20 +3,25 @@
 ;;;
 ;;; Copyright © 2017 Inria
 ;;; Copyright © 2017 Ludovic Courtès
+;;; Copyright © 2015 David Thompson <davet@gnu.org>
+;;; Copyright © 2016 Christopher Allan Webber <cwebber@dustycloud.org>
 
 (define-module (guix-hpc)
   #:use-module (haunt post)
   #:use-module (haunt page)
   #:use-module (haunt site)
   #:use-module (haunt html)
+  #:use-module (haunt utils)
   #:use-module (haunt reader)
   #:use-module (haunt reader commonmark)
   #:use-module (syntax-highlight)
   #:use-module (syntax-highlight scheme)
   #:use-module (syntax-highlight lexers)
+  #:use-module (sxml simple)
   #:use-module (ice-9 match)
   #:use-module (srfi srfi-11)
   #:use-module (srfi srfi-19)
+  #:use-module (srfi srfi-26)
   #:export (base-url
             image-url
             css-url
@@ -25,7 +30,8 @@
             syntax-highlight
             base-layout
 
-            static-pages))
+            static-pages
+            atom-feed))
 
 (define (base-url . location)
   (string-concatenate (cons "" location)))
@@ -142,6 +148,10 @@
                       "Source of this site")))))))
 
 
+;;;
+;;; Static pages.
+;;;
+
 (define %cwd
   (and=> (assq-ref (current-source-location) 'filename)
          dirname))
@@ -168,3 +178,63 @@ representation."
 
   (list (markdown-page "about/index.html" "about.md")
         (markdown-page "index.html" "getting-started.md")))
+
+
+;;;
+;;; Atom feed (stolen from Haunt and adjusted).
+;;;
+
+;;; We cannot use Haunt's 'atom-feed' because of the non-default post URLs
+;;; that we use.  Thus the code below is mostly duplicated from (haunt
+;;; builder atom), with the exception of the URLs.
+
+(define (sxml->xml* sxml port)
+  "Write SXML to PORT, preceded by an <?xml> tag."
+  (display "<?xml version=\"1.0\" encoding=\"utf-8\"?>" port)
+  (sxml->xml sxml port))
+
+(define (date->string* date)
+  "Convert date to ISO-8601 formatted string."
+  (date->string date "~4"))
+
+(define* (post->atom-entry site post #:key (blog-prefix ""))
+  "Convert POST into an Atom <entry> XML node."
+  `(entry
+    (title ,(post-ref post 'title))
+    (author
+     (name ,(post-ref post 'author))
+     ,(let ((email (post-ref post 'email)))
+        (if email `(email ,email) '())))
+    (updated ,(date->string* (post-date post)))
+    (link (@ (href ,(post-url post site))
+             (rel "alternate")))
+    (summary (@ (type "html"))
+             ,(sxml->html-string (post-sxml post)))))
+
+(define* (atom-feed #:key
+                    (file-name "feed.xml")
+                    (subtitle "Recent Posts")
+                    (filter posts/reverse-chronological)
+                    (max-entries 20)
+                    (blog-prefix ""))
+  "Return a builder procedure that renders a list of posts as an Atom
+feed.  All arguments are optional:
+
+FILE-NAME: The page file name
+SUBTITLE: The feed subtitle
+FILTER: The procedure called to manipulate the posts list before rendering
+MAX-ENTRIES: The maximum number of posts to render in the feed"
+  (lambda (site posts)
+    (make-page file-name
+               `(feed (@ (xmlns "http://www.w3.org/2005/Atom"))
+                      (title ,(site-title site))
+                      (subtitle ,subtitle)
+                      (updated ,(date->string* (current-date)))
+                      (link (@ (href ,(string-append (site-domain site)
+                                                     "/" file-name))
+                               (rel "self")))
+                      (link (@ (href ,(site-domain site))))
+                      ,@(map (cut post->atom-entry site <>
+                                  #:blog-prefix blog-prefix)
+                             (take-up-to max-entries (filter posts))))
+               sxml->xml*)))

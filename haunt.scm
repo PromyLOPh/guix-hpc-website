@@ -15,7 +15,6 @@
              (haunt utils)
              (haunt builder assets)
              (haunt builder blog)
-             (haunt builder atom)
              (ice-9 match)
              (srfi srfi-1)
              (srfi srfi-19)
@@ -94,7 +93,7 @@
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
              ;; hence this #:blog-prefix.
              (atom-feed #:file-name "blog/feed.xml"
-                        #:blog-prefix "https://hpc.guixsd.org")
+                        #:blog-prefix "https://hpc.guixsd.org/blog")
 
              (static-directory "static")
 
