@@ -56,7 +56,9 @@
   ;; Theme for the rendering of the news pages.
   (theme #:name "Guix-HPC"
          #:layout (lambda (site title body)
-                    (base-layout body #:title %web-site-title))
+                    (base-layout body
+                                 #:title (string-append "Guix-HPC — "
+                                                        title)))
          #:post-template post->sxml
          #:collection-template page->sxml))
 
@@ -86,7 +88,8 @@
                (make-page
                 "/blog/index.html"
                 (render-collection %hpc-haunt-theme site
-                                   %web-site-title
+                                   "Reproducible software \
+deployment for high-performance computing — Blog"         ;title
                                    posts "/blog")
                 sxml->html))
 
