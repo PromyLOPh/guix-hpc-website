@@ -17,7 +17,7 @@ package built from a specific Guix commit on your laptop will be exactly
 the same as the one built on the HPC cluster you deploy it too, usually
 [bit-for-bit](https://reproducible-builds.org/docs/definition/).
 
-[We believe](/about.html) this makes Guix a great foundation for
+[We believe](/about) this makes Guix a great foundation for
 reproducible software deployment in high-performance computing (HPC).
 Here’s how to get started.
 
@@ -194,6 +194,6 @@ just
 
 Learn more about on-going Guix-HPC developments [on our blog](/blog).
 
-[Guix-HPC](/about.html)
+[Guix-HPC](/about)
 and [GNU Guix](https://www.gnu.org/software/guix/) are collaborative
-efforts.  You are welcome to [join](/about.html)!
+efforts.  You are welcome to [join](/about)!

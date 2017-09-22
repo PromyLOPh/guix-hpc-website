@@ -3,7 +3,7 @@ title: About
 
 Guix-HPC an effort to optimize [GNU Guix](https://gnu.org/s/guix) for
 _reproducible scientific workflows in high-performance computing_ (HPC).
-Our [introductory article](/guix-hpc-debut.html) explains how we got
+Our [introductory article](/blog/2017/09/guix-hpc-debut) explains how we got
 started and gives an overview of what we want to achieve.  We will
 regularly publish articles on this Web site highlighting specific
 features or achievements.  Stay tuned!
