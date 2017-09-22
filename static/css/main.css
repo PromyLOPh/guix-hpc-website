@@ -176,7 +176,7 @@ hr {
 }
 
 .post h1 { color: #433; }
-.post h2 { padding: 0pt; margin: 0pt; }
+.post h2 { color: #433; padding: 0pt; font-size: 1.3rem; }
 
 .post-about {
     color: #4D4D4D;
