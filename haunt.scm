@@ -90,7 +90,8 @@
                 (render-collection %hpc-haunt-theme site
                                    "Reproducible software \
 deployment for high-performance computing — Blog"         ;title
-                                   posts "/blog")
+                                   (posts/reverse-chronological posts)
+                                   "/blog")
                 sxml->html))
 
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
