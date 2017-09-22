@@ -9,10 +9,10 @@ regularly publish articles on this Web site highlighting specific
 features or achievements.  Stay tuned!
 
 Guix-HPC is a joint software development project currently involving
-three research institutes: [Inria](https://www.inria.fr/en),
+three research institutes: [Inria](https://www.inria.fr/en/centre/bordeaux/news/towards-reproducible-software-environments-in-hpc-with-guix),
 the
-[Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/),
-and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/).
+[Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/47864296/en/news/2017/20170905-wissenschaftliches-rechnen-erfolgreich-reproduzieren),
+and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/reproducible-software-environments-in-hpc-with-guix/).
 
 # Talks & Papers
 
