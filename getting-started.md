@@ -32,8 +32,7 @@ follow
 The
 [`guix package` command](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-package.html) is
 the entry point.  Say you’re searching for a sparse solver among the
-[6,000+ packages](https://www.gnu.org/software/guix/packages/) that come
-with Guix:
+[6,000+ packages](/browse) that come with Guix:
 
 ```
 $ guix package -s sparse -s solver
