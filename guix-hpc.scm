@@ -120,6 +120,8 @@
                 (ul
                  (li (a (@ (href ,(base-url "/about")))
                         "About"))
+                 (li (a (@ (href ,(base-url "/browse")))
+                        "Browse"))
                  (li (a (@ (href ,(base-url "/blog")))
                         "Blog"))
                  (li (a (@ (href ,(base-url "/blog/feed.xml")))
