@@ -72,7 +72,7 @@ because `~/.local/bin` is a symlink to `/gnu/store`, which does not
 exist on that machine, and second because binaries in general are not
 relocatable.
 
-So need to _map_ `$HOME/.local/gnu/store` to `/gnu/store` in the
+So we need to _map_ `$HOME/.local/gnu/store` to `/gnu/store` in the
 execution environment of hwloc.  We’ve [seen
 before](/blog/2017/09/reproducibility-and-root-privileges) that this
 normally requires root privileges, so let’s see how we can work around
