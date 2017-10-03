@@ -22,7 +22,7 @@ first have to _deploy_ your application, and that’s where things often
 start looking muddy: the machine runs an ancient GNU/Linux with a bunch
 of sysadmin-provided “environment modules.”
 
-Most likely you’ll end up building your applications and its
+Most likely you’ll end up building your application and its
 dependencies by hand, just to notice later that it doesn’t quite behave
 the same way as on your lab’s cluster, and yet again differently from
 what happens on your laptop.  Wouldn’t it be great if you could use the
