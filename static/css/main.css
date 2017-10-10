@@ -178,11 +178,7 @@ hr {
 }
 
 .post h1 { color: #433; }
-<<<<<<< HEAD
-.post h2 { padding: 0px; margin: 0px; }
-=======
 .post h2 { color: #433; padding: 0pt; font-size: 1.3rem; }
->>>>>>> 53a0f896f619977fb1d83c014cde093326296393
 
 .post-about {
     color: #4D4D4D;
