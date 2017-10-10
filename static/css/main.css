@@ -69,10 +69,14 @@ code {
     border-radius: 0.3em;
 }
 
+/* Arrange to have between 40 and 70 characters per line.  */
+
 .width-control {
-    max-width: 1260px;
-    width: 90%;
+    max-width: 800px;
+    width: 65%;
 }
+
+@media all and (max-width: 760px) { .width-control { width: 90%; } };
 
 p {
     max-width: 70rem;
