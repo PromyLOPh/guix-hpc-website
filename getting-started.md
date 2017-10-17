@@ -39,14 +39,17 @@ $ guix package -s sparse -s solver
 name: mumps
 version: 5.0.2
 outputs: out
-systems: x86_64-linux i686-linux armhf-linux aarch64-linux mips64el-linux
-dependencies: gfortran-5.4.0 metis-5.1.0 openblas-0.2.19 scotch-6.0.4
+systems: x86_64-linux i686-linux armhf-linux aarch64-linux
++ mips64el-linux
+dependencies: gfortran-5.4.0 metis-5.1.0 openblas-0.2.19
++ scotch-6.0.4
 location: gnu/packages/maths.scm:1550:2
 homepage: http://mumps.enseeiht.fr
 license: CeCILL-C
 synopsis: Multifrontal sparse direct solver
-description: MUMPS (MUltifrontal Massively Parallel sparse direct Solver) solves a
-+ sparse system of linear equations A x = b using Guassian elimination.
+description: MUMPS (MUltifrontal Massively Parallel sparse
++ direct Solver) solves a sparse system of linear equations
++ A x = b using Guassian elimination.
 relevance: 12
 
 …
