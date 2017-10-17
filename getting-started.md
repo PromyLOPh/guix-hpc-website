@@ -49,23 +49,6 @@ description: MUMPS (MUltifrontal Massively Parallel sparse direct Solver) solves
 + sparse system of linear equations A x = b using Guassian elimination.
 relevance: 12
 
-name: superlu
-version: 5.2.1
-outputs: out
-systems: x86_64-linux i686-linux armhf-linux aarch64-linux mips64el-linux
-dependencies: gfortran-5.4.0 openblas-0.2.19 tcsh-6.20.00
-location: gnu/packages/maths.scm:1756:2
-homepage: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
-license: Modified BSD, GPL 2+, FSF-free
-synopsis: Supernodal direct solver for sparse linear systems
-description: SuperLU is a general purpose library for the direct solution of large,
-+ sparse, nonsymmetric systems of linear equations on high performance machines.  The
-+ library is written in C and is callable from either C or Fortran.  The library
-+ routines perform an LU decomposition with partial pivoting and triangular system
-+ solves through forward and back substitution.  The library also provides
-+ threshold-based ILU factorization preconditioners.
-relevance: 9
-
 …
 ```
 
