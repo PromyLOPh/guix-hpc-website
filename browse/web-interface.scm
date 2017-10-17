@@ -1,4 +1,5 @@
 ;;; Copyright © 2016, 2017  Roel Janssen <roel@gnu.org>
+;;; Copyright © 2017  Ludovic Courtès <ludo@gnu.org>
 ;;;
 ;;; This program is free software: you can redistribute it and/or
 ;;; modify it under the terms of the GNU Affero General Public License
@@ -24,6 +25,7 @@
   #:use-module (rnrs bytevectors)
   #:use-module (rnrs io ports)
   #:use-module (srfi srfi-1)
+  #:use-module (srfi srfi-19)
   #:use-module (sxml simple)
   #:use-module (guix utils)
   #:use-module (guix packages)
@@ -51,7 +53,7 @@
 ;; In this section, the different handlers are implemented.
 ;;
 
-(define (request-packages-json-handler)
+(define (request-packages-json-handler request)
   (let* ((packages-file (string-append %www-root "/packages.json"))
          (cache-timeout-file (string-append %www-root "/cache.timeout"))
          (cache-timeout-exists? (access? cache-timeout-file F_OK)))
@@ -78,9 +80,9 @@
                        port)))
         (when cache-timeout-exists?
           (delete-file cache-timeout-file))))
-    (request-file-handler "packages.json")))
+    (request-file-handler request)))
 
-(define (request-file-handler path)
+(define (request-file-handler request)
   "This handler takes data from a file and sends that as a response."
 
   (define (response-content-type path)
@@ -97,21 +99,44 @@
             [(string= extension "ttf")  '(application/font-sfnt)]
             [(#t '(text/plain))])))
 
+  (define path
+    (uri-path (request-uri request)))
+
   (let* ((full-path (string-append %www-root "/" path))
-         (file-stat (stat full-path #f)))
-    (if (not file-stat)
-        (values '((content-type . (text/html)))
-                (with-output-to-string (lambda _ (sxml->xml (page-error-404 path)))))
-        ;; Do not handle files larger than %maximum-file-size.
-        ;; Please increase the file size if your server can handle it.
-        (if (> (stat:size file-stat) %www-max-file-size)
-            (values '((content-type . (text/html)))
-                    (with-output-to-string
-                      (lambda _ (sxml->xml (page-error-filesize path)))))
-            (values `((content-type . ,(response-content-type full-path)))
-                    (with-input-from-file full-path
-                      (lambda _
-                        (get-bytevector-all (current-input-port)))))))))
+         (file-stat (stat full-path #f))
+         (modified  (and file-stat
+                         (make-time time-utc
+                                    0 (stat:mtime file-stat)))))
+    (define (send-file)
+      ;; Do not handle files larger than %maximum-file-size.
+      ;; Please increase the file size if your server can handle it.
+      (if (> (stat:size file-stat) %www-max-file-size)
+          (values `((content-type . (text/html))
+                    (last-modified . ,(time-utc->date modified)))
+                  (with-output-to-string
+                    (lambda _ (sxml->xml (page-error-filesize path)))))
+          (values `((content-type . ,(response-content-type full-path))
+                    (last-modified . ,(time-utc->date modified)))
+                  (with-input-from-file full-path
+                    (lambda _
+                      (get-bytevector-all (current-input-port)))))))
+
+    (cond ((not file-stat)
+           (values '((content-type . (text/html)))
+                   (with-output-to-string
+                     (lambda _
+                       (sxml->xml (page-error-404 path))))))
+          ((assoc-ref (request-headers request) 'if-modified-since)
+           =>
+           (lambda (client-date)
+             ;; For /packages.json, which is quite big, it's a good idea to
+             ;; honor 'If-Modified-Since'.
+             (if (time>? modified (date->time-utc client-date))
+                 (send-file)
+                 (values (build-response #:code 304) ;"Not Modified"
+                         #f))))
+          (else
+           (send-file)))))
 
 (define (request-package-handler request-path)
   (values '((content-type . (text/html)))
@@ -176,10 +201,10 @@
     (format #t "~a ~a~%" (request-method request) request-path)
     (cond
      ((string= request-path "/packages.json")
-      (request-packages-json-handler))
+      (request-packages-json-handler request))
      ((and (> (string-length request-path) 7)
            (string= (string-take request-path 8) "/static/"))
-      (request-file-handler request-path))
+      (request-file-handler request))
      ((and (> (string-length request-path) 8)
            (string= (string-take request-path 9) "/package/"))
       (request-package-handler request-path))
