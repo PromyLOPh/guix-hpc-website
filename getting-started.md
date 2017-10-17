@@ -172,6 +172,21 @@ You can have your personal package collection:
 just
 [add it to `$GUIX_PACKAGE_PATH`](https://www.gnu.org/software/guix/manual/html_node/Package-Modules.html).
 
+# Sending Guix Packages to Guix-less Machines
+
+What if the target supercomputer lacks Guix?  You can still enjoy Guix’s
+reproducibility and customizability by [sending your package binaries
+there](/blog/2017/10/using-guix-without-being-root/):
+
+```
+laptop$ scp `guix pack hwloc -S /bin=bin` supercomputer:hwloc.tar.gz
+laptop$ scp `guix build proot-static`/bin/proot supercomputer:
+…
+supercomputer$ mkdir -p ~/.local
+supercomputer$ (cd ~/.local; tar xf ~/hwloc.tar.gz)
+supercomputer$ ./proot -r ~/.local -b /proc /bin/lstopo
+```
+
 # Joining
 
 Learn more about on-going Guix-HPC developments [on our blog](/blog).
