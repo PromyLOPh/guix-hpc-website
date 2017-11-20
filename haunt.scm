@@ -24,8 +24,21 @@
 (define %web-site-title
   "Guix-HPC — Reproducible software deployment for high-performance computing")
 
-(define* (post->sxml post #:key post-uri)
+(define (summarize-post post uri)
+  (match (post-sxml post)
+    ((('p paragraph ...) _ ...)
+     `((p ,@paragraph)
+       (p (a (@ (href ,uri)) "Continue reading…"))))
+    (body
+     body)))
+
+(define* (post->sxml post #:key post-uri summarize?)
   "Return the SXML for POST."
+  (define post-body*
+    (if summarize?
+        (cut summarize-post <> post-uri)
+        post-sxml))
+
   `(div (@ (class "post"))
         (h1 (@ (class "title"))
             ,(if post-uri
@@ -37,14 +50,15 @@
              " — " ,(date->string (post-date post) "~B ~e, ~Y"))
         (hr)
         (div (@ (class "post-body"))
-             ,(syntax-highlight (post-sxml post)))))
+             ,(syntax-highlight (post-body* post)))))
 
 (define (page->sxml site title posts prefix)
   "Return the SXML for the news page of SITE, containing POSTS."
   `((div (@ (class "header"))
          (div (@ (class "post-list"))
               ,@(map (lambda (post)
-                       (post->sxml post #:post-uri (post-url post site)))
+                       (post->sxml post #:post-uri (post-url post site)
+                                   #:summarize? #t))
                      posts)))))
 
 (define (post->page post site)
