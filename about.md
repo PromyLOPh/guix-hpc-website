@@ -77,6 +77,9 @@ Here are deployments of Guix on clusters and contact information:
   - [Australian Centre for Ecogenomics](http://ecogenomic.org/) (Australia)
       - 21-node cluster (~1,000 cores)
       - contact: Ben Woodcroft
+  - [PlaFRIM cluster](https://www.plafrim.fr/en/home/) (France)
+	  - 120-node heterogeneous cluster (3,000+ cores)
+	  - contact: Ludovic Courtès
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 
