@@ -311,7 +311,7 @@ glibc variant.
 # Summary
 
 Guix can readily be installed cluster-wide on a cluster.  The task
-primarily involves installing Guix on a mater node and exporting
+primarily involves installing Guix on a master node and exporting
 `/gnu/store` and `/var/guix` over NFS to compute node, and possibly
 augmenting the firewall’s white list to allow the master node to
 retrieve software binaries and source code.
