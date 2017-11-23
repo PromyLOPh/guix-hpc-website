@@ -175,7 +175,7 @@ You can have your personal package collection:
 just
 [add it to `$GUIX_PACKAGE_PATH`](https://www.gnu.org/software/guix/manual/html_node/Package-Modules.html).
 
-# Sending Guix Packages to Guix-less Machines
+# Sending Packages to Guix-less Machines
 
 What if the target supercomputer lacks Guix?  You can still enjoy Guix’s
 reproducibility and customizability by [sending your package binaries

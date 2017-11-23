@@ -19,6 +19,7 @@
   #:use-module (syntax-highlight lexers)
   #:use-module (sxml simple)
   #:use-module (ice-9 match)
+  #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-11)
   #:use-module (srfi srfi-19)
   #:use-module (srfi srfi-26)
@@ -87,7 +88,13 @@
     ((? string? str)
      str)))
 
-(define* (base-layout body #:key (title "Guix-HPC") (meta '()))
+(define* (base-layout body #:key (title "Guix-HPC") (meta '())
+                      (posts '()) site)
+  (define (post->brief post)
+    `(li (@ (class "news-brief"))
+         (a (@ (href ,(post-url post site)))
+            ,(post-ref post 'title))))
+
   `((doctype "html")
     (html (@ (lang "en"))
           (head
@@ -131,6 +138,15 @@
            (div (@ (id "content")
                    (class "width-control"))
                 (div (@ (id "content-inner"))
+
+                     ,@(if (assoc-ref meta 'frontpage)
+                           `((div (@ (class "latest-news"))
+                                  "LATEST ARTICLES"
+                                  (ul ,@(map post->brief
+                                             (take (posts/reverse-chronological posts) 3))
+                                      (li (a (@ (href "/blog")) "More…")))))
+                           '())
+
                      (article ,body)))
 
            (div (@ (id "collaboration"))
@@ -161,7 +177,7 @@
 (define read-markdown
   (reader-proc commonmark-reader))
 
-(define (read-markdown-page file)
+(define (read-markdown-page file posts site)
   "Read the CommonMark page from FILE.  Return its final SXML
 representation."
   (let-values (((meta body)
@@ -171,12 +187,15 @@ representation."
                             ,(syntax-highlight body)))
                  #:title (string-append "Guix-HPC — "
                                         (assoc-ref meta 'title))
-                 #:meta meta)))
+                 #:meta meta
+                 #:posts posts
+                 #:site site)))
 
 (define (static-pages)
   (define (markdown-page html md)
-    (make-page html (read-markdown-page md)
-               sxml->html))
+    (lambda (site posts)
+      (make-page html (read-markdown-page md posts site)
+                 sxml->html)))
 
   (list (markdown-page "about/index.html" "about.md")
         (markdown-page "index.html" "getting-started.md")))

@@ -115,7 +115,4 @@ deployment for high-performance computing — Blog"         ;title
 
              (static-directory "static")
 
-             (map (lambda (page)
-                    (lambda (site posts)
-                      page))
-                  (static-pages))))
+             (static-pages)))

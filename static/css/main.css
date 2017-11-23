@@ -153,6 +153,18 @@ p + p {
 }
 
 
+.latest-news {
+    margin-top: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10pt;
+    border-left: solid 10px #ffbf2d;
+    color: #533;
+}
+
+.news-brief {
+}
+
 #collaboration {
     border-top: solid 4px #aaaaaa;
     border-bottom: solid 4px #aaaaaa;
