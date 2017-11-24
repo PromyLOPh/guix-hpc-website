@@ -28,7 +28,7 @@ follow
 [the binary install instructions](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html).
 
 You’re a cluster sysadmin and would like to have a cluster-wide install?
-Read [this article](/blog/2011/11/installing-guix-on-a-cluster).
+Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
 
 # Installing Packages
 
