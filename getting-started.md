@@ -23,16 +23,19 @@ Here’s how to get started.
 
 # Installing Guix
 
-Guix can be installed in 5 minutes: just
+You can install Guix on your laptop in 5 minutes: just
 follow
 [the binary install instructions](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html).
+
+You’re a cluster sysadmin and would like to have a cluster-wide install?
+Read [this article](/blog/2011/11/installing-guix-on-a-cluster).
 
 # Installing Packages
 
 The
 [`guix package` command](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-package.html) is
 the entry point.  Say you’re searching for a sparse solver among the
-[6,000+ packages](/browse) that come with Guix:
+[6,500+ packages](/browse) that come with Guix:
 
 ```
 $ guix package -s sparse -s solver
