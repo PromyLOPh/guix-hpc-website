@@ -177,7 +177,7 @@ When the library and its replacement (`fftw` and `fftw-avx` here) are
 known to have the same application binary interface (ABI), as is the
 case here, another option is to simply let the run-time linker pick up
 the optimized version instead of the unoptimized one.  This can be done
-using by setting the `LD_LIBRARY_PATH` environment variable:
+by setting the `LD_LIBRARY_PATH` environment variable:
 
 ```
 LD_LIBRARY_PATH=`guix build fftw-avx`/lib octave
@@ -185,7 +185,7 @@ LD_LIBRARY_PATH=`guix build fftw-avx`/lib octave
 
 Here Octave will pick the optimized `libfftw.so`.  (`/etc/ld.so.conf`
 would be another possibility but the glibc package in Guix currently
-ignores since that file since that could lead to loading
+ignores that file since that could lead to loading
 binary-incompatible `.so` files when using Guix on a distro other than
 GuixSD.)
 
