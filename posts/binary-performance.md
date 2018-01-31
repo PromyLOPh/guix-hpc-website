@@ -110,7 +110,7 @@ Problem solved?
 # When upstream software lacks run-time selection
 
 It turns out that not all software packages, especially scientific
-software, uses these techniques.  Some do—for instance,
+software, use these techniques.  Some do—for instance,
 [OpenBLAS](https://guix-hpc.bordeaux.inria.fr/package/openblas) supports
 run-time selection when compiled with `DYNAMIC_ARCH=1`—but many don’t.
 For example, [FFTW](https://guix-hpc.bordeaux.inria.fr/package/fftw)
