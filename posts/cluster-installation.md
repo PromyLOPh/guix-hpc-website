@@ -108,7 +108,7 @@ To avoid warnings and make sure `guix` uses the right locale, we need to
 tell it to use locale data provided by Guix:
 
 ```
-GUIX_LOCPATH=/var/guix/profiles/per-user/root/lib/locale
+GUIX_LOCPATH=/var/guix/profiles/per-user/root/guix-profile/lib/locale
 export GUIX_LOCPATH
 
 # Here we must use a valid locale name.  Try "ls $GUIX_LOCPATH/*"
@@ -135,7 +135,7 @@ Last but not least, Guix provides command-line completion notably for
 Bash and zsh.  In `/etc/bashrc`, consider adding this line:
 
 ```
-. /var/guix/profiles/per-user/root/etc/profile.d/bash_completion.sh
+. /var/guix/profiles/per-user/root/guix-profile/etc/bash_completion.d/guix
 ```
 
 Voilà!
