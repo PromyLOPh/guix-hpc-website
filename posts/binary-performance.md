@@ -118,7 +118,8 @@ insists on being compiled with
 [`-mtune=native`](https://gcc.gnu.org/onlinedocs/gcc-7.3.0/gcc/x86-Options.html#index-mtune-15)
 and provides [configuration
 options](http://fftw.org/fftw3_doc/Installation-on-Unix.html#Installation-on-Unix)
-to statically select CPU optimizations;
+to statically select CPU optimizations (*Update:* FFTW 3.3.7+ [can select
+optimized routines at run time](https://lists.gnu.org/archive/html/guix-devel/2018-04/msg00091.html));
 [ATLAS](https://guix-hpc.bordeaux.inria.fr/package/atlas) optimizes
 itself for the CPU it is being built on.  We can always say that the
 “right” solution would be to “fix” these packages upstream so that they
