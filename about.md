@@ -18,6 +18,12 @@ and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/reproducible-sof
 
 The material below covers our work and motivation for Guix-HPC:
 
+  - [_Reproducible genomics analysis pipelines with
+    GNU Guix_](https://www.biorxiv.org/content/early/2018/04/11/298653),
+    Apr. 2018
+  - [_Tying software deployment to scientific
+    workflows_](https://fosdem.org/2018/schedule/event/guix_workflows/),
+    [FOSDEM](https://fosdem.org/2018/), Feb. 2018
   - [_Reproducible and user-controlled software management in HPC with GNU Guix_](https://www.youtube.com/watch?v=cH6wCL6GeOQ&list=PLir-OOQiOhXZX_2zmUJz0fx8RLALi3tkK&index=26) ([PDF](https://www.gnu.org/software/guix/guix-bosc-20170724.pdf)),
     [BOSC](https://www.open-bio.org/wiki/BOSC_2017_Schedule), July 2017
   - [_Optimized and Reproducible HPC Deployment_](https://archive.fosdem.org/2017/schedule/event/hpc_deployment_guix/),
