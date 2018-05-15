@@ -18,6 +18,9 @@ and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/reproducible-sof
 
 The material below covers our work and motivation for Guix-HPC:
 
+  - [_Beyond Bundles—Reproducible Software Environments with
+    GNU Guix_](https://cds.cern.ch/record/2316926), [CERN Computing
+    Seminars](http://cseminar.web.cern.ch/cseminar/), May 2018
   - [_Reproducible genomics analysis pipelines with
     GNU Guix_](https://www.biorxiv.org/content/early/2018/04/11/298653),
     Apr. 2018
