@@ -1,11 +1,11 @@
 title: About
 ---
 
-Guix-HPC an effort to optimize [GNU Guix](https://gnu.org/s/guix) for
+Guix-HPC is an effort to optimize [GNU Guix](https://gnu.org/s/guix) for
 _reproducible scientific workflows in high-performance computing_ (HPC).
 Our [introductory article](/blog/2017/09/guix-hpc-debut) explains how we got
-started and gives an overview of what we want to achieve.  We will
-regularly publish articles on this Web site highlighting specific
+started and gives an overview of what we want to achieve.  We
+regularly publish [articles](/blog) on this Web site highlighting specific
 features or achievements.  Stay tuned!
 
 Guix-HPC is a joint software development project currently involving
