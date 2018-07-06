@@ -1,6 +1,6 @@
 title: HPC goodies in Guix 0.15.0
 author: Ludovic Courtès
-date: 2017-07-06 16:00
+date: 2018-07-06 16:00
 slug: hpc-goodies-in-guix-0-15-0
 tags: packages, releases
 ---
