@@ -8,7 +8,8 @@ tags: packages, releases
 Version 0.15.0 of Guix was [released
 today](https://www.gnu.org/software/guix/blog/2018/gnu-guix-and-guixsd-0.15.0-released/).
 As usual, it brings packages and features that we hope HPC users and
-sysadmins will enjoy.
+sysadmins will enjoy.  This release brings us close to our goals for
+1.0, so it’s probably one of the last zero-dot-something releases.
 
 Over the 1,200+ packages added and 2,200+ packages updated since the
 0.14.0 release, there are many noteworthy HPC additions.
