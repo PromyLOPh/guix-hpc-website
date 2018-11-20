@@ -62,13 +62,26 @@ inclusion in Guix:
   - The [Guix-HPC repository](https://gitlab.inria.fr/guix-hpc/guix-hpc)
     currently contains packages for HPC tools and run-time support
     and linear algebra libraries developed by research teams
-    at [Inria Bordeaux](https://www.inria.fr/en/centre/bordeaux).
+    at [Inria](https://www.inria.fr/en/).
   - The [Guix-BIMSB repository](https://github.com/BIMSBbioinfo/guix-bimsb)
     currently contains packages for bioinformatics tools and package
     variants used at the
     [Berlin Institute for Medical Systems Biology](https://www.mdc-berlin.de/bimsb)
     of the
-    [Max Delbrück Center for Molecular Medicine](https://www.mdc-berlin.de).
+    [Max Delbrück Center for Molecular
+    Medicine](https://www.mdc-berlin.de).
+  - This [UMCU Genetics
+    repository](https://github.com/UMCUGenetics/guix-additions) has more
+    bioinformatics packages in use at the [Center for Molecular Medicine
+    at UMC
+    Utrecht](http://www.umcutrecht.nl/en/Research/Research-centers/Center-for-Molecular-Medicine).
+  - The [ACE repository](https://github.com/Ecogenomics/ace-guix)
+    provides packages used by the [Australian Centre for
+    Ecogenomics](http://ecogenomic.org/).
+  - This [Genenetwork
+    repository](https://gitlab.com/genenetwork/guix-bioinformatics)
+    contains bioinformatics and HPC packages used by
+    [Genenetwork](http://genenetwork.org/).
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
@@ -84,7 +97,7 @@ Here are deployments of Guix on clusters and contact information:
       - 68-node cluster (1,000+ cores)
       - contact: Roel Janssen
   - [Australian Centre for Ecogenomics](http://ecogenomic.org/) (Australia)
-      - 21-node cluster (~1,000 cores)
+      - 21-node cluster (1,000 cores)
       - contact: Ben Woodcroft
   - [PlaFRIM cluster](https://www.plafrim.fr/en/home/) (France)
 	  - 120-node heterogeneous cluster (3,000+ cores)
