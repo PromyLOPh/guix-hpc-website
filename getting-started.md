@@ -35,7 +35,7 @@ Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
 The
 [`guix package` command](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-package.html) is
 the entry point.  Say you’re searching for a sparse solver among the
-[7,500+ packages](/browse) that come with Guix:
+[8,500+ packages](/browse) that come with Guix:
 
 ```
 $ guix package -s sparse -s solver
