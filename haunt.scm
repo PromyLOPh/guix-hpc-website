@@ -1,7 +1,7 @@
 ;;; This module is part of Guix-HPC and is licensed under the same terms,
 ;;; those of the GNU GPL version 3 or (at your option) any later version.
 ;;;
-;;; Copyright © 2017 Inria
+;;; Copyright © 2017, 2019 Inria
 
 ;; This is a build file for Haunt.  Run 'haunt build' to build the web site,
 ;; and 'haunt serve' to serve it locally.  Alternatively, you can run
@@ -91,7 +91,7 @@
       #:default-metadata
       '((author . "Guix-HPC Contributors")
         (email  . "guix-devel@gnu.org"))
-      #:readers (list commonmark-reader)
+      #:readers (list sxml-reader commonmark-reader)
       #:builders
       (cons* (lambda (site posts)
                ;; Pages for each post.
