@@ -9,7 +9,7 @@
 
 `((title . "PiGx paper awarded at the International Conference on Genomics (ICG-13)")
   (author . "Ricardo Wurmus")
-  (date . ,(make-date 0 0 00 10 11 01 2019 +3600))
+  (date . ,(make-date 0 0 30 10 11 01 2019 +3600))
   (tags . ("High-performance computing" "Research" "Reproducibility" "Bioinformatics"))
   (content
    (div
@@ -46,4 +46,4 @@ Ricardo re-recorded the talk a few weeks later.")
      ;; Fallback content.
      (div
       (a (@ (href ,%video-url)) "DOWNLOAD VIDEO")
-      (p "(WebM, 26 minutes)"))))))
+      (p "(WebM, 9 minutes)"))))))
