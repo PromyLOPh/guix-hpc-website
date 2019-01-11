@@ -1,0 +1,49 @@
+;; -*- Scheme -*-
+;;
+;; We'd rather use CommonMark but we need the <video> tag...
+
+(use-modules (srfi srfi-19))
+
+(define %video-url
+  "https://guix-hpc.bordeaux.inria.fr/static/videos/pigx.webm")
+
+`((title . "PiGx paper awarded at the International Conference on Genomics (ICG-13)")
+  (author . "Ricardo Wurmus")
+  (date . ,(make-date 0 0 00 10 11 01 2019 +3600))
+  (tags . ("High-performance computing" "Research" "Reproducibility" "Bioinformatics"))
+  (content
+   (div
+    (p "December 2018 the Akalin lab at the Berlin Institute of Medical Systems
+Biology (BIMSB) " (a (@ (href "https://doi.org/10.1093/gigascience/giy123"))
+                     "published")
+" a paper about a collection of reproducible genomics pipelines called "
+(a (@ (href "http://bioinformatics.mdc-berlin.de/pigx/")) "PiGx")
+" that are made available through GNU Guix.  The article was awarded third
+place in the GigaScience ICG-13 Prize.  Representing the authors, Ricardo
+Wurmus was invited to present the work on PiGx and
+Guix " (a (@ (href "http://www.icg-13.org"))
+                               "in Shenzhen, China at
+ICG-13") ".")
+
+    (img (@ (alt "Ricardo Wurmus presenting at ICG-13.")
+            (src "/static/images/blog/ricardo-icg13.jpg")
+            (class "full-width")))
+
+    (p "Ricardo urged the audience of wet lab scientists and bioinformaticians
+to apply the same rigorous standards of experimental design to
+experiments involving software: all variables need to be captured and
+constrained.  To demonstrate that this does not need to be complicated,
+Ricardo reported the experiences of the Akalin lab in building a
+collection of reproducibly built automated genomics workflows using GNU
+Guix.")
+
+    (p "Due to technical difficulties the recording of the talk was lost, so
+Ricardo re-recorded the talk a few weeks later.")
+
+    (video
+     (@ (src ,%video-url)
+	(controls "controls"))
+     ;; Fallback content.
+     (div
+      (a (@ (href ,%video-url)) "DOWNLOAD VIDEO")
+      (p "(WebM, 26 minutes)"))))))

@@ -307,5 +307,11 @@ a:visited {
 a img { outline : none; }
 img { border: none; }
 
+audio, video, .full-width {
+    display: block;
+    margin: 50px auto;
+    max-width: 100%;
+}
+
 #footer-box a { color: #333333; }
 #footer-box a:visited { color: #333333; }
