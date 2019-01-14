@@ -199,6 +199,7 @@ reproducibility, transparency, and flexibility benefits offered by Guix.
 
   - FOSDEM 2017
   - EasyBuild User Days 2018
+  - GNU Guix Day 2018
   - FOSDEM 2018
   - GigaScience, China (Oct. 2018, Ricardo Wurmus)
   - Biohackathon Japan 2017 (Pjotr Prins)
@@ -271,3 +272,4 @@ summarize here.
     - Inria: Guix-HPC web server (1 machine)
   - training sessions
   - conference travel expenses(?)
+  - GNU Guix Day was sponsored by GeneNetwork and Guix Europe
