@@ -201,14 +201,20 @@ reproducibility, transparency, and flexibility benefits offered by Guix.
   - EasyBuild User Days 2018
   - FOSDEM 2018
   - GigaScience, China (Oct. 2018, Ricardo Wurmus)
+  - Biohackathon Japan 2017 (Pjotr Prins)
+  - Biohackathon Paris 2018 (Pjotr Prins)
+  - Biohackathon Japan 2018 (Pjotr Prins)
 
 ## Talks
 
+  - HPC track FOSDEM 2018 (Ludovic Courtès, Pjotr Prins)
+  - EasyBuild User Days 2018 (Ricardo Wurmus, Pjotr Prins)
   - CERN (May 2018; ~20 people + video; invited talk)
   - Software development plenary, Inria, May 2018
   - [JCAD](https://jcad2018.sciencesconf.org/resource/page/id/7)
     (Nov. 2018; ~100 people + streaming)
-  - Nairobi (Pjotr Prins, May 2018)
+  - iHub Nairobi (Pjotr Prins, May 2018)
+  - Biohackathon Matsue Japan (Pjotr Prins, December 2018)
   - INRA Toulouse (Feb. 2019)
 
 ## Training sessions
@@ -252,8 +258,8 @@ summarize here.
     - Cray, Inc.: ? person·year (Eric Bavier)
     - Inria: 2 person·year (Ludovic Courtès)
     - MDC: 2 person·year (Ricardo Wurmus)
-    - Pjotr (affiliation?): 2(?) person·year (Pjotr Prins)
-    - UBC: 2(?) person·year (Roel Janssen)
+    - UTHSC: 0.3 person·year (Pjotr Prins)
+    - UBC UMCU: 2(?) person·year (Roel Janssen)
   - internships
     - Inria: 4 person·months (Pierre-Antoine Rouby)
     - ?
