@@ -259,6 +259,7 @@ summarize here.
     - Cray, Inc.: ? person·year (Eric Bavier)
     - Inria: 2 person·year (Ludovic Courtès)
     - MDC: 2 person·year (Ricardo Wurmus)
+    - Tourbillion Technology: 0.5 person-year (Paul Garlick)
     - UTHSC: 0.3 person·year (Pjotr Prins)
     - UBC UMCU: 2(?) person·year (Roel Janssen)
   - internships
