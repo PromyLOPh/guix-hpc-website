@@ -24,8 +24,24 @@
 (define %web-site-title
   "Guix-HPC — Reproducible software deployment for high-performance computing")
 
+(define (post-sxml* post)
+  "Add the 'full-width' class attribute to all 'img' tags of POST so that
+they get properly displayed in blog articles."
+  (let loop ((sxml (post-sxml post)))
+    (match sxml
+      (('img ('@ attributes ...) rest ...)
+       `(img (@ (class "full-width") ,@attributes)
+             ,@rest))
+      (((? symbol? tag) ('@ attributes ...) rest ...)
+       `(,tag (@ ,@attributes) ,@(map loop rest)))
+      (((? symbol? tag) rest ...)
+       `(,tag ,@(map loop rest)))
+      ((lst ...)
+       (map loop lst))
+      (x x))))
+
 (define (summarize-post post uri)
-  (match (post-sxml post)
+  (match (post-sxml* post)
     ((('p paragraph ...) _ ...)
      `((p ,@paragraph)
        (p (a (@ (href ,uri)) "Continue reading…"))))
@@ -37,7 +53,7 @@
   (define post-body*
     (if summarize?
         (cut summarize-post <> post-uri)
-        post-sxml))
+        post-sxml*))
 
   `(div (@ (class "post"))
         (h1 (@ (class "title"))
