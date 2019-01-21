@@ -706,7 +706,7 @@ spirit of functional programming Guix does not allow for side-effects.
 This figure shows the dependency graph for running the workflow, and
 includes  fastqc, trimmomatic-jar, bwa, ipfs-go, and cwltool itself.
 
-![img](./images/workflow-example.svg)
+![Dependency graph of the tools needed to run the workflow](https://guix-hpc.bordeaux.inria.fr/static/images/blog/workflow-example.svg)
 
 This is a huge graph (but not abnormally so). GNU Guix keeps track of all these
 dependencies (here we show versions, but can also show the hash values) and can
