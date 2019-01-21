@@ -976,3 +976,12 @@ guix pack -f docker cwltool trimmomatic-jar bwa fastqc go-ipfs curl
 
 This creates a tar ball which can be loaded into Docker and run - see also
 my [Guix notes](https://gitlab.com/pjotrp/guix-notes/blob/master/CONTAINERS.org).
+
+# Acknowledgements
+
+Quite a number of people read the draft of this blog article. I particularly
+wish to thank Toshiaki Katayama and the Biohackathon in Japan for
+creating the opportunity to work on this topic; Ludovic Courtès and
+Ricardo Wurmus of the GNU Guix project for comments and suggestions;
+Michael Crusoe of the CWL project for comments and suggestions; and
+Prof. Rob W. Williams for textual edits and overall support.
