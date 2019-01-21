@@ -19,41 +19,6 @@ reproducibility with provenance and improved security.
 *Note: this work was mostly executed during the Biohackathon 2018 in
 Matsue, Japan.*
 
-
-# Table of Contents
-
-1.  [Introduction](#org9618575)
-    *  [Common Workflow Language (CWL)](#org17122da)
-    *  [IPFS](#org09cc6f0)
-    *  [GNU Guix](#org3203428)
-    *  [Why content-addressable?](#orgd727637)
-2.  [Getting started](#orgd5430da)
-    *  [GNU Guix installation](#org8801964)
-    *  [IPFS and CWL installation](#orgd4cebd1)
-    *  [Short recap](#org6af2910)
-3.  [The workflow](#orgd5ecc15)
-    *  [Choosing a CWL workflow](#orgf92823c)
-    *  [Add the data sources](#org9c578e7)
-    *  [Run CWL script](#org47e82f7)
-    *  [trimmomatic: adding a binary blob to GNU Guix](#org42325c3)
-    *  [bwa: adding bwa to the profile](#orgcac9712)
-4.  [Prove results are deterministic](#org759f9e2)
-5.  [Capture the provenance graph](#orga0f2f8f)
-    *  [GNU Guix software graph](#orgaf08275)
-    *  [CWL provenance graph](#orgd39788a)
-6.  [Containerised run of workflow](#org87edbd6)
-    *  [A GNU Guix CWL workflow](#org5fa55eb)
-    *  [A full Docker container](#org1085993)
-7.  [Future work](#org76623e9)
-8.  [Discussion](#orgc2e75e5)
-9.  [Extra notes](#org360747a)
-    *  [Create dependency graph](#orgf97df14)
-    *  [Create a Docker container](#org475d172)
-
-
-
-<a id="org17122da"></a>
-
 ## Common Workflow Language (CWL)
 
 The Common Workflow Language (CWL) is a specification for describing
@@ -84,8 +49,6 @@ software inputs are split from the [workflow definition](https://github.com/pjot
 known as Workflows).
 
 
-<a id="org09cc6f0"></a>
-
 ## IPFS
 
 The [InterPlanetary File System](https://ipfs.io/) is a protocol and network designed to
@@ -98,8 +61,6 @@ below) and allows for deduplication, local caching, and swarm-like
 software downloads over the network. IPFS is free software and
 available through GNU Guix.
 
-
-<a id="org3203428"></a>
 
 ## GNU Guix
 
@@ -126,8 +87,6 @@ provides rigorous and robust control of the dependency graph.
 We deploy some massively complicated software deployments using
 development, testing, staging and production environments with and
 without containers. Because of GNU Guix I can sleep at night :).
-
-<a id="orgd727637"></a>
 
 ## Why content-addressable?
 
@@ -167,12 +126,8 @@ most of these references are transparent. The Guix environment deals
 with resolving them as should become clear.
 
 
-<a id="orgd5430da"></a>
-
 # Getting started
 
-
-<a id="org8801964"></a>
 
 ## GNU Guix installation
 
@@ -197,8 +152,6 @@ it can be done on HPC, think again: [Compute Canada](https://archive.fosdem.org/
 their HPCs (over 120,000 cores). And if you can do Nix, you can do
 Guix. Same principles.
 
-
-<a id="orgd4cebd1"></a>
 
 ## IPFS and CWL installation
 
@@ -252,8 +205,6 @@ Note that the guix-cwl [channel](https://github.com/genenetwork/guix-cwl) also p
 we will update for cwltool.
 
 
-<a id="org6af2910"></a>
-
 ## Short recap
 
 After adding the cwl channel we can have the main tools installed in one go with
@@ -272,12 +223,8 @@ ipfs --version
 ```
 
 
-<a id="orgd5ecc15"></a>
-
 # The workflow
 
-
-<a id="orgf92823c"></a>
 
 ## Choosing a CWL workflow
 
@@ -295,8 +242,6 @@ blobs, it is quite hard to verify what is in them, i.e., there is a trust
 issue, and it is usually impossible to recreate them exactly——the core of the
 reproducibility issue. We can do better than this.
 
-
-<a id="org9c578e7"></a>
 
 ## Add the data sources
 
@@ -356,8 +301,6 @@ ipfs pin add QmR81HRaDDvvEjnhrq5ftMF1KRtqp8MiwGzwZnsC4ch1tE
   pinned QmR81HRaDDvvEjnhrq5ftMF1KRtqp8MiwGzwZnsC4ch1tE recursively
 ```
 
-
-<a id="org47e82f7"></a>
 
 ## Run CWL script
 
@@ -518,8 +461,6 @@ and again CWL runs up to
     Error: Unable to access jarfile /usr/local/share/trimmomatic/trimmomatic.jar
 
 
-<a id="org42325c3"></a>
-
 ## trimmomatic: adding a binary blob to GNU Guix
 
 The original workflow pulls trimmomatic.jar as a Docker image. Just as an example
@@ -597,8 +538,6 @@ cwltool --no-container Workflows/test-workflow.cwl Jobs/small.ERR034597.test-wor
 
 The GUIX\_PACKAGE\_PATH points into the workflow directory where I created the package.
 
-
-<a id="orgcac9712"></a>
 
 ## bwa: adding bwa to the profile
 
@@ -701,8 +640,6 @@ Yes!
 The source and full diff can be viewed on [github](https://github.com/hacchy1983/CWL-workflows/compare/master...pjotrp:guix-cwl).
 
 
-<a id="org759f9e2"></a>
-
 # Prove results are deterministic
 
 GNU Guix has an option to rebuild packages multiple times and compare
@@ -763,12 +700,8 @@ is why GNU Guix is called a 'functional package manager' - in the
 spirit of functional programming Guix does not allow for side-effects.
 
 
-<a id="orga0f2f8f"></a>
-
 # Capture the provenance graph
 
-
-<a id="orgaf08275"></a>
 
 ## GNU Guix software graph
 
@@ -790,8 +723,6 @@ stress-free and sane, a rigorous way of managing resources is crucial
 and this is what GNU Guix provides.
 
 
-<a id="orgd39788a"></a>
-
 ## CWL provenance graph
 
 ![A CWL provenance graph](/static/images/blog/cwl-provenance-graph.png)
@@ -807,8 +738,6 @@ view once a repo had been linked. It should be possible to update
 information - at least to create a new generation of workflow. I have now been informed you can only update after 24
 hours&#x2026; That is an odd restriction.
 
-
-<a id="org87edbd6"></a>
 
 # Containerised run of workflow
 
@@ -843,8 +772,6 @@ in from the local environment, depending on how the CWL runner is
 behaving/deployed. This is because software paths are not rigourously
 fixated in CWL scripts - it has to be handled by then environment. One
 way to handle this is by using a GNU Guix container.
-
-<a id="org5fa55eb"></a>
 
 ## A GNU Guix CWL workflow
 
@@ -885,8 +812,6 @@ advertised. See the [output](https://gist.github.com/pjotrp/53c4ab2cdfb95b146695
 fix it).
 
 
-<a id="org1085993"></a>
-
 ## A full Docker container
 
 Now we have the software stack in a GNU Guix container we can also have Guix
@@ -902,8 +827,6 @@ some other repo without using Docker. See also
 <https://github.com/genenetwork/guix-cwl> where we achieved exactly that. Note that a
 recent version of Docker itself is packaged in GNU Guix.
 
-
-<a id="org76623e9"></a>
 
 # Future work
 
@@ -938,8 +861,6 @@ requirement with journal publications. Prototypes of such live
 publications should appear in the coming two years. Here I show that
 we have the technology to make that happen.
 
-
-<a id="orgc2e75e5"></a>
 
 # Discussion
 
@@ -1027,12 +948,8 @@ and pipelines similar to [view.commonwl.org](https://view.commonwl.org/workflows
 creators.
 
 
-<a id="org360747a"></a>
-
 # Extra notes
 
-
-<a id="orgf97df14"></a>
 
 ## Create dependency graph
 
@@ -1053,8 +970,6 @@ And the full [dependency graph](http://biogems.info/cwltool-package.pdf) for cwl
 ```sh
 guix graph  --type=references cwltool |dot -Tpdf > cwltool-references.pdf
 ```
-
-<a id="org475d172"></a>
 
 ## Create a Docker container
 
