@@ -1,12 +1,11 @@
-title: Creating a Reproducible Workflow with CWL
+title: Creating a reproducible workflow with CWL
 subtitle: The quest to build a fully reproducible software pipeline with provenance
 author: Pjotr Prins
-date: 2019-01-21 14:00
+date: 2019-01-21 14:30
 tags: High-performance computing, Research, Reproducibility, Bioinformatics
 ---
 
-
-In the **quest** for truly reproducible workflows I set out to create
+In the quest for truly reproducible workflows I set out to create
 an example of a reproducible workflow using GNU Guix, IPFS, and
 CWL. GNU Guix provides content-addressable, reproducible, and verifiable software
 deployment. IPFS provides content-addressable storage, and CWL
@@ -23,10 +22,10 @@ Matsue, Japan.*
 
 The Common Workflow Language (CWL) is a specification for describing
 analysis workflows and tools in a way that makes them portable and
-scalable across a variety of software and hardware environments——from
-workstations, to clusters, to the cloud, and to secure high
+scalable across a variety of software and hardware environments—from
+workstations, to clusters, to “the cloud”, and to secure high
 performance computing (HPC) environments. CWL is designed to meet the
-needs of data-intensive sciences, such as bio- and medial informatics,
+needs of data-intensive sciences, such as bio- and medical informatics,
 imaging, astronomy, physics, and chemistry.
 
 CWL started as an answer to problems associated with *ad hoc* pipeline
@@ -35,31 +34,31 @@ reliable, modular, and well documented solutions.  The CWL promises a
 future of far more efficient pipeline assembly and use, building on
 components others have created and tested. The objectives of CWL are
 now more important than ever, especially given the [reproducibility
-crisis](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970). Many important publications can not be reproduced using source
+crisis](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970). Many important publications cannot be reproduced using source
 data and the reported workflow. These problems are also
 highlighted in
-[Experimenting
-with reproducibility: a case study of robustness in bioinformatics](https://academic.oup.com/gigascience/article/7/7/giy077/5046609)
-and in [PiGx: reproducible genomics analysis pipelines with GNU Guix](https://www.ncbi.nlm.nih.gov/pubmed/30277498).
+[_Experimenting
+with reproducibility: a case study of robustness in bioinformatics_](https://academic.oup.com/gigascience/article/7/7/giy077/5046609)
+and in [_PiGx: reproducible genomics analysis pipelines with GNU Guix_](https://www.ncbi.nlm.nih.gov/pubmed/30277498).
 
 CWL definitions are comparatively simple once you understand that
-responsibilities are split into three components: [data inputs](https://github.com/pjotrp/CWL-workflows/blob/master/Jobs/small.ERR034597.test-workflow.yml) (aka Jobs in
-CWL parlance) are separate from [software inputs](https://github.com/pjotrp/CWL-workflows/blob/master/Tools/fastqc.cwl) (aka Tools) and
+responsibilities are split into three components: [data inputs](https://github.com/pjotrp/CWL-workflows/blob/master/Jobs/small.ERR034597.test-workflow.yml) (“Jobs” in
+CWL parlance) are separate from [software inputs](https://github.com/pjotrp/CWL-workflows/blob/master/Tools/fastqc.cwl) (aka. “Tools”) and
 software inputs are split from the [workflow definition](https://github.com/pjotrp/CWL-workflows/blob/master/Workflows/test-workflow.cwl) (fortunately
-known as Workflows).
+known as “Workflows”).
 
 
 ## IPFS
 
 The [InterPlanetary File System](https://ipfs.io/) is a protocol and network designed to
-create content-addressable, peer-to-peer method of storing and sharing
+create a content-addressable, peer-to-peer method of storing and sharing
 hypermedia in a distributed file system. IPFS provides a way of
 connecting different data sources and sites together (say from
 different institutes), and can locate and serve files in a
 (reasonably) scalable manner. IPFS is content-addressable (more on this
 below) and allows for deduplication, local caching, and swarm-like
 software downloads over the network. IPFS is free software and
-available through GNU Guix.
+[available through GNU Guix](https://guix-hpc.bordeaux.inria.fr/package/go-ipfs).
 
 
 ## GNU Guix
@@ -68,7 +67,7 @@ available through GNU Guix.
 GNU Project.  The Guix project originated from the work done on the
 [Nix](https://nixos.org/nix/) package manager. There are some
 misconceptions here.  In a way, Guix is to Nix what LDC is to Clang:
-both use the same low-level mechanisms (i.e., build daemon to LLVM),
+both use the same low-level mechanisms (build daemon, LLVM),
 both share the same functional paradigm of software deployment, but
 the rest of the implementation and philosophy is different. There is
 no anymosity between the projects and they still share work and
@@ -104,7 +103,7 @@ of the reference. If the file contents **change** in any way, even a single
 letter, the hash value changes, and therefore the reference. This
 property guarantees you are **always** dealing with the same input
 data - a key property of any reproducible pipeline. There can be **no**
-ambiguity about file names and what they represent. Files can not
+ambiguity about file names and what they represent. Files cannot
 **change** without the file name changing.
 
 Similarly, every GNU Guix software reference includes a hash computed
@@ -141,8 +140,8 @@ you do not have to worry about messing up your Linux system!
 An [install script](https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh) can be run on the command line. That is the easy
 option.  More installation instructions are here at [GitLab](https://gitlab.com/pjotrp/guix-notes/blob/master/INSTALL.org) and here at
 [GNU.org](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html). The short of it is that the Guix (daemon) needs to be installed
-as root, but runs with user land privileges. For those who can not get
-access to root there are [work arounds](https://guix-hpc.bordeaux.inria.fr/blog/2017/10/using-guix-without-being-root/), including the use of
+as root, but runs with user land privileges. For those who cannot get
+access to root there are [workarounds](https://guix-hpc.bordeaux.inria.fr/blog/2017/10/using-guix-without-being-root/), including the use of
 Docker. Ricardo Wurmus describes how MDC deploys GNU Guix on their [HPC](https://guix.mdc-berlin.de/documentation.html)
 and [here](https://elephly.net/posts/2015-04-17-gnu-guix.html) (essentially use one build host and copy files to the
 rest). For HPC we typically use a build host that has privileges, but
@@ -158,23 +157,23 @@ Guix. Same principles.
 IPFS was recently added to GNU Guix.  The first task for me was to update and
 add cwltool to GNU Guix. cwltool is the reference implementation of CWL. This took me a few hours because quite a few
 dependencies had to be added in, and some of these packages have
-'fixated' versions and ultimately do not build on a very recent Python 3.7. Of
+'fixated' versions and ultimately do not build on a very recent Python 3.7. Of
 course this should (and will) be fixed with cwltool, but with Guix we can introduce both older
 and recently updated packages without issues, i.e., fixing dependency
 hell. To manage all this I created a special Guix [channel](https://github.com/genenetwork/guix-cwl) and after
-setting up the channel (see the [README](https://github.com/genenetwork/guix-cwl/blob/master/README.org)) on Debian, Ubuntu, Fedora,
-Arch (etc.) the installation should be as easy as
+setting up the channel (see the [`README`](https://github.com/genenetwork/guix-cwl/blob/master/README.org)) on Debian, Ubuntu, Fedora,
+Arch, etc., the installation should be as easy as
 
 ```sh
 guix package -i cwltool -p ~/opt/cwl
 ```
 
-Note that I am setting a Guix profile in ~/opt/cwl. This profile
+Note that I am setting a Guix profile in `~/opt/cwl`. This profile
 contains symbolic links to all relevant tools installed by GNU Guix
 with that command.
 
 Now to run the tool you need to set the paths etc. with the convenience
-script
+script:
 
 ```sh
 . ~/opt/cwl/etc/profile
@@ -182,16 +181,14 @@ cwltool --help
 ```
 
 I added the packages in these [commits](https://gitlab.com/genenetwork/guix-bioinformatics/commits/master), for example [update CWL](https://gitlab.com/genenetwork/guix-bioinformatics/commit/f65893ba096bc4b190d9101cca8fe490af80109e). Also some
-packages on Guix trunk needed to be updated, including [python-rdflib
-and python-setuptools](https://gitlab.com/genenetwork/guix/commit/1204258ca29bba9966934507287eb320a64afe8f). This leads to the following dependency graph
+packages on Guix trunk needed to be updated, including [`python-rdflib`
+and `python-setuptools`](https://gitlab.com/genenetwork/guix/commit/1204258ca29bba9966934507287eb320a64afe8f). This leads to the following dependency graph
 for cwltool generated by Guix itself:
 
-![img](/static/images/blog/cwltool-dependencies.svg)
-
-(click on the figure to enlarge)
+![Dependencies of cwtool.](/static/images/blog/cwltool-dependencies.svg)
 
 If Guix is correctly installed most packages get downloaded and
-installed as binaries. Guix only builds packages when it can not find
+installed as binaries. Guix only builds packages when it cannot find
 a binary substitute. And now I can run
 
 ```sh
@@ -239,7 +236,7 @@ with IPFS and Guix and make it fully reproducible.
 Note that git does provide provenance but is not suitable for large
 data files. And even though Docker may provide reproducible binary
 blobs, it is quite hard to verify what is in them, i.e., there is a trust
-issue, and it is usually impossible to recreate them exactly——the core of the
+issue, and it is usually impossible to recreate them exactly—the core of the
 reproducibility issue. We can do better than this.
 
 
@@ -291,8 +288,8 @@ Test a file
 ipfs cat QmfRb8TLfVnMbxauTPV2hx5EW6pYYYrCRmexcYCQyQpZjV
 ```
 
-and you should see the contents of small.chr22.fa. You can also browse to
-<http://localhost:8080/ipfs/QmR81HRaDDvvEjnhrq5ftMF1KRtqp8MiwGzwZnsC4ch1tE> on your local machine.
+and you should see the contents of `small.chr22.fa`. You can also browse to
+`http://localhost:8080/ipfs/QmR81HRaDDvvEjnhrq5ftMF1KRtqp8MiwGzwZnsC4ch1tE` on your local machine.
 
 Next you ought to pin the data so it does not get garbage collected by IPFS.
 
@@ -304,14 +301,14 @@ ipfs pin add QmR81HRaDDvvEjnhrq5ftMF1KRtqp8MiwGzwZnsC4ch1tE
 
 ## Run CWL script
 
-Follow the instructions in the original workflow README
+Follow the instructions in the original workflow `README`
 
 ```sh
 cwltool Workflows/test-workflow.cwl Jobs/small.ERR034597.test-workflow.yml
 ```
 
 where the first CWL describes the workflow and the second the data inputs. This command
-complains we don't have Docker. Since we want to run without Docker specify &#x2013;no-container:
+complains we don't have Docker. Since we want to run without Docker specify `--no-container`:
 
 ```sh
 cwltool --no-container Workflows/test-workflow.cwl Jobs/small.ERR034597.test-workflow.yml
@@ -321,17 +318,17 @@ Resulting in
 
     'fastqc' not found: [Errno 2] No such file or directory: 'fastqc': 'fastqc'
 
-which exists in Guix, so
+`fastqc` exists in Guix, so:
 
 ```sh
 guix package -i fastqc -p ~/opt/cwl
 ```
 
-installs
+installs it:
 
     fastqc       0.11.5  /gnu/store/sh0wj2c00vkkh218jb5p34gndfdmbhrf-fastqc-0.11.5
 
-and also downloads missing fastqc dependencies
+… and also downloads missing `fastqc` dependencies:
 
     /gnu/store/sh0wj2c00vkkh218jb5p34gndfdmbhrf-fastqc-0.11.5
     /gnu/store/0j2j0i55s0xykfcgx9fswks8792gk4sk-java-cisd-jhdf5-14.12.6-39162
@@ -340,14 +337,14 @@ and also downloads missing fastqc dependencies
     /gnu/store/m0k3fdpgyms3fwbz24vaxclx6f1rwjdg-java-jbzip2-0.9.1
 
 Note that the package is completely defined with its dependencies and
-'content-addressable'. We can see it pulls in Java and Picard. Note
-also the software is made available under an 'isolated' profile in
-~/opt/cwl. We are not mixing with other software setups. And, in the
+“content-addressable”. We can see it pulls in Java and Picard. Note
+also the software is made available under an “isolated” profile in
+`~/opt/cwl`. We are not mixing with other software setups. And, in the
 end, all software installed in this profile can be hosted in a
 (Docker) container.
 
 After installing with Guix we can rerun the workflow and note that it fails at
-the next step with
+the next step with:
 
 ```sh
 /gnu/store/nwrvpgf3l2d5pccg997cfjq2zqj0ja0j-cwltool-1.0.20181012180214/bin/.cwltool-real 1.0
@@ -370,7 +367,7 @@ Error: Unable to access jarfile /usr/local/share/trimmomatic/trimmomatic.jar
 ```
 
 Partial success. fastqc runs fine and now we hit the next issue.  The
-/usr/local points out there is at least one problem :). There is also another issue in that
+`/usr/local` points out there is at least one problem :). There is also another issue in that
 the data files are specified from the source tree, e.g.
 
 ```yaml
@@ -394,7 +391,7 @@ mkdir DATA
 ```
 
 We need to fetch with IPFS so the description
-becomes
+becomes:
 
 ```diff
 --- a/Jobs/small.ERR034597.test-workflow.yml
@@ -470,7 +467,7 @@ it available to the workflow.
 Guix likes things to be built from source. This is a clear goal of the
 GNU project. But you can
 still stick in binary blobs if you want. Main thing is that they need
-to be available in the /gnu/store to be seen at build/install
+to be available in `/gnu/store` to be seen at build/install
 time. Here I am going to show you how to do this, but keep in mind
 that for reproducible pipelines this is a questionable design
 choice.
@@ -479,25 +476,25 @@ I created a jar download for GNU Guix. This was done by creating a
 Guix channel as part of the repository. The idea of the package in
 words is:
 
--   Download the jar and compute the HASH for Guix with
+-   Download the jar and compute the hash for Guix with:
 
-```sh
-    guix download http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.38.zip
-      /gnu/store/pkjlw42f5ihbvx2af6macinf290l3197-Trimmomatic-0.38.zip
-      0z34y7f9idnxgnyqdc29z4hwdp8f96mlqssyxvks4064nr1aya6l
-```
+	  ```sh
+	  $ guix download http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.38.zip
+	  /gnu/store/pkjlw42f5ihbvx2af6macinf290l3197-Trimmomatic-0.38.zip
+	  0z34y7f9idnxgnyqdc29z4hwdp8f96mlqssyxvks4064nr1aya6l
+	  ```
 
 -   Check the contents of the Zip file
 
-```sh
-unzip -t /gnu/store/pkjlw42f5ihbvx2af6macinf290l3197-Trimmomatic-0.38.zip
-       testing: Trimmomatic-0.38/trimmomatic-0.38.jar   OK
-```
+	  ```sh
+	  $ unzip -t /gnu/store/pkjlw42f5ihbvx2af6macinf290l3197-Trimmomatic-0.38.zip
+	  testing: Trimmomatic-0.38/trimmomatic-0.38.jar   OK
+	  ```
 
--   On running 'guix install' Guix will unzip the file in a 'build' directory
--   You need to tell Guix to copy the file into the target 'installation' directory -
-    we'll copy it into `lib/share/jar`
--   After installation the jar will be available in the profile under that directory path
+-   On running `guix package --install` Guix will unzip the file in a `build` directory
+-   You need to tell Guix to copy the file into the target installation
+    directory—we'll copy it into `lib/share/jar`
+-   After installation the jar will be available in the profile under that directory.
 
 A (paraphrased) YAML definition therefore looks like:
 
@@ -536,10 +533,10 @@ env GUIX_PACKAGE_PATH=../hacchy1983-CWL-workflows/ \
 cwltool --no-container Workflows/test-workflow.cwl Jobs/small.ERR034597.test-workflow.yml
 ```
 
-The GUIX\_PACKAGE\_PATH points into the workflow directory where I created the package.
+The `GUIX_PACKAGE_PATH` variable points into the workflow directory where I created the package.
 
 
-## bwa: adding bwa to the profile
+## Adding bwa to the profile
 
 In the next step the workflow failed because bwa was missing, so added bwa with Guix
 
@@ -547,7 +544,7 @@ In the next step the workflow failed because bwa was missing, so added bwa with 
 guix package -i bwa -p ~/opt/cwl
 ```
 
-And then we got a different error
+And then we got a different error from bwa:
 
     [E::bwa_idx_load_from_disk] fail to locate the index files
 
@@ -566,7 +563,7 @@ If you check the earlier IPFS upload you can see we added them with:
 
 But the workflow does not automatically fetch them. So, we need to fix
 that. Just add them using IPFS (though we could actually
-recreate them using 'bwa index' instead).
+recreate them using `bwa index` instead).
 
 ```diff
 diff --git a/Jobs/small.ERR034597.test-workflow.yml b/Jobs/small.ERR034597.test-workflow.yml
@@ -631,46 +628,47 @@ index fc0d12d..0f87af3 100644
      format: edam:format_1930
 ```
 
-After that we got
+After that we got:
 
     Final process status is success
 
 Yes!
 
-The source and full diff can be viewed on [github](https://github.com/hacchy1983/CWL-workflows/compare/master...pjotrp:guix-cwl).
+The source and full diff can be viewed on [GitHub](https://github.com/hacchy1983/CWL-workflows/compare/master...pjotrp:guix-cwl).
 
 
 # Prove results are deterministic
 
 GNU Guix has an option to rebuild packages multiple times and compare
-the results. In case there is a difference the packages can not be
+the results. In case there is a difference the packages cannot be
 considered deterministic. For example software builds may contain a
 time stamp at time of build. This is harmless, but who is to tell the
 difference is not caused by something else? This is why the
-[reproducible builds](https://reproducible-builds.org/) project exist of which Guix is a member. See also
-[GNU Guix Reproducible builds: a means to an end](http://savannah.gnu.org/forum/forum.php?forum_id=8407).
+[Reproducible Builds](https://reproducible-builds.org/) project exist
+[of which Guix is a
+member](https://www.gnu.org/software/guix/blog/2015/reproducible-builds-a-means-to-an-end/).
 
-The referenc CWL runner does not have such an option (yet). I ran it by hand three times.
-The first time capture the MD5 values with
+The reference CWL runner does not have such an option (yet). I ran it by hand three times.
+The first time capture the MD5 values with:
 
 ```sh
 find . -type f -print0 | xargs -0 md5sum > ~/md5sum.txt
 ```
 
-next times check with
+Next times, check with:
 
 ```sh
 md5sum -c ~/md5sum.txt |grep -v OK
 ```
 
-it complained on one file
+It complained on one file:
 
 ```sh
 ./output.sam: FAILED
     md5sum: WARNING: 1 computed checksum did NOT match
 ```
 
-and the @PG field in the output file contains a temporary path:
+and the `@PG` field in the output file contains the name of a temporary file:
 
 ```diff
 diff output.sam output.sam.2
@@ -682,7 +680,7 @@ diff output.sam output.sam.2
 
 To fix this we could add a step to the pipeline to filter out this field
 or force output to go into the same destination directory. Or tell bwa
-to skip the @PG field.
+to skip the `@PG` field.
 
 Determinism (and reproducibility) may break when the pipeline has
 software that does not behave well. Some tools give different results
@@ -694,7 +692,7 @@ network traffic when the workflow is running. GNU Guix builds all its
 software without a network, i.e., after downloading the files as
 described in the package definition the network is switched off and
 the build procedure runs without network in complete isolation. This
-guarantees software can not download non-deterministic material from
+guarantees software cannot download non-deterministic material from
 the internet. It also guarantees no dependencies can 'bleed' in. This
 is why GNU Guix is called a 'functional package manager' - in the
 spirit of functional programming Guix does not allow for side-effects.
@@ -709,8 +707,6 @@ This figure shows the dependency graph for running the workflow, and
 includes  fastqc, trimmomatic-jar, bwa, ipfs-go, and cwltool itself.
 
 ![img](./images/workflow-example.svg)
-
-(click on the figure to enlarge)
 
 This is a huge graph (but not abnormally so). GNU Guix keeps track of all these
 dependencies (here we show versions, but can also show the hash values) and can
@@ -729,22 +725,22 @@ and this is what GNU Guix provides.
 
 The figure was created by adding the workflow to the CWL viewer online
 (simply by pasting the github link). See
-<https://view.commonwl.org/workflows/github.com/pjotrp/CWL-workflows/blob/guix-cwl/Workflows/test-workflow.cwl>
+<https://view.commonwl.org/workflows/github.com/pjotrp/CWL-workflows/blob/guix-cwl/Workflows/test-workflow.cwl>.
 
 There are two issues with the cwlviewer. First, the PNG/SVG output
-links do not end in .png and .svg respectively. This makes it hard to
+links do not end in `.png` and `.svg` respectively. This makes it hard to
 show them in a browser. Second, I could not find out how to update a
 view once a repo had been linked. It should be possible to update
-information - at least to create a new generation of workflow. I have now been informed you can only update after 24
+information—at least to create a new generation of workflow. I have now been informed you can only update after 24
 hours&#x2026; That is an odd restriction.
 
 
 # Containerised run of workflow
 
 Now you may ask at this point: what is actually the difference with
-the original workflow? There are a few differences - first we were
+the original workflow? There are a few differences—first we were
 forced to make the inputs more explicit. In the original there was no
-mention of BWA index files, they just sat in the github
+mention of BWA index files, they just sat in the GitHub
 repository. The main difference, however, is that we were forced to
 specify all tools and their dependencies. The original workflow simply
 assumed the tools would already be on the system including the CWL
@@ -815,17 +811,18 @@ fix it).
 ## A full Docker container
 
 Now we have the software stack in a GNU Guix container we can also have Guix
-create a Docker container with
+create a Docker container with:
 
 ```sh
-guix pack -f docker cwltool trimmomatic-jar bwa fastqc go-ipfs
-  /gnu/store/57fg8hfah46rclg3vybb9nckg6766izp-docker-pack.tar.gz
+$ guix pack -f docker cwltool trimmomatic-jar bwa fastqc go-ipfs
+/gnu/store/57fg8hfah46rclg3vybb9nckg6766izp-docker-pack.tar.gz
 ```
 
 which writes out a container that can be uploaded to docker hub or
 some other repo without using Docker. See also
 <https://github.com/genenetwork/guix-cwl> where we achieved exactly that. Note that a
-recent version of Docker itself is packaged in GNU Guix.
+recent version of Docker itself is [packaged in
+GNU Guix](https://guix-hpc.bordeaux.inria.fr/package/docker).
 
 
 # Future work
@@ -847,14 +844,14 @@ guix pack -f docker my-workflow
 ```
 
 And everything is pulled into the container. We could even make a Guix
-package (and therefor container) that includes all data inputs.
+package (and therefore a container) that includes all data inputs.
 
 I will leave this as an exercise for the reader right now, but with
 research objects and 'live publications' the enforcement of such
 practices may be around the corner.
 
 In the near future we can imagine that a scientific publication is
-accompanied by a 'live document'. I.e., the pipeline with datasets can
+accompanied by a “live document”.  I.e., the pipeline with datasets can
 be rerun by anyone, anywhere. And results can be reproduced and
 validated. With the current technology stack it can become a common
 requirement with journal publications. Prototypes of such live
@@ -917,11 +914,11 @@ One interesting development is that IPFS might be integrated with GNU
 Guix to make it easier to share data, software source tar balls and
 binary software deployment.
 
-Docker has had a good run over the last few years, but with respect to these last two points –
-transparency and recreatability – Docker really falls short. A Docker image is a binary
-'blob' and it is impossible to go back from the image alone and see
+Docker has had a good run over the last few years, but with respect to
+these last two points—transparency and recreatability—Docker really falls short. A Docker image is a binary
+“blob” and it is impossible to go back from the image alone and see
 how it was built. This is not transparent. In almost all cases,
-Docker build instructions include the equivalent of a 'apt-get update'
+Docker build instructions include the equivalent of a `apt-get update`
 which essentially says the image will end up being different every
 time you create it. This means it is virtually impossible to
 recreate an image. The greatest concern, however, is that of
