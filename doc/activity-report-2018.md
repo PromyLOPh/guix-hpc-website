@@ -151,6 +151,7 @@ and integrated in Guix proper:
 
 These package collections, along with the curated package set that comes
 with Guix (almost 9,000 packages), cover a wide range of HPC use cases.
+
 One such case is numerical simulation.  Development work in this area
 has been supported by [Tourbillion Technology](http://tourbillion-technology.com/).
 Within Guix a module named `(gnu packages simulation)` has been
