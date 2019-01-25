@@ -151,6 +151,23 @@ and integrated in Guix proper:
 
 These package collections, along with the curated package set that comes
 with Guix (almost 9,000 packages), cover a wide range of HPC use cases.
+One such case is numerical simulation.  Development work in this area
+has been supported by [Tourbillion Technology](http://tourbillion-technology.com/).
+Within Guix a module named `(gnu packages simulation)` has been
+established to contain package definitions for simulation software.
+In 2018 the [FEniCS](https://fenicsproject.org/) finite element
+framework was added to the module, complementing the [OpenFOAM](https://openfoam.org/)
+finite volume framework that was added in 2017.  Together these packages
+allow engineers and scientists to tackle a broad range of challenging
+problems within industry and academia.  The ability of Guix to reproduce
+software environments on different systems is significantly helpful in
+the workflow associated with this type of project.  In these projects the
+initial stages of model development are often undertaken on relatively
+small computer systems, scaling-up to HPC systems for the full
+computations when the models are ready.  This move can sometimes be
+problematic, especially for models with complex dependencies on
+underlying libraries.  By setting up consistent environments Guix ensures
+that even highly-complex models can be confidently transfered.
 
 # Cluster Usage
 
