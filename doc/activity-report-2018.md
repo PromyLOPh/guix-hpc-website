@@ -204,14 +204,38 @@ reproducibility, transparency, and flexibility benefits offered by Guix.
 
 ## Articles
 
-  - [Code Staging in GNU Guix](https://hal.inria.fr/hal-01580582/en),
-    Ludovic Courtès, Oct. 2017
-  - [Scientific Data Analysis Pipelines and
-    Reproducibility](https://medium.com/@aakalin/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5),
-    Altuna Akalin, Oct. 2018
-  - [Reproducible Genomics Analysis Pipelines with
-    GNU Guix](https://doi.org/10.1101/298653), Ricardo Wurmus et al,
-    Dec. 2018
+Since the inception of Guix-HPC, two scientific articles were published
+in peer-reviewed conferences:
+
+  - [_Code Staging in GNU Guix_](https://hal.inria.fr/hal-01580582/en),
+    (Ludovic Courtès, Oct. 2017) discusses programming language design
+    issues.  It was presented at the [16th International Conference on
+    Generative Programming: Concepts & Experience (GPCE
+    2017)](http://conf.researchr.org/home/gpce-2017).
+  - [_Reproducible Genomics Analysis Pipelines with
+    GNU Guix_](https://doi.org/10.1101/298653) (Ricardo Wurmus et al,
+    Dec. 2018) was published at the GigaScience [International
+    Conference on Genomics (ICG-13)](http://www.icg-13.org/) where it
+    was
+    [awarded](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/).
+
+Altula Alkalin, research team leader at the Max Delbrück Center (MDC),
+wrote an article entitled [_Scientific Data Analysis Pipelines and
+Reproducibility_](https://medium.com/@aakalin/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5),
+(Oct. 2018).  The article discusses the “reproducibility spectrum” and
+compares existing tools to achieve software environment reproducibility:
+application bundles (also referred to as “containers”), CONDA, and Guix.
+
+We have published [11 articles on this
+blog](https://guix-hpc.bordeaux.inria.fr/blog) touching a range of
+technical topics.
+
+In September 2017, Inria, the MDC, and the Utrecht Bioinformatics Center
+[published an
+article](https://www.inria.fr/en/centre/bordeaux/news/towards-reproducible-software-environments-in-hpc-with-guix)
+for the project launch.  On-line magazine HPC Wire [covered
+it](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibility-problem/).
+
 
 ## Conferences
 
@@ -243,28 +267,6 @@ reproducibility, transparency, and flexibility benefits offered by Guix.
   - Inria Bordeaux (Mar. 2018)
   - Inria Bordeaux (Oct. 2018)
   - URFIST, Bordeaux (Nov. 2018)
-
-## Blog articles
-
-  - Pre-built binaries vs. performance
-  - Installing Guix on a cluster
-  - Guix-HPC at FOSDEM
-  - Guix-HPC debut!
-  - Using Guix Without Being root
-  - HPC goodies in Guix 0.14.0
-  - HPC goodies in Guix 0.15.0
-  - Paper on reproducible bioinformatics pipelines with Guix
-  - Reproducibility vs. root privileges
-  - HPC & reproducible research in Guix 0.16.0
-
-## Media coverage
-
-  - [Towards reproducible software environments in HPC with
-    Guix](https://www.inria.fr/en/centre/bordeaux/news/towards-reproducible-software-environments-in-hpc-with-guix),
-    Sept. 2017
-  - [Project Adapts Reproducibility Software for HPC
-    Environments](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibility-problem/),
-    Sept. 2017
 
 # Personnel
 
