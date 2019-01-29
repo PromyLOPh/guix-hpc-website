@@ -86,8 +86,6 @@ scientific workflows.
 
 ## Reproducible Pipelines
 
-  - TODO: PiGx article by Ricardo et al.
-  - TODO: Guix Workflow Language by Roel et al.
   - TODO: hpcguix-web
 
 [Jupyter Notebooks](https://jupyter.org) have become a tool of choice
@@ -105,6 +103,37 @@ the kernel allows notebook writers to precisely specify the software
 environment the notebook depends on: the Guix packages, and the Guix
 commit.  This ensures that someone replaying the notebook will run it in
 the right environment as the author intended.
+
+For less interactive computations that are to be evaluated on HPC
+clusters, scientists often compose applications to build so-called
+pipelines that express common data processing workflows.  In state of
+the art workflow systems, it is often the users' responsibility to
+prepare a suitable environment in which the workflow's assumptions
+about software applications and libraries are satisfied.  Some
+workflow systems allow the authors to declare a process to be
+dependent on software provided in a Docker application bundle, which
+is convenient but ignores the problem of software provenance.
+
+The genomics pipelines presented in the paper [_PiGx: Reproducible
+Genomics Analysis Pipelines with
+GNU Guix_](https://doi.org/10.1093/gigascience/giy123) are an example
+for an attempt to move the responsibility of provisioning the required
+software environment from the pipeline user to the package manager.
+By using Guix at build time the PiGx pipelines are able to benefit
+from reproducibile software environments and pass that benefit down to
+the users at runtime.
+
+The [Guix Workflow Language (GWL)](https://guixwl.org) takes a
+different approach: instead of assuming that a suitable software
+environment is provided---by the user, by black box container images,
+or through a build system---it *extends* Guix itself with a workflow
+definition language that can make use of its rich facilities for
+reproducible software deployment.  In the past year the GWL has gained
+support for a Python-like whitespace-aware workflow definitions
+through [Wisp](https://www.draketo.de/english/wisp), syntax for
+embedding foreign language code snippets in processes, and facilities
+to more conveniently specify or detect data dependencies between
+processes.
 
 The GWL and the Guix Jupyter kernel take the same approach: making
 reproducible software deployment a built-in feature of a larger tool.
@@ -212,14 +241,15 @@ in peer-reviewed conferences:
     issues.  It was presented at the [16th International Conference on
     Generative Programming: Concepts & Experience (GPCE
     2017)](http://conf.researchr.org/home/gpce-2017).
-  - [_Reproducible Genomics Analysis Pipelines with
-    GNU Guix_](https://doi.org/10.1101/298653) (Ricardo Wurmus et al,
-    Dec. 2018) was published at the GigaScience [International
-    Conference on Genomics (ICG-13)](http://www.icg-13.org/) where it
-    was
-    [awarded](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/).
+  - [_PiGx: Reproducible Genomics Analysis Pipelines with
+    GNU Guix_](https://doi.org/10.1093/gigascience/giy123) (Ricardo
+    Wurmus et al, Dec. 2018) was published in the Open Access journal
+    GigaScience and was presented at the [International Conference on
+    Genomics (ICG-13)](http://www.icg-13.org/) where it was [awarded
+    2nd Runner Up in the GigaScience Prize Track
+    ](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/).
 
-Altula Alkalin, research team leader at the Max Delbrück Center (MDC),
+Altuna Alkalin, research team leader at the Max Delbrück Center (MDC),
 wrote an article entitled [_Scientific Data Analysis Pipelines and
 Reproducibility_](https://medium.com/@aakalin/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5),
 (Oct. 2018).  The article discusses the “reproducibility spectrum” and
@@ -243,7 +273,9 @@ it](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibil
   - EasyBuild User Days 2018
   - GNU Guix Day 2018
   - FOSDEM 2018
-  - GigaScience, China (Oct. 2018, Ricardo Wurmus)
+  - Bio-IT World (May 2018, Ricardo Wurmus), Boston
+  - International Conference on Genomics (ICG-13), China (Oct. 2018,
+    Ricardo Wurmus)
   - Biohackathon Japan 2017 (Pjotr Prins)
   - Biohackathon Paris 2018 (Pjotr Prins)
   - Biohackathon Japan 2018 (Pjotr Prins)
@@ -254,6 +286,7 @@ it](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibil
   - EasyBuild User Days 2018 (Ricardo Wurmus, Pjotr Prins)
   - CERN (May 2018; ~20 people + video; invited talk)
   - Software development plenary, Inria, May 2018
+  ⁃ Bio-IT World, Data Computing track (Ricardo Wurmus, May 2018)
   - [JCAD](https://jcad2018.sciencesconf.org/resource/page/id/7)
     (Nov. 2018; ~100 people + streaming)
   - iHub Nairobi (Pjotr Prins, May 2018)
@@ -263,9 +296,9 @@ it](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibil
 ## Training sessions
 
   - Utrecht?
-  - MDC (? 2018)
   - Inria Bordeaux (Mar. 2018)
   - Inria Bordeaux (Oct. 2018)
+  - MDC (Oct. 2018)
   - URFIST, Bordeaux (Nov. 2018)
 
 # Personnel
