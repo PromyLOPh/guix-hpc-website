@@ -267,35 +267,39 @@ for the project launch.  On-line magazine HPC Wire [covered
 it](https://www.hpcwire.com/off-the-wire/free-software-helps-tackle-reproducibility-problem/).
 
 
-## Conferences
-
-  - FOSDEM 2017
-  - EasyBuild User Days 2018
-  - GNU Guix Day 2018
-  - FOSDEM 2018
-  - Bio-IT World (May 2018, Ricardo Wurmus), Boston
-  - International Conference on Genomics (ICG-13), China (Oct. 2018,
-    Ricardo Wurmus)
-  - Biohackathon Japan 2017 (Pjotr Prins)
-  - Biohackathon Paris 2018 (Pjotr Prins)
-  - Biohackathon Japan 2018 (Pjotr Prins)
-
 ## Talks
 
-  - HPC track FOSDEM 2018 (Ludovic Courtès, Pjotr Prins)
-  - EasyBuild User Days 2018 (Ricardo Wurmus, Pjotr Prins)
-  - CERN (May 2018; ~20 people + video; invited talk)
+Since Guix-HPC was started, we gave talks at a number of venues:
+
+  - [EasyBuild User Days, Jan. 2018](https://github.com/easybuilders/easybuild/wiki/3rd-EasyBuild-User-Meeting)
+    (Ricardo Wurmus, Pjotr Prins)
+  - [GNU Guix Day,
+    Feb. 2018](https://libreplanet.org/wiki/Group:Guix/FOSDEM2018)
+    (Ludovic Courtès, Roel Janssen, Pjotr Prins, Ricardo Wurmus)
+  - [HPC track at FOSDEM, Feb. 2018](https://archive.fosdem.org/2018/schedule/event/guix_workflows/)
+    (Ludovic Courtès)
+  - [CERN, May 2018](https://cds.cern.ch/record/2316926) (Ricardo
+    Wurmus, Ludovic Courtès)
   - Software development plenary, Inria, May 2018
-  ⁃ Bio-IT World, Data Computing track (Ricardo Wurmus, May 2018)
-  - [JCAD](https://jcad2018.sciencesconf.org/resource/page/id/7)
-    (Nov. 2018; ~100 people + streaming)
-  - iHub Nairobi (Pjotr Prins, May 2018)
-  - Biohackathon Matsue Japan (Pjotr Prins, December 2018)
-  - INRA Toulouse (Feb. 2019)
+  - [Bio-IT World, Data Computing track, May
+    2018](https://www.bio-itworldexpo.com/18/data-computing) (Ricardo
+    Wurmus)
+  - [International Conference on Genomics (ICG-13),
+    Oct. 2018](http://www.icg-13.org/) (Ricardo Wurmus)
+  - [JCAD,
+    Nov. 2018](https://jcad2018.sciencesconf.org/resource/page/id/7)
+    (Ludovic Courtès)
+  - [iHub Nairobi, May
+    2018](https://ihub.co.ke/event/75/pjotr-prins-in-nairobi-on-functional-programming-hpcs-in-research-gnu-guix)
+    (Pjotr Prins)
+  - [Biohackathon Japan,
+    Dec. 2018](http://2018.biohackathon.org/symposium) (Pjotr Prins)
 
 ## Training sessions
 
-  - Utrecht?
+We’ve organized a number of Guix training sessions for HPC, primarily at
+our work places:
+
   - Inria Bordeaux (Mar. 2018)
   - Inria Bordeaux (Oct. 2018)
   - MDC (Oct. 2018)
@@ -317,7 +321,6 @@ summarize here.
     - UBC UMCU: 2(?) person·year (Roel Janssen)
   - internships
     - Inria: 4 person·months (Pierre-Antoine Rouby)
-    - ?
 
 # Funding and Support (FIXME: remove?)
 
