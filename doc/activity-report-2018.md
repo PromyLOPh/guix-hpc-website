@@ -1,7 +1,8 @@
-*DRAFT* Guix-HPC Activity Report, 2018
-=================================
-
-# Preface
+title: Guix-HPC Activity Report, 2018
+author: Ludovic Courtès, Paul Garlick, Roel Janssen, Pjotr Prins, Ricardo Wurmus
+date: 2019-01-31 12:00
+slug: guix-hpc-activity-report-2018
+---
 
 Guix-HPC is a collaborative effort to bring reproducible software
 deployment to scientific workflows and high-performance computing (HPC).
