@@ -295,6 +295,12 @@ Since Guix-HPC was started, we gave talks at a number of venues:
     (Pjotr Prins)
   - [Biohackathon Japan,
     Dec. 2018](http://2018.biohackathon.org/symposium) (Pjotr Prins)
+  - [Minimalistic languages track at FOSDEM,
+    Feb. 2019](https://fosdem.org/2019/schedule/event/guixinfra/)
+    (Ricardo Wurmus)
+  - [Distributions track at FOSDEM,
+    Feb. 2019](https://fosdem.org/2019/schedule/event/gnu_guix_new_approach_to_software_distribution/)
+    (Ludovic Courtès)
 
 ## Training sessions
 
@@ -331,3 +337,13 @@ summarize here.
   - training sessions
   - conference travel expenses(?)
   - GNU Guix Day was sponsored by GeneNetwork and Guix Europe
+
+# Perspectives (TODO)
+
+  - GWL
+  - Jupyter kernel
+  - easier unprivileged use (daemon running in a user ns or no daemon at
+    all)
+  - integration with batch schedulers?
+  - work with review editors to integrate in their workflows (ReScience,
+    etc.)
