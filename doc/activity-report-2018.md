@@ -338,12 +338,37 @@ summarize here.
   - conference travel expenses(?)
   - GNU Guix Day was sponsored by GeneNetwork and Guix Europe
 
-# Perspectives (TODO)
+# Perspectives
 
-  - GWL
-  - Jupyter kernel
-  - easier unprivileged use (daemon running in a user ns or no daemon at
-    all)
-  - integration with batch schedulers?
-  - work with review editors to integrate in their workflows (ReScience,
-    etc.)
+In the coming years, we plan to continue our development efforts.  Some
+of them concern directly the core of Guix.  In particular, we would like
+to further simplify the use of Guix on clusters where Guix is not
+installed by refining the `guix pack` tool or by turning the build
+daemon into a library that would make it easy to run builds as non-root
+on such systems.  We may also provide services built around that; `guix
+pack` as a service, for instance, would make it easy for users to build
+“container images” in a reproducible fashion.
+
+Of the more exciting developments, work on the GWL and on the Jupyter
+kernel shows that integrating reproducible software deployment
+capabilities to existing applications is a fruitful.  We believe it’s an
+easy to bring reproducible deployment into the hands of scientists,
+directly within the tools that they use daily.  We will continue working
+in that direction, and we hope to extend to other tools as well—workflow
+management tools, batch schedulers, and “active paper” authoring tools
+come to mind.
+
+Beyond development, one of the missions of Guix-HPC is to support
+reproducible science efforts.  Achieving fully reproducible scientific
+computing pipelines is a lot of work in itself, but we believe
+reproducible software deployment is a prerequisite.  We will continue
+publishing on this topic, giving talks and training sessions, and
+generally raise awareness on the importance of reproducible software
+deployment, the ways Guix helps achieve that, and the shortcomings of
+popular approaches such as Docker-style application bundles.  We hope to
+work more closely with initiatives such as
+[ReScience](https://rescience.github.io) and with scientific societies
+to investigate ways Guix could help improve their reviewing worflows.
+
+We are very much open to new ideas and we’d like to [hear from
+you](https://guix-hpc.bordeaux.inria.fr/about)!
