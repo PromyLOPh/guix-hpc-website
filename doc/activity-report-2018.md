@@ -198,6 +198,12 @@ problematic, especially for models with complex dependencies on
 underlying libraries.  By setting up consistent environments Guix ensures
 that even highly-complex models can be confidently transfered.
 
+Guix added support in its 0.13.0 release of mid-2017 for ARM's 64-bit
+aarch64 processors, which are becomming increasingly popular as a
+target for HPC clusters.  Since then, several core linear algebra and
+maths libraries have had work done, thanks to [Cray
+Inc](http://www.cray.com/), to better support this architecture.
+
 # Cluster Usage
 
 GNU Guix has been deployed on clusters at our research institutes and in
@@ -325,7 +331,7 @@ institutions have dedicated work hours to the project, which we
 summarize here.
 
   - development, leadership, and support:
-    - Cray, Inc.: ? person·year (Eric Bavier)
+    - Cray, Inc.: .4 person·year (Eric Bavier)
     - Inria: 2 person·year (Ludovic Courtès)
     - MDC: 2 person·year (Ricardo Wurmus)
     - Tourbillion Technology: 0.5 person-year (Paul Garlick)
