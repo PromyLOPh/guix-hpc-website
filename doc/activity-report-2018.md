@@ -87,8 +87,6 @@ scientific workflows.
 
 ## Reproducible Pipelines
 
-  - TODO: hpcguix-web
-
 [Jupyter Notebooks](https://jupyter.org) have become a tool of choice
 for scientists willing to share, and hopefully reproduce computational
 experiments.  Yet, nothing in a notebook specifies which software
@@ -228,7 +226,14 @@ executables](https://www.gnu.org/software/guix/blog/2018/tarballs-the-ultimate-c
 This interoperability tool allows users to not give up on the
 reproducibility, transparency, and flexibility benefits offered by Guix.
 
-  - TODO: hpcguix-web, explain customization in Utrecht
+To help cluster users get started with Guix,
+[hpcguix-web](https://github.com/UMCUGenetics/hpcguix-web), initially
+developed at the UMC Utrecht, provides a web interface that allows users
+to search for software packages and to learn how to install them.  A
+public instance is visible [on the Guix-HPC web
+site](https://guix-hpc.bordeaux.inria.fr/browse).  Hpcguix-web is
+customizable and the instance running in Utrecht provides users with
+additional information such as how to use the batch scheduler.
 
 # Outreach and user support
 
