@@ -362,19 +362,19 @@ pack` as a service, for instance, would make it easy for users to build
 
 Of the more exciting developments, work on the GWL and on the Jupyter
 kernel shows that integrating reproducible software deployment
-capabilities to existing applications is a fruitful.  We believe it’s an
-easy to bring reproducible deployment into the hands of scientists,
-directly within the tools that they use daily.  We will continue working
-in that direction, and we hope to extend to other tools as well—workflow
-management tools, batch schedulers, and “active paper” authoring tools
-come to mind.
+capabilities with existing applications is a fruitful endeavor.  We
+believe it’s an easy way to bring reproducible deployment into the
+hands of scientists, directly within the tools that they use daily.
+We will continue working in that direction, and we hope to extend to
+other tools as well—workflow management tools, batch schedulers, and
+“active paper” authoring tools come to mind.
 
 Beyond development, one of the missions of Guix-HPC is to support
 reproducible science efforts.  Achieving fully reproducible scientific
 computing pipelines is a lot of work in itself, but we believe
 reproducible software deployment is a prerequisite.  We will continue
 publishing on this topic, giving talks and training sessions, and
-generally raise awareness on the importance of reproducible software
+generally raise awareness of the importance of reproducible software
 deployment, the ways Guix helps achieve that, and the shortcomings of
 popular approaches such as Docker-style application bundles.  We hope to
 work more closely with initiatives such as
