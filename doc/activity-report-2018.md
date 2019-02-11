@@ -1,5 +1,5 @@
 title: Guix-HPC Activity Report, 2018
-author: Ludovic Courtès, Paul Garlick, Roel Janssen, Pjotr Prins, Ricardo Wurmus
+author: Eric Bavier, Ludovic Courtès, Paul Garlick, Pjotr Prins, Ricardo Wurmus
 date: 2019-01-31 12:00
 slug: guix-hpc-activity-report-2018
 ---
