@@ -85,6 +85,13 @@ directory containing Lout files."
                (map sxml->skribilo strings))
               ((? string? str) str)))
 
+          (define (back-cover)
+            (! (format #f "@NP
+#@I { \"https://guix-hpc.bordeaux.inria.fr/\"
+//1rt
+@Right 0.9 @Scale @IncludeGraphic { ~s }\n"
+                       #+(svg->eps logo "guix-logo.eps"))))
+
           (define top
             ;; The Skribilo document.
             (document
@@ -93,7 +100,8 @@ directory containing Lout files."
                              (author #:name name))
                            (string-split (assoc-ref headers 'author)
                                          #\,))
-             (map sxml->skribilo body)))
+             (map sxml->skribilo body)
+             (back-cover)))
 
           (define %unicode-chars
             ;; XXX: The Lout engine in Skribilo 0.9.4 doesn't automatically
@@ -109,17 +117,18 @@ directory containing Lout files."
               (#\… "...")))
 
           (define (make-front-cover doc engine)
-            (format #t "0.9 @Scale { @IncludeGraphic { ~s } }"
+            (format #t "{ @IncludeGraphic { ~s } }"
                     #+(svg->eps logo "guix-logo.eps"))
             (output (! "
-//0.3c { Helvetica Bold 8p } @Font \"darkgrey\" @Color
+//0.3c { Helvetica Bold 9p } @Font \"darkgrey\" @Color
 { Reproducible software deployment for high-performance computing. }
 
-//0.6rt { Helvetica Bold 22p } @Font { Activity Report 2017--2018 }
+//0.6rt { Helvetica Bold 24p } @Font { Activity Report 2017--2018 }
 //1rt
-{ Helvetica Base 8p } @Font \"darkgrey\" @Color { $1 }
+{ Helvetica Base 9p } @Font \"darkgrey\" @Color { $1 }
 @NP\n
-@NP\n"                                            ;page 2 must be empty
+@NP                                            # page 2 must be empty
+//.2bt\n"
                        (assoc-ref headers 'author))
                     engine))
 
@@ -138,10 +147,11 @@ directory containing Lout files."
           (engine-custom-set! lout-engine 'document-include
                               "@Include { doc-style.lout }\n")
 	  (engine-custom-set! lout-engine 'initial-font
-                              "GentiumPlus Base 9p")
+                              "GentiumPlus Base 11p")
 	  (engine-custom-set! lout-engine 'initial-break
 	                      (string-append "unbreakablefirst "
 			                     "unbreakablelast "
+                                             "marginkerning "
 			                     "hyphen adjust 1.3fx"))
           (engine-custom-set! lout-engine 'includes
                               (string-append

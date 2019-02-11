@@ -41,7 +41,7 @@
 
 @Use { @BasicSetup
   # @InitialFont	{ Times Base 12p	} # initial font
-  # @InitialBreak	{{adjust 1.2fx hyphen} @OrIfPlain {ragged 1fx nohyphen}}
+    @InitialBreak	{ unbreakablefirst unbreakablelast hyphen adjust marginkerning 1.3fx }
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
   # @InitialLanguage	{ English		} # initial language
@@ -88,12 +88,12 @@
   # @PageHeight		{ 66f			} # page height if type Other
   # @PageOrientation	{ Portrait		} # Portrait, Landscape, etc.
   # @PageBackground	{  			} # background of each page
-    @TopMargin		{ 1.6c	@OrIfPlain 6f	} # top margin of all pages
-    @FootMargin		{ 2.8c	@OrIfPlain 6f	} # bottom margin of all pages
-    @OddLeftMargin	{ 1.8c	@OrIfPlain 10s	} # left margin of odd pages
-    @OddRightMargin	{ 2.8c	@OrIfPlain 10s	} # right margin of odd pages
-    @EvenLeftMargin	{ 2.8c	@OrIfPlain 10s	} # left margin of even pages
-    @EvenRightMargin	{ 1.8c	@OrIfPlain 10s	} # right margin of even pages
+    @TopMargin		{ 1.0c	@OrIfPlain 6f	} # top margin of all pages
+    @FootMargin		{ 2.0c	@OrIfPlain 6f	} # bottom margin of all pages
+    @OddLeftMargin	{ 1.2c	@OrIfPlain 10s	} # left margin of odd pages
+    @OddRightMargin	{ 2.0c	@OrIfPlain 10s	} # right margin of odd pages
+    @EvenLeftMargin	{ 2.0c	@OrIfPlain 10s	} # left margin of even pages
+    @EvenRightMargin	{ 1.2c	@OrIfPlain 10s	} # right margin of even pages
   # @OddLeftBodyMargin	{ 0c			} # extra margin for page body
   # @OddRightBodyMargin	{ 0c			} # extra margin for page body
   # @EvenLeftBodyMargin	{ 0c			} # extra margin for page body
