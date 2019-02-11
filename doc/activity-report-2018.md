@@ -21,7 +21,7 @@ organizations, including [Cray, Inc.](https://www.cray.com) and
 [Tourbillion Technology](http://tourbillion-technology.com/).
 
 This report highlights key achievements of Guix-HPC between its launch
-date in September 2017 and today, December 2018.
+date in September 2017 and today, February 2019.
 
 # Outline
 
@@ -315,13 +315,10 @@ Since Guix-HPC was started, we gave talks at a number of venues:
 
 ## Training sessions
 
-We’ve organized a number of Guix training sessions for HPC, primarily at
-our work places:
-
-  - Inria Bordeaux (Mar. 2018)
-  - Inria Bordeaux (Oct. 2018)
-  - MDC (Oct. 2018)
-  - URFIST, Bordeaux (Nov. 2018)
+We’ve organized a number of Guix training sessions for HPC, in
+particular at Inria (March and October 2018), at the MDC (October 2018),
+and URFIST, the French unit for training and scientific information in
+Bordeaux (November 2018).
 
 # Personnel
 
@@ -331,12 +328,12 @@ institutions have dedicated work hours to the project, which we
 summarize here.
 
   - development, leadership, and support:
-    - Cray, Inc.: .4 person·year (Eric Bavier)
+    - Cray, Inc.: 0.4 person·year (Eric Bavier)
     - Inria: 2 person·year (Ludovic Courtès)
     - MDC: 2 person·year (Ricardo Wurmus)
     - Tourbillion Technology: 0.5 person-year (Paul Garlick)
     - UTHSC: 0.3 person·year (Pjotr Prins)
-    - UBC UMCU: 2(?) person·year (Roel Janssen)
+    - UBC UMCU: 1 person·year (Roel Janssen)
   - internships
     - Inria: 4 person·months (Pierre-Antoine Rouby)
 
@@ -346,7 +343,6 @@ summarize here.
     - MDC: build farm (25 machines)
     - Inria: Guix-HPC web server (1 machine)
   - training sessions
-  - conference travel expenses(?)
   - GNU Guix Day was sponsored by GeneNetwork and Guix Europe
 
 # Perspectives
