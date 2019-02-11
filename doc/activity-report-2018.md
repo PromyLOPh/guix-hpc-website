@@ -263,7 +263,7 @@ in peer-reviewed conferences:
 
 Altuna Alkalin, research team leader at the Max Delbrück Center (MDC),
 wrote an article entitled [_Scientific Data Analysis Pipelines and
-Reproducibility_](https://medium.com/@aakalin/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5),
+Reproducibility_](https://medium.com/@aakalin/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5)
 (Oct. 2018).  The article discusses the “reproducibility spectrum” and
 compares existing tools to achieve software environment reproducibility:
 application bundles (also referred to as “containers”), CONDA, and Guix.
@@ -327,15 +327,15 @@ than 40 people every month.  As part of Guix-HPC though, participating
 institutions have dedicated work hours to the project, which we
 summarize here.
 
-  - development, leadership, and support:
-    - Cray, Inc.: 0.4 person·year (Eric Bavier)
-    - Inria: 2 person·year (Ludovic Courtès)
-    - MDC: 2 person·year (Ricardo Wurmus)
-    - Tourbillion Technology: 0.5 person-year (Paul Garlick)
-    - UTHSC: 0.3 person·year (Pjotr Prins)
-    - UBC UMCU: 1 person·year (Roel Janssen)
-  - internships
-    - Inria: 4 person·months (Pierre-Antoine Rouby)
+  - Cray, Inc.: 0.4 person·year (Eric Bavier)
+  - Inria: 2 person·year (Ludovic Courtès) + 4 person·months
+    (Pierre-Antoine Rouby, intern)
+  - Max Delbrück Center for Molecular Medicine (MDC): 2 person·year
+    (Ricardo Wurmus)
+  - Tourbillion Technology: 0.5 person-year (Paul Garlick)
+  - University of Tennessee Health Science Center (UTHSC): 0.3
+    person·year (Pjotr Prins)
+  - Utrecht Bioinformatics Center (UBC): 1 person·year (Roel Janssen)
 
 # Funding and Support (FIXME: remove?)
 
