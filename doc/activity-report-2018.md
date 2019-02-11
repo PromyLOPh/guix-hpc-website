@@ -337,14 +337,6 @@ summarize here.
     person·year (Pjotr Prins)
   - Utrecht Bioinformatics Center (UBC): 1 person·year (Roel Janssen)
 
-# Funding and Support (FIXME: remove?)
-
-  - hardware and hosting
-    - MDC: build farm (25 machines)
-    - Inria: Guix-HPC web server (1 machine)
-  - training sessions
-  - GNU Guix Day was sponsored by GeneNetwork and Guix Europe
-
 # Perspectives
 
 In the coming years, we plan to continue our development efforts.  Some
