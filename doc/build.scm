@@ -50,6 +50,7 @@ directory containing Lout files."
                        (skribilo evaluator)
                        (skribilo package base)
                        (skribilo utils strings)
+                       (srfi srfi-19)
                        (ice-9 match))
 
           (define-values (headers body)
@@ -138,10 +139,12 @@ directory containing Lout files."
             (output (! "
 //0.8rt { Helvetica Bold 24p } @Font { Activity Report 2017--2018 }
 //1rt
-{ Helvetica Base 9p } @Font \"darkgrey\" @Color { $1 }
+{ Helvetica Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
 @NP\n
 @NP                                            # page 2 must be empty
 //.2bt\n"
+                       (date->string (assoc-ref headers 'date)
+                                     "~e ~B ~Y")
                        (assoc-ref headers 'author))
                     engine))
 
