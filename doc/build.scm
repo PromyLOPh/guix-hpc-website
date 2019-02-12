@@ -37,6 +37,9 @@ directory containing Lout files."
   (define logo
     (local-file "../image-sources/guixhpc-logo-transparent-white.svg"))
 
+  (define lab-book
+    (local-file "lab-book-cover.svg"))
+
   (define build
     (with-extensions %authoring-packages
       #~(begin
@@ -121,11 +124,15 @@ directory containing Lout files."
           (define (make-front-cover doc engine)
             (format #t "{ @IncludeGraphic { ~s } }"
                     #+(svg->eps logo "guix-logo.eps"))
-            (output (! "
+            (format #t "
 //0.3c { Helvetica Bold 9p } @Font \"darkgrey\" @Color
 { Reproducible software deployment for high-performance computing. }
 
-//0.6rt { Helvetica Bold 24p } @Font { Activity Report 2017--2018 }
+//0.6rt
+@Center 0.3 @Scale { @IncludeGraphic { ~s } }\n"
+                    #+(svg->eps lab-book "lab-book.eps"))
+            (output (! "
+//0.8rt { Helvetica Bold 24p } @Font { Activity Report 2017--2018 }
 //1rt
 { Helvetica Base 9p } @Font \"darkgrey\" @Color { $1 }
 @NP\n
