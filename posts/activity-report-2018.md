@@ -7,7 +7,7 @@ slug: guix-hpc-activity-report-2018
 Guix-HPC is a collaborative effort to bring reproducible software
 deployment to scientific workflows and high-performance computing (HPC).
 Guix-HPC builds upon the [GNU Guix](https://www.gnu.org/software/guix/)
-software deployment tool and aims to make it a better tool to HPC
+software deployment tool and aims to make it a better tool for HPC
 practitioners and scientists concerned with reproducible research.
 
 Guix-HPC was launched in September 2017 as a joint software development
@@ -180,7 +180,7 @@ and integrated in Guix proper:
     [Genenetwork](http://genenetwork.org/).
 
 These package collections, along with the curated package set that comes
-with Guix (almost 9,000 packages), cover a wide range of HPC use cases.
+with Guix (more than 9,000 packages), cover a wide range of HPC use cases.
 
 One such case is numerical simulation.  Development work in this area
 has been supported by [Tourbillion Technology](http://tourbillion-technology.com/).
