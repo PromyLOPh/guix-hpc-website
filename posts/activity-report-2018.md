@@ -41,6 +41,8 @@ these areas.
 
 # Reproducible Scientific Workflows
 
+![Lab book.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/lab-book.svg)
+
 Research heavily depends on computational results, which in turn depends
 on the ability to reproduce software environments.  As key scientific
 organizations such as the Association for Computer Machinery (ACM) and
@@ -206,6 +208,8 @@ Inc](http://www.cray.com/), to better support this architecture.
 
 # Cluster Usage
 
+![High-performance computing cluster.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/hpc-cluster.svg)
+
 GNU Guix has been deployed on clusters at our research institutes and in
 other places. One of our first task has been to simplify the deployment
 and installation of Guix on clusters, providing new features for
@@ -242,6 +246,8 @@ customizable and the instance running in Utrecht provides users with
 additional information such as how to use the batch scheduler.
 
 # Outreach and user support
+
+![Containers are like smoothies.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/container-smoothie.svg)
 
 ## Articles
 
@@ -371,3 +377,8 @@ to investigate ways Guix could help improve their reviewing worflows.
 
 We are very much open to new ideas and we’d like to [hear from
 you](https://guix-hpc.bordeaux.inria.fr/about)!
+
+# Credits
+
+Illustrations are copyright © 2019 Ricardo Wurmus, available under the
+terms of the CC-BY-SA 4.0 international licence.

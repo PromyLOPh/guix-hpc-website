@@ -83,6 +83,8 @@ directory containing Lout files."
                (tt (map sxml->skribilo body)))
               (((? string? strings) ...)
                (map sxml->skribilo strings))
+              (('img . _)
+               #t)                                ;dismiss images
               ((? string? str) str)))
 
           (define (back-cover)
