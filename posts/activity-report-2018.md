@@ -7,7 +7,7 @@ slug: guix-hpc-activity-report-2018
 _This document is also available as a
 [PDF](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018.pdf)
 ([printable
-booklet](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018-booklet.pdf)).
+booklet](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018-booklet.pdf))._
 
 Guix-HPC is a collaborative effort to bring reproducible software
 deployment to scientific workflows and high-performance computing (HPC).
