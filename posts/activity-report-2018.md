@@ -245,9 +245,16 @@ site](https://guix-hpc.bordeaux.inria.fr/browse).  Hpcguix-web is
 customizable and the instance running in Utrecht provides users with
 additional information such as how to use the batch scheduler.
 
-# Outreach and user support
+# Outreach and User Support
 
 ![Containers are like smoothies.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/container-smoothie.svg)
+
+One aspect of our work on Guix-HPC is to “spread the word” about the
+importance of being able not just to replicate software environments,
+but also to inspect and modified those software environments.  These are
+key to proper scientific understanding and experimentation.  This
+section summarizes articles we published and talks we gave around these
+topics.
 
 ## Articles
 
@@ -274,9 +281,11 @@ Reproducibility_](https://medium.com/@aakalin/scientific-data-analysis-pipelines
 compares existing tools to achieve software environment reproducibility:
 application bundles (also referred to as “containers”), CONDA, and Guix.
 
-We have published [11 articles on this
+We have published [12 articles on this
 blog](https://guix-hpc.bordeaux.inria.fr/blog) touching a range of
-technical topics.
+technical topics: running Guix without being root, on the performance of
+pre-built binaries, creating reproducible workflows with CWL or PiGx,
+and more.
 
 In September 2017, Inria, the MDC, and the Utrecht Bioinformatics Center
 [published an
@@ -319,7 +328,7 @@ Since Guix-HPC was started, we gave talks at a number of venues:
     Feb. 2019](https://fosdem.org/2019/schedule/event/gnu_guix_new_approach_to_software_distribution/)
     (Ludovic Courtès)
 
-## Training sessions
+## Training Sessions
 
 We’ve organized a number of Guix training sessions for HPC, in
 particular at Inria (March and October 2018), at the MDC (October 2018),
