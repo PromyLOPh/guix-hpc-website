@@ -355,15 +355,15 @@ than 40 people every month.  As part of Guix-HPC though, participating
 institutions have dedicated work hours to the project, which we
 summarize here.
 
-  - Cray, Inc.: 0.4 person·year (Eric Bavier)
-  - Inria: 2 person·year (Ludovic Courtès) + 4 person·months
+  - Cray, Inc.: 0.4 person-year (Eric Bavier)
+  - Inria: 2 person-years (Ludovic Courtès) + 4 person-months
     (Pierre-Antoine Rouby, intern)
-  - Max Delbrück Center for Molecular Medicine (MDC): 2 person·year
+  - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus)
   - Tourbillion Technology: 0.5 person-year (Paul Garlick)
   - University of Tennessee Health Science Center (UTHSC): 0.3
-    person·year (Pjotr Prins)
-  - Utrecht Bioinformatics Center (UBC): 1 person·year (Roel Janssen)
+    person-year (Pjotr Prins)
+  - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
 
 # Perspectives
 
