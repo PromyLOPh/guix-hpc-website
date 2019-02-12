@@ -61,9 +61,14 @@ directory containing Lout files."
                   (values headers
                           (commonmark->sxml port))))))
 
+          (define (also-as-pdf? str)
+            (string-prefix? "This document is also available" str))
+
           (define (sxml->skribilo sxml)
             ;; Convert SXML to Skribilo nodes.
             (match sxml
+              (('p ('em (? also-as-pdf? str) . _))
+               #t)                                ;discard
               (('p . body)
                (paragraph (map sxml->skribilo body)))
               (('h1 title)                        ;start on a new page
