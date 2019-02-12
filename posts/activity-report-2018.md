@@ -4,7 +4,7 @@ date: 2019-02-12 14:00
 slug: guix-hpc-activity-report-2018
 ---
 
-_This document is also available as a
+_This document is also available as
 [PDF](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018.pdf)
 ([printable
 booklet](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018-booklet.pdf))._
