@@ -278,6 +278,6 @@ PDF."
   (computed-file (basename file ".lout") build))
 
 
-(lout->pdf (markdown->lout (local-file "activity-report-2018.md"))
+(lout->pdf (markdown->lout (local-file "../posts/activity-report-2018.md"))
            "activity-report-2018.lout"
            #:paper-size "A5")
