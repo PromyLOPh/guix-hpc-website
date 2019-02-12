@@ -265,7 +265,7 @@ additional information such as how to use the batch scheduler.
 
 # Outreach and User Support
 
-![Containers are like smoothies.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/container-smoothie.svg)
+![Containers are like smoothies.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/container-smoothie.png)
 
 One aspect of our work on Guix-HPC is to “spread the word” about the
 importance of being able not just to replicate software environments,
