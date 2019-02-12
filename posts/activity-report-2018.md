@@ -115,6 +115,19 @@ workflow systems allow the authors to declare a process to be
 dependent on software provided in a Docker application bundle, which
 is convenient but ignores the problem of software provenance.
 
+As demonstrated by Pjotr Prins in a [blog
+post](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/creating-a-reproducible-workflow-with-cwl/),
+GNU Guix can be used to build reproducible software environments
+incrementally or declaratively to prepare the context in which an
+existing Common Workflow Language (CWL) workflow is to be executed.
+Compared to the use of Docker containers this unlocks software
+provenance and source/binary transparency while only requiring minor
+modifications to existing workflow definitions.  While the burden of
+preparing the environment still lies with the user, this approach
+allows for a smooth transition to more reproducible workflows as Guix
+environments can be transparently described with a plain text
+manifest.
+
 The genomics pipelines presented in the paper [_PiGx: Reproducible
 Genomics Analysis Pipelines with
 GNU Guix_](https://doi.org/10.1093/gigascience/giy123) are an example
