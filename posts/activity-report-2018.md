@@ -72,7 +72,7 @@ replicate a Guix setup, as [explained in the release notes of version
 Better yet, Guix allows mixing software packages coming from different
 Guix revisions through a new mechanism called _inferiors_.
 
-With the help of the [Software Heritage](https://softwareheritage.org)
+With the help of the [Software Heritage](https://www.softwareheritage.org)
 engineers, we designed and implemented a back-end [that allows Guix to
 fetch source code from Software
 Heritage](https://issues.guix.info/issue/33432).  Software Heritage is a
@@ -219,7 +219,7 @@ underlying libraries.  By setting up consistent environments Guix ensures
 that even highly-complex models can be confidently transfered.
 
 Guix added support in its 0.13.0 release of mid-2017 for ARM's 64-bit
-aarch64 processors, which are becomming increasingly popular as a
+aarch64 processors, which are becoming increasingly popular as a
 target for HPC clusters.  Since then, several core linear algebra and
 maths libraries have had work done, thanks to [Cray
 Inc](http://www.cray.com/), to better support this architecture.
@@ -400,7 +400,7 @@ deployment, the ways Guix helps achieve that, and the shortcomings of
 popular approaches such as Docker-style application bundles.  We hope to
 work more closely with initiatives such as
 [ReScience](https://rescience.github.io) and with scientific societies
-to investigate ways Guix could help improve their reviewing worflows.
+to investigate ways Guix could help improve their reviewing workflows.
 
 We are very much open to new ideas and we’d like to [hear from
 you](https://guix-hpc.bordeaux.inria.fr/about)!
