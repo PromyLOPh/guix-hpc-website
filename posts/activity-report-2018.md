@@ -144,8 +144,8 @@ the users at runtime.
 
 The [Guix Workflow Language (GWL)](https://guixwl.org) takes a
 different approach: instead of assuming that a suitable software
-environment is provided---by the user, by black box container images,
-or through a build system---it *extends* Guix itself with a workflow
+environment is provided—by the user, by black box container images,
+or through a build system—it *extends* Guix itself with a workflow
 definition language that can make use of its rich facilities for
 reproducible software deployment.  In the past year the GWL has gained
 support for a Python-like whitespace-aware workflow definitions
@@ -269,7 +269,7 @@ additional information such as how to use the batch scheduler.
 
 One aspect of our work on Guix-HPC is to “spread the word” about the
 importance of being able not just to replicate software environments,
-but also to inspect and modified those software environments.  These are
+but also to inspect and modify those software environments.  These are
 key to proper scientific understanding and experimentation.  This
 section summarizes articles we published and talks we gave around these
 topics.
@@ -279,7 +279,7 @@ topics.
 Since the inception of Guix-HPC, two scientific articles were published
 in peer-reviewed conferences:
 
-  - [_Code Staging in GNU Guix_](https://hal.inria.fr/hal-01580582/en),
+  - [_Code Staging in GNU Guix_](https://hal.inria.fr/hal-01580582/en)
     (Ludovic Courtès, Oct. 2017) discusses programming language design
     issues.  It was presented at the [16th International Conference on
     Generative Programming: Concepts & Experience (GPCE
