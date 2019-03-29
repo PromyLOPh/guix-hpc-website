@@ -245,4 +245,4 @@ revisions of packages it provides…  There are still technical challenges
 to overcome, but that vision is shaping up.
 
 > _Originally published [on the Guix
-> blog](https://www.gnu.org/software/guix/blog/2019/connecting-reproducible-deployment-to-a-long-term-source-code-archive/)_
+> blog](https://www.gnu.org/software/guix/blog/2019/connecting-reproducible-deployment-to-a-long-term-source-code-archive/)._
