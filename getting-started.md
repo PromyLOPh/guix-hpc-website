@@ -32,13 +32,11 @@ Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
 
 # Installing Packages
 
-The
-[`guix package` command](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-package.html) is
-the entry point.  Say you’re searching for a sparse solver among the
-[8,500+ packages](/browse) that come with Guix:
+Say you’re searching for a sparse solver among the
+[9,500+ packages](/browse) that come with Guix:
 
 ```
-$ guix package -s sparse -s solver
+$ guix search sparse solver
 name: mumps
 version: 5.0.2
 outputs: out
@@ -61,12 +59,11 @@ relevance: 12
 To install it along with the latest GNU compiler tool chain:
 
 ```
-$ guix package -i mumps gcc-toolchain
+$ guix install mumps gcc-toolchain
 The following packages will be installed:
    mumps	5.0.2	/gnu/store/gg55pn4nk3fl7fvxqqsgqr2w6fds7wa6-mumps-5.0.2
-   gcc-toolchain	7.2.0	/gnu/store/zs62l7rwvk5180cz3bykjprk2fymsnbs-gcc-toolchain-7.2.0
+   gcc-toolchain	9.1.0	/gnu/store/zs62l7rwvk5180cz3bykjprk2fymsnbs-gcc-toolchain-9.1.0
 
-substitute: updating list of substitutes from 'https://mirror.hydra.gnu.org'... 100.0%
 The following derivations will be built:
    /gnu/store/kipa9k61zkhw4s3frs92w683ps23hpjj-profile.drv
    /gnu/store/73lzwjvr6wx4gb3l9a7vlx6759kcgp7h-fonts-dir.drv
@@ -81,8 +78,7 @@ The following derivations will be built:
 2 packages in profile
 The following environment variable definitions may be needed:
    export PATH="$HOME/.guix-profile/bin:$HOME/.guix-profile/sbin${PATH:+:}$PATH"
-   export C_INCLUDE_PATH="$HOME/.guix-profile/include${C_INCLUDE_PATH:+:}$C_INCLUDE_PATH"
-   export CPLUS_INCLUDE_PATH="$HOME/.guix-profile/include${CPLUS_INCLUDE_PATH:+:}$CPLUS_INCLUDE_PATH"
+   export CPATH="$HOME/.guix-profile/include${C_INCLUDE_PATH:+:}$C_INCLUDE_PATH"
    export LIBRARY_PATH="$HOME/.guix-profile/lib${LIBRARY_PATH:+:}$LIBRARY_PATH"
 ```
 
@@ -101,11 +97,13 @@ bash: python3: Command not found
 $ guix environment --ad-hoc python@3 python-numpy python-scikit-learn
 The following derivations will be built:
    /gnu/store/2g3mj1xdlq2rj8j0crl4sa68bqhmfsmd-profile.drv
+The following profile hooks will be built:
    /gnu/store/wd0ma3xjq25w2qcnn3x0dgjyrck3dnk0-info-dir.drv
    /gnu/store/n97xqbig6rfliqrw0qbkb1zbnh8v0dis-fonts-dir.drv
    /gnu/store/igdhg9hm5n4npvf41zvznm06c226kx4a-ca-certificate-bundle.drv
    /gnu/store/my4m438264jyq5awk39j20xhdf6symha-manual-database.drv
-Creating manual page database for 1 packages... done in 0.021 s
+building directory of Info manuals...
+building database for manual pages...
 [env]$ python3
 Python 3.5.3 (default, Jan  1 1970, 00:00:01) 
 [GCC 5.4.0] on linux
@@ -126,7 +124,7 @@ with another one in the dependency graph.  The example below replaces
 `mumps-openmpi`:
 
 ```
-$ guix package -i mumps-openmpi \
+$ guix install mumps-openmpi \
      --with-input=openmpi=openmpi-thread-multiple
 ```
 
@@ -174,9 +172,8 @@ singular value problems.")
                                 "See LICENSE in the distribution."))))
 ```
 
-You can have your personal package collection:
-just
-[add it to `$GUIX_PACKAGE_PATH`](https://www.gnu.org/software/guix/manual/html_node/Package-Modules.html).
+You can have your own package collection published as a
+[channel](https://www.gnu.org/software/guix/manual/en/html_node/Channels.html).
 
 # Sending Packages to Guix-less Machines
 
@@ -193,9 +190,19 @@ supercomputer$ (cd ~/.local; tar xf ~/hwloc.tar.gz)
 supercomputer$ ./proot -r ~/.local -b /proc /bin/lstopo
 ```
 
+# Learning More
+
+Find the main commands in the [quick reference
+card](https://www.gnu.org/software/guix/guix-refcard.pdf).  Learn more
+in the reference manual:
+[Deutsch](https://www.gnu.org/software/guix/manual/de/html_node) |
+[English](https://www.gnu.org/software/guix/manual/en/html_node) |
+[español](https://www.gnu.org/software/guix/manual/es/html_node) |
+[français](https://www.gnu.org/software/guix/manual/fr/html_node).
+
 # Joining
 
-Learn more about on-going Guix-HPC developments [on our blog](/blog).
+Read about on-going Guix-HPC developments [on our blog](/blog).
 
 [Guix-HPC](/about)
 and [GNU Guix](https://www.gnu.org/software/guix/) are collaborative
