@@ -25,7 +25,7 @@ Here’s how to get started.
 
 You can install Guix on your laptop in 5 minutes: just
 follow
-[the binary install instructions](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html).
+[the binary install instructions](https://www.gnu.org/software/guix/manual/en/html_node/Binary-Installation.html).
 
 You’re a cluster sysadmin and would like to have a cluster-wide install?
 Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
@@ -87,7 +87,7 @@ The following environment variable definitions may be needed:
 Sometimes all you want is to try out a program without installing it in
 your profile.  That’s
 where
-[`guix environment`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-environment.html) comes
+[`guix environment`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-environment.html) comes
 in.  To create an environment containing Python 3.x, NumPy, and
 scikit-learn, run:
 
@@ -117,7 +117,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Occasionally you’ll want to customize the way packages are
 built.
-[From the command line](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html),
+[From the command line](https://www.gnu.org/software/guix/manual/en/html_node/Package-Transformation-Options.html),
 you can apply transformations, such as replacing one dependency
 with another one in the dependency graph.  The example below replaces
 `openmpi` with `openmpi-thread-multiple` in the dependency graph of
@@ -135,10 +135,10 @@ by writing your own package definitions.
 
 To add a package, you
 can
-[generate a template from a third-party repository using `guix import`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-import.html),
+[generate a template from a third-party repository using `guix import`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-import.html),
 or you
 can
-[write a package definition](https://www.gnu.org/software/guix/manual/html_node/Defining-Packages.html),
+[write a package definition](https://www.gnu.org/software/guix/manual/en/html_node/Defining-Packages.html),
 which looks like this:
 
 ```scheme
