@@ -40,7 +40,7 @@ us summarize the salient features of Guix.
 ## For scientists
 
   - *Reproducibility* and *transparency.* Guix combines the flexibility
-    and transparency of “package-centered” like
+    and transparency of package managers like
     [Anaconda](https://anaconda.org) or [Spack](https://spack.io), along
     with the reproducibility of “container-based solutions” such as
     [Docker](https://www.docker.com/) or
