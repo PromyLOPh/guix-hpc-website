@@ -1,6 +1,6 @@
 title: GNU Guix 1.0: a solid foundation for HPC and reproducible science
 author: Ludovic Courtès
-date: 2019-05-06 16:00
+date: 2019-05-06 17:00
 slug: gnu-guix-1.0-foundation-for-hpc-reproducible-science
 tags: packages, releases
 ---
@@ -17,7 +17,7 @@ Useful links:
 
   - [installation script and
     instructions](https://www.gnu.org/software/guix/manual/en/html_node/Binary-Installation.html)
-  - user manual:
+  - reference manual:
 	[Deutsch](https://www.gnu.org/software/guix/manual/de/html_node),
     [English](https://www.gnu.org/software/guix/manual/en/html_node),
     [español](https://www.gnu.org/software/guix/manual/es/html_node),
@@ -61,8 +61,9 @@ us summarize the salient features of Guix.
     install` command away, maintained openly by [an active
     community](https://www.openhub.net/p/gnuguix/), including lots of
     scientific software packages—from
-    [OpenFOAM](https://guix-hpc.bordeaux.inria.fr/package/openfoam), to
-    linear algebra software, and to statistics and bioinformatics
+    [OpenFOAM](https://guix-hpc.bordeaux.inria.fr/package/openfoam) and
+    [TensorFlow](https://guix-hpc.bordeaux.inria.fr/package/tensorflow),
+    to linear algebra software, and to statistics and bioinformatics
     packages.
 	
 	Upgrade software when _you_ decide, not when administrators decide,
@@ -83,7 +84,7 @@ us summarize the salient features of Guix.
     [channels](https://www.gnu.org/software/guix/manual/en/html_node/Channels.html),
     developers can publish their own package collection.  You can easily
     share package definitions for your software with colleagues and
-    partners, while still benefiting from the benefits of Guix.
+    partners, while still benefiting from the properties of Guix.
 
   - *Container images.* You have a Guix-managed package collection and
     would like to use it on a cluster that lacks Guix?  Create an
