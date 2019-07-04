@@ -18,10 +18,13 @@
 (define guile-syntax-highlight
   (specification->package "guile-syntax-highlight"))
 
+(define this-directory
+  (dirname (current-filename)))
+
 (define source
-  (local-file "." "guix-hpc-web"
+  (local-file this-directory "guix-hpc-web"
               #:recursive? #t
-              #:select? (git-predicate ".")))
+              #:select? (git-predicate this-directory)))
 
 (define build
   (with-imported-modules (source-module-closure
