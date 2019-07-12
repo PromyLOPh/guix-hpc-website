@@ -33,7 +33,7 @@ Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
 # Installing Packages
 
 Say you’re searching for a sparse solver among the
-[9,500+ packages](/browse) that come with Guix:
+[10,000+ packages](/browse) that come with Guix:
 
 ```
 $ guix search sparse solver
