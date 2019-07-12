@@ -179,16 +179,20 @@ You can have your own package collection published as a
 
 What if the target supercomputer lacks Guix?  You can still enjoy Guix’s
 reproducibility and customizability by [sending your package binaries
-there](/blog/2017/10/using-guix-without-being-root/):
+there](/blog/2017/10/using-guix-without-being-root/), leveraging
+[relocatable
+binaries](https://www.gnu.org/software/guix/blog/2018/tarballs-the-ultimate-container-image-format/):
 
 ```
-laptop$ scp `guix pack hwloc -S /bin=bin` supercomputer:hwloc.tar.gz
-laptop$ scp `guix build proot-static`/bin/proot supercomputer:
+laptop$ scp `guix pack -RR hwloc -S /bin=bin` supercomputer:hwloc.tar.gz
 …
 supercomputer$ mkdir -p ~/.local
 supercomputer$ (cd ~/.local; tar xf ~/hwloc.tar.gz)
-supercomputer$ ./proot -r ~/.local -b /proc /bin/lstopo
+supercomputer$ ./bin/lstopo
 ```
+
+Other options include building [Singularity or Docker
+images](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pack.html).
 
 # Learning More
 
