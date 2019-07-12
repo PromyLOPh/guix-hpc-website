@@ -188,7 +188,7 @@ laptop$ scp `guix pack -RR hwloc -S /bin=bin` supercomputer:hwloc.tar.gz
 …
 supercomputer$ mkdir -p ~/.local
 supercomputer$ (cd ~/.local; tar xf ~/hwloc.tar.gz)
-supercomputer$ ./bin/lstopo
+supercomputer$ ~/.local/bin/lstopo
 ```
 
 Other options include building [Singularity or Docker
