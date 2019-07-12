@@ -47,7 +47,7 @@ us summarize the salient features of Guix.
     [Singularity](https://www.sylabs.io/singularity/).
 	
 	With [`guix pull` and `guix
-    describe`](https://guix-hpc.bordeaux.inria.fr/blog/2018/12/hpc-reproducible-research-in-guix-0-16-0/),
+    describe`](https://hpc.guix.info/blog/2018/12/hpc-reproducible-research-in-guix-0-16-0/),
     you can reproduce the exact same environment on a different machine,
     or at a different point in time.  Our [collaboration with Software
     Heritage](https://www.softwareheritage.org/2019/04/18/software-heritage-and-gnu-guix-join-forces-to-enable-long-term-reproducibility/)
@@ -57,12 +57,12 @@ us summarize the salient features of Guix.
   - *Packages.* No need to wait for cluster sysadmins to provide the
     software you’re interested in as
     [modules](http://modules.sourceforge.net/): almost [10,000
-    packages](https://guix-hpc.bordeaux.inria.fr/browse) are one `guix
+    packages](https://hpc.guix.info/browse) are one `guix
     install` command away, maintained openly by [an active
     community](https://www.openhub.net/p/gnuguix/), including lots of
     scientific software packages—from
-    [OpenFOAM](https://guix-hpc.bordeaux.inria.fr/package/openfoam) and
-    [TensorFlow](https://guix-hpc.bordeaux.inria.fr/package/tensorflow),
+    [OpenFOAM](https://hpc.guix.info/package/openfoam) and
+    [TensorFlow](https://hpc.guix.info/package/tensorflow),
     to linear algebra software, and to statistics and bioinformatics
     packages.
 	
@@ -89,7 +89,7 @@ us summarize the salient features of Guix.
   - *Container images.* You have a Guix-managed package collection and
     would like to use it on a cluster that lacks Guix?  Create an
     application bundle with [`guix
-    pack`](https://guix-hpc.bordeaux.inria.fr/blog/2017/10/using-guix-without-being-root/),
+    pack`](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/),
     in the [Docker (OCI) or Singularity
     format](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pack.html).
 
@@ -126,5 +126,5 @@ us summarize the salient features of Guix.
 Whatever your HPC or scientific use case is, we hope that you’ll find in
 GNU Guix 1.0 the tools to further your goals.  We’d love to hear from
 you!  You can email us at
-[`guix-hpc@gnu.org`](https://guix-hpc.bordeaux.inria.fr/about/) or on
+[`guix-hpc@gnu.org`](https://hpc.guix.info/about/) or on
 the Guix [mailing lists](https://www.gnu.org/software/guix/contact/).

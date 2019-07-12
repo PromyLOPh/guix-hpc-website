@@ -111,16 +111,16 @@ Problem solved?
 
 It turns out that not all software packages, especially scientific
 software, use these techniques.  Some do—for instance,
-[OpenBLAS](https://guix-hpc.bordeaux.inria.fr/package/openblas) supports
+[OpenBLAS](https://hpc.guix.info/package/openblas) supports
 run-time selection when compiled with `DYNAMIC_ARCH=1`—but many don’t.
-For example, [FFTW](https://guix-hpc.bordeaux.inria.fr/package/fftw)
+For example, [FFTW](https://hpc.guix.info/package/fftw)
 insists on being compiled with
 [`-mtune=native`](https://gcc.gnu.org/onlinedocs/gcc-7.3.0/gcc/x86-Options.html#index-mtune-15)
 and provides [configuration
 options](http://fftw.org/fftw3_doc/Installation-on-Unix.html#Installation-on-Unix)
 to statically select CPU optimizations (*Update:* FFTW 3.3.7+ [can select
 optimized routines at run time](https://lists.gnu.org/archive/html/guix-devel/2018-04/msg00091.html));
-[ATLAS](https://guix-hpc.bordeaux.inria.fr/package/atlas) optimizes
+[ATLAS](https://hpc.guix.info/package/atlas) optimizes
 itself for the CPU it is being built on.  We can always say that the
 “right” solution would be to “fix” these packages upstream so that they
 use run-time selection, but how do we handle these _today_ in Guix?
@@ -131,7 +131,7 @@ simply don’t distribute pre-built binaries for it.  Instead, running
 `guix package -i atlas` unconditionally builds it locally, as upstream
 authors intended.
 
-For FFTW, [BLIS](https://guix-hpc.bordeaux.inria.fr/package/blis), and
+For FFTW, [BLIS](https://hpc.guix.info/package/blis), and
 other packages where optimizations are selected at configure-time, we
 simply build the generic version, like Debian and others do.  This is
 the most unsatisfactory situation: we have portable binaries at the cost
@@ -154,8 +154,8 @@ corresponds to their machine.
 
 Having optimized package variants is nice, but how can users take
 advantage of them?  For instance, the
-[`julia`](https://guix-hpc.bordeaux.inria.fr/package/julia) and
-[`octave`](https://guix-hpc.bordeaux.inria.fr/package/octave) packages
+[`julia`](https://hpc.guix.info/package/julia) and
+[`octave`](https://hpc.guix.info/package/octave) packages
 depend on the generic (unoptimized) `fftw` package—this allows us to
 distribute pre-built binaries.  What if you want Octave to use the
 AVX2-optimized FFTW?

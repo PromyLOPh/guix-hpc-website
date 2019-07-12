@@ -17,7 +17,7 @@ them to their needs.  This aspect is key to reproducible computational
 experiments: scientists need to reproduce software environments before
 they can reproduce experimental results, and this is one of the things
 we are focusing on in the context of the
-[Guix-HPC](https://guix-hpc.bordeaux.inria.fr) effort.  At a lower
+[Guix-HPC](https://hpc.guix.info) effort.  At a lower
 level, the project, along with others in the [Reproducible
 Builds](https://reproducible-builds.org) community, is working to ensure
 that software build outputs are [reproducible,

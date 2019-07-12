@@ -5,9 +5,9 @@ slug: guix-hpc-activity-report-2018
 ---
 
 _This document is also available as
-[PDF](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018.pdf)
+[PDF](https://hpc.guix.info/static/doc/activity-report-2018.pdf)
 ([printable
-booklet](https://guix-hpc.bordeaux.inria.fr/static/doc/activity-report-2018-booklet.pdf))._
+booklet](https://hpc.guix.info/static/doc/activity-report-2018-booklet.pdf))._
 
 Guix-HPC is a collaborative effort to bring reproducible software
 deployment to scientific workflows and high-performance computing (HPC).
@@ -46,7 +46,7 @@ these areas.
 
 # Reproducible Scientific Workflows
 
-![Lab book.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/lab-book.svg)
+![Lab book.](https://hpc.guix.info/static/images/blog/lab-book.svg)
 
 Research heavily depends on computational results, which in turn depends
 on the ability to reproduce software environments.  As key scientific
@@ -68,7 +68,7 @@ provides information about the currently used revision.  Along with the
 new _channels_ facility, which allows users to obtain software packages
 from third-party repositories, this offers a transparent way to
 replicate a Guix setup, as [explained in the release notes of version
-0.16.0](https://guix-hpc.bordeaux.inria.fr/blog/2018/12/hpc-reproducible-research-in-guix-0-16-0/).
+0.16.0](https://hpc.guix.info/blog/2018/12/hpc-reproducible-research-in-guix-0-16-0/).
 Better yet, Guix allows mixing software packages coming from different
 Guix revisions through a new mechanism called _inferiors_.
 
@@ -121,7 +121,7 @@ dependent on software provided in a Docker application bundle, which
 is convenient but ignores the problem of software provenance.
 
 As demonstrated by Pjotr Prins in a [blog
-post](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/creating-a-reproducible-workflow-with-cwl/),
+post](https://hpc.guix.info/blog/2019/01/creating-a-reproducible-workflow-with-cwl/),
 GNU Guix can be used to build reproducible software environments
 incrementally or declaratively to prepare the context in which an
 existing Common Workflow Language (CWL) workflow is to be executed.
@@ -167,7 +167,7 @@ Since the Guix-HPC effort was started in September 2017, around 3,000
 packages were added to Guix itself; of these many had to do with linear
 algebra, computational fluid dynamics, bioinformatics, and statistics,
 as reported in the HPC release notes on the [Guix-HPC
-blog](https://guix-hpc.bordeaux.inria.fr/blog).
+blog](https://hpc.guix.info/blog).
 
 In addition, our institutes have developed their own package
 collections, sometimes as a staging area before packages are reviewed
@@ -226,14 +226,14 @@ Inc](http://www.cray.com/), to better support this architecture.
 
 # Cluster Usage
 
-![High-performance computing cluster.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/hpc-cluster.svg)
+![High-performance computing cluster.](https://hpc.guix.info/static/images/blog/hpc-cluster.svg)
 
 GNU Guix has been deployed on clusters at our research institutes and in
 other places. One of our first task has been to simplify the deployment
 and installation of Guix on clusters, providing new features for
 distributed setups to its build daemon and command-line tools, and
 [documenting the installation process for system
-administrators](https://guix-hpc.bordeaux.inria.fr/blog/2017/11/installing-guix-on-a-cluster/).
+administrators](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/).
 This is the option we recommend because it gives cluster users a lot of
 flexibility: each user can install, upgrade, and remove packages at
 will, create software environments on the fly with `guix environment`,
@@ -244,7 +244,7 @@ installed, and we wanted to offer interoperability with those.  As
 so-called “container-based solutions” like Docker and Singularity are
 being deployed on clusters, we developed `guix pack`, a [tool that can
 create “container
-images”](https://guix-hpc.bordeaux.inria.fr/blog/2017/10/using-guix-without-being-root/).
+images”](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/).
 In this setup, users use `guix pack` on their laptop to generate an
 image that contains precisely the software environment they need, and
 then send it over to the cluster to run their application.  `guix pack`
@@ -259,13 +259,13 @@ To help cluster users get started with Guix,
 developed at the UMC Utrecht, provides a web interface that allows users
 to search for software packages and to learn how to install them.  A
 public instance is visible [on the Guix-HPC web
-site](https://guix-hpc.bordeaux.inria.fr/browse).  Hpcguix-web is
+site](https://hpc.guix.info/browse).  Hpcguix-web is
 customizable and the instance running in Utrecht provides users with
 additional information such as how to use the batch scheduler.
 
 # Outreach and User Support
 
-![Containers are like smoothies.](https://guix-hpc.bordeaux.inria.fr/static/images/blog/container-smoothie.png)
+![Containers are like smoothies.](https://hpc.guix.info/static/images/blog/container-smoothie.png)
 
 One aspect of our work on Guix-HPC is to “spread the word” about the
 importance of being able not just to replicate software environments,
@@ -290,7 +290,7 @@ in peer-reviewed conferences:
     GigaScience and was presented at the [International Conference on
     Genomics (ICG-13)](http://www.icg-13.org/) where it was [awarded
     2nd Runner Up in the GigaScience Prize Track
-    ](https://guix-hpc.bordeaux.inria.fr/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/).
+    ](https://hpc.guix.info/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/).
 
 Altuna Alkalin, research team leader at the Max Delbrück Center (MDC),
 wrote an article entitled [_Scientific Data Analysis Pipelines and
@@ -300,7 +300,7 @@ compares existing tools to achieve software environment reproducibility:
 application bundles (also referred to as “containers”), CONDA, and Guix.
 
 We have published [12 articles on this
-blog](https://guix-hpc.bordeaux.inria.fr/blog) touching a range of
+blog](https://hpc.guix.info/blog) touching a range of
 technical topics: running Guix without being root, on the performance of
 pre-built binaries, creating reproducible workflows with CWL or PiGx,
 and more.
@@ -403,7 +403,7 @@ work more closely with initiatives such as
 to investigate ways Guix could help improve their reviewing workflows.
 
 We are very much open to new ideas and we’d like to [hear from
-you](https://guix-hpc.bordeaux.inria.fr/about)!
+you](https://hpc.guix.info/about)!
 
 # Credits
 

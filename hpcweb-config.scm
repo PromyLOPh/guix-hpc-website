@@ -1,5 +1,4 @@
-;; Configuration of hpcguix-web for use on
-;; "https://guix-hpc.bordeaux.inria.fr/browse".
+;; Configuration of hpcguix-web for use on "https://hpc.guix.info/browse".
 
 (use-modules (hpcweb-configuration))
 

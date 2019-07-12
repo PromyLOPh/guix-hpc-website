@@ -15,26 +15,26 @@ noteworthy packages and features for HPC and reproducible research.
 Of the 985 packages were added and 1,945 upgraded, here are the
 noteworthy HPC and bioinformatics changes:
 
-  - [FEniCS](https://guix-hpc.bordeaux.inria.fr/package/fenics) and
+  - [FEniCS](https://hpc.guix.info/package/fenics) and
     related packages were contributed by Paul Garlick of Tourbillion
     Technology.
-  - [`petsc-openmpi`](https://guix-hpc.bordeaux.inria.fr/package/petsc-openmpi)
+  - [`petsc-openmpi`](https://hpc.guix.info/package/petsc-openmpi)
     is now configured with support for the HYPRE preconditioner, for
     the MUMPS solver, and for the HDF5 data format.
-  - [SLEPc](https://guix-hpc.bordeaux.inria.fr/package/slepc) and
-    [PETSc](https://guix-hpc.bordeaux.inria.fr/package/petsc) were
+  - [SLEPc](https://hpc.guix.info/package/slepc) and
+    [PETSc](https://hpc.guix.info/package/petsc) were
     upgraded to 3.10.1 and 3.10.2.
-  - [MPI4Py](https://guix-hpc.bordeaux.inria.fr/package/python-mpi4py)
+  - [MPI4Py](https://hpc.guix.info/package/python-mpi4py)
     was added.
-  - [ngless](https://guix-hpc.bordeaux.inria.fr/package/ngless), a
+  - [ngless](https://hpc.guix.info/package/ngless), a
     domain-specific language (DSL) for working with next generation
     sequencing data is now available.
   - A handful of packages for Nanopore processing have been added,
 	including
-	[Filtlong](https://guix-hpc.bordeaux.inria.fr/package/filtlong),
-	[Nanopolish](https://guix-hpc.bordeaux.inria.fr/package/nanopolish),
-	[Poretools](https://guix-hpc.bordeaux.inria.fr/package/poretools),
-	and [Porechop](https://guix-hpc.bordeaux.inria.fr/package/porechop).
+	[Filtlong](https://hpc.guix.info/package/filtlong),
+	[Nanopolish](https://hpc.guix.info/package/nanopolish),
+	[Poretools](https://hpc.guix.info/package/poretools),
+	and [Porechop](https://hpc.guix.info/package/porechop).
   - Hundreds of bioinformatics and R packages and upgrades were
     contributed in particular by Mădălin Ionel Patrașcu and Ricardo
     Wurmus of the Max Delbrück Center for Molecular Medicine (MDC).
@@ -55,7 +55,7 @@ solves several problems:
     pull`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pull.html)
     pull not just Guix, but also external package repositories such as
     [the HPC and bioinfo repositories of our
-    institutes](https://guix-hpc.bordeaux.inria.fr/about/).
+    institutes](https://hpc.guix.info/about/).
   - It allows you to _replicate_ a Guix setup with all its channels.
   
 As an example, if I want to use packages from the [Guix-HPC repository

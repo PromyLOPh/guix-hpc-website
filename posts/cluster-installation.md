@@ -5,7 +5,7 @@ tags: cluster installation sysadmin
 ---
 
 Previously we
-[discussed](https://guix-hpc.bordeaux.inria.fr/blog/2017/10/using-guix-without-being-root)
+[discussed](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root)
 ways to use Guix-produced packages on a cluster where Guix is not
 installed.  In this post we look at how a cluster sysadmin can install
 Guix for system-wide use, and discuss the various tradeoffs.

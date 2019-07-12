@@ -5,7 +5,7 @@
 (use-modules (srfi srfi-19))
 
 (define %video-url
-  "https://guix-hpc.bordeaux.inria.fr/static/videos/pigx.webm")
+  "https://hpc.guix.info/static/videos/pigx.webm")
 
 `((title . "PiGx paper awarded at the International Conference on Genomics (ICG-13)")
   (author . "Ricardo Wurmus")
