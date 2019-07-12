@@ -102,6 +102,9 @@ Here are deployments of Guix on clusters and contact information:
   - [PlaFRIM cluster](https://www.plafrim.fr/en/home/) (France)
 	  - 120-node heterogeneous cluster (3,000+ cores)
 	  - contact: Ludovic Courtès
+  - [GriCAD](https://gricad.univ-grenoble-alpes.fr/) (France)
+	  - 72-node “Dahu” cluster (1,000+ cores)
+	  - contact: Violaine Louvet, Pierre-Antoine Bouttier
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 
