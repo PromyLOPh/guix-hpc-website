@@ -18,6 +18,11 @@ and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/reproducible-sof
 
 The material below covers our work and motivation for Guix-HPC:
 
+  - [_PiGx: Reproducible Genomics Analysis Pipelines with
+    GNU Guix_](https://doi.org/10.1093/gigascience/giy123), GigaScience
+    [ICG-13](http://www.icg-13.org/)
+    ([video](https://hpc.guix.info/blog/2019/01/pigx-paper-awarded-at-the-international-conference-on-genomics-icg-13/)),
+    Dec. 2018
   - [_Beyond Bundles—Reproducible Software Environments with
     GNU Guix_](https://cds.cern.ch/record/2316926), [CERN Computing
     Seminars](http://cseminar.web.cern.ch/cseminar/), May 2018
