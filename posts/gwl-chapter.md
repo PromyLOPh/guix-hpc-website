@@ -48,10 +48,10 @@ that the GWL has been exploring:
 Tight integration of reproducible software deployment with higher-level
 tools, such as workflow tools, has been the topic of a FOSDEM 2018 talk
 we gave, entitled [_Tying software deployment to scientific
-workflows_](https://archive.fosdem.org/2018/schedule/event/guix_workflows/)
-in 2018.  While we’re still in the early days of implementing it, we
-believe that this approach is promising and may well be key to future
-reproducible science tool chains.
+workflows_](https://archive.fosdem.org/2018/schedule/event/guix_workflows/).
+While we’re still in the early days of implementing it, we believe that
+this approach is promising and may well be key to future reproducible
+science tool chains.
 
 ![GWL logo.](https://hpc.guix.info/static/images/blog/gwl-logo-black.png)
 
