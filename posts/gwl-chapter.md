@@ -53,7 +53,7 @@ in 2018.  While we’re still in the early days of implementing it, we
 believe that this approach is promising and may well be key to future
 reproducible science tool chains.
 
-![GWL logo.](https://hpc.guix.info/static/images/blog/gwl-logo.png)
+![GWL logo.](https://hpc.guix.info/static/images/blog/gwl-logo-black.png)
 
 A lot of work has gone into the GWL since that chapter was written.
 Among other things, the maintainers, Roel Janssen and Ricardo Wurmus,
