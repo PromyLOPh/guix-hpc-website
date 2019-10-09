@@ -2,7 +2,7 @@ title: Towards reproducible Jupyter notebooks
 date: 2019-10-10 09:00
 author: Ludovic Courtès
 tags: Research, Reproducibility, Jupyter
---
+---
 
 [Jupyter Notebooks](http://jupyter.org/) are becoming a key component of
 the researcher’s toolbox when it comes to sharing and reproducing
@@ -91,7 +91,7 @@ and spawning a Jupyter Notebook instance in that environment.
 Research institutes and computing centers have
 [also](https://www.egi.eu/services/applications-on-demand/)
 [started](https://jcad2018.sciencesconf.org/resource/page/id/7) offering
-“Jupyter Notebooks as a service” in a similar way.  Administrators of
+“Jupyter Notebook as a service” in a similar way.  Administrators of
 those systems can “just” [deploy JupyterHub with Kubernetes on
 OpenStack](https://blog.jupyter.org/how-to-deploy-jupyterhub-with-kubernetes-on-openstack-f8f6120d4b1?gi=4df7a08f32b9),
 possibly with a drop of [BinderHub](https://binderhub.readthedocs.io/)
@@ -104,7 +104,12 @@ into mere Web terminals when you could run notebooks locally.
 
 Last but not least, we still haven’t solved the core issue, which is
 that notebooks are not self-contained: they do not describe the
-dependencies they need.
+dependencies they need.  Binder’s [configuration
+files](https://mybinder.readthedocs.io/en/latest/config_files.html#config-files),
+such as `environment.yml` for Anaconda, get us close to that, but they
+fail to capture a complete environment, thereby making it hard to
+impossible to reproduce the same environment on different machines or at
+different points in time.
 
 # Making Notebooks “deployment-aware”
 
@@ -113,12 +118,13 @@ if the notebook itself could describe its dependencies?  What if
 reproducible software deployment was an integral part of the notebook?
 
 We started working in that direction a year ago when Pierre-Antoine
-Rouby started writing a Guix kernel for Jupyter.
+Rouby wrote a first version of the Guix kernel for Jupyter.
 
-> Today, we’re happy to announce the first beta release of the [Guix
-> kernel for Jupyter](https://gitlab.inria.fr/guix-hpc/guix-kernel)!
+> Today, we’re happy to announce the [first beta release](https://gitlab.inria.fr/guix-hpc/guix-kernel/-/tags/v0.1.0)
+> of the [Guix-Jupyter, a Guix kernel for
+> Jupyter](https://gitlab.inria.fr/guix-hpc/guix-kernel)!
 
-TODO: Insert logo
+![Guix-Jupyter logo.](/static/images/blog/guix-jupyter/guix-jupyter.png)
 
 The Guix kernel is still very much a work-in-progress but it already
 lays the foundation for _self-contained, reproducible
@@ -126,30 +132,42 @@ notebooks_—notebooks that automatically run in the right software
 environment, regardless of the machine where you run it or the time at
 which you run it.  We’re pretty excited to share it today!
 
-So, what does the Guix kernel has to offer?  First and foremost, it
+So, what does the Guix kernel have to offer?  First and foremost, it
 allows you to define _environments_ in which the notebook code is going
 to be executed.  An environment consists of any number of [Guix
-packages](https://hpc.guix.info/browse), and one of them must be a
+packages](https://hpc.guix.info/browse) and one of them must be a
 Jupyter kernel—e.g.,
 [`python-ipykernel`](https://hpc.guix.info/package/python-ipykernel) for
 Python 3 or [`r-irkernel`](https://hpc.guix.info/package/r-irkernel) for
-GNU R.  And of course, you can add any Python or R libraries you need to
-use in those environments.  Subsequent cells are automatically executed
-in that environment, using the Jupyter kernel it contains.
+GNU R.  And of course, you can add any Python or R libraries or really
+any package you need to use in those environments.  Subsequent cells are
+automatically executed in that environment, using the Jupyter kernel it
+contains.
 
 In fact, a single notebook can define several environments, each with a
 possibly different Jupyter kernel, which allows you to create a
 _multi-lingual_ notebook:
 
-TODO: animated GIF
+![Multi-lingual notebook.](/static/images/blog/guix-jupyter/multi-env.gif)
 
-Since Guix is able to reproduce software environments [at any point in
-time and
+(The IPython kernel has a [built-in mechanism to interface with
+languages other than
+Python](https://blog.jupyter.org/i-python-you-r-we-julia-baf064ca1fb6),
+but that’s a wholly different approach.)
+
+How does that differ from running `pip install` or similar right from
+the notebook?  First, it doesn’t fiddle with your home directory or
+similar—the environments are one-off environments created on the fly.
+Second, it’s not limited to a particular language.  And third, it’s
+_reproducible_.
+
+Namely, since Guix is able to reproduce software environments [at any
+point in time and
 space](https://guix.gnu.org/blog/2018/multi-dimensional-transactions-and-rollbacks-oh-my/),
 you can not only specify packages to include in the environment, but
 also _pin_ a specific revision of the Guix channels:
 
-TODO animated GIF
+![Pinning a Guix revision.](/static/images/blog/guix-jupyter/pin.gif)
 
 How do you obtain the commit ID that you want to pin to in the first
 place?  If you’re using Guix, you can obtain it by running [`guix
@@ -171,14 +189,16 @@ now run untrusted notebooks locally), but that’s also good for
 reproducibility: the notebook cannot have undeclared dependencies.  In
 fact, we’re adapting the functional model of build processes [pioneered
 by Nix](https://nixos.org/~eelco/pubs/immdsd-icse2004-final.pdf) to an
-interactive execution environment.
+interactive execution environment.  In other words, we’re saying that _a
+reproducible notebook is a pure function_, and we create an isolated
+execution environment to make it happen.
 
 So far so good, but if you’ve payed attention, you’re probably
-wondering: how do I get my data in that environment?  Good question!  To
-refer to data, the notebook must use a `;;guix download` directive
-containing a URL and expected SHA256 hash of the data:
+wondering: how do I get my data in that environment?  To refer to data,
+the notebook must use a `;;guix download` directive containing a URL and
+expected SHA256 hash of the data:
 
-TODO animated GIF
+![The download magic.](/static/images/blog/guix-jupyter/download.gif)
 
 In practice, data is only downloaded the first time.  Subsequent
 executions reuse the pre-downloaded data.  In Nix/Guix terms, this is a
@@ -209,10 +229,8 @@ Guix](https://guix.gnu.org/manual/en/html_node/Binary-Installation.html)
 on your machine, and then Jupyter and the Guix kernel:
 
 ```
-guix install jupyter guix-jupyter-kernel
+guix install jupyter guix-jupyter
 ```
-
-TODO: Ensure that this works.
 
 At that point, you can start a notebook:
 
@@ -222,7 +240,7 @@ jupyter notebook
 
 … and select the “Guix” kernel.
 
-TODO: Add GIF.
+![Selecting the kernel.](/static/images/blog/guix-jupyter/select-kernel.png)
 
 Then you don’t need to explicitly install any other Jupyter kernel since
 you can just add them to your notebook _via_ `;;guix environment`
@@ -240,42 +258,59 @@ such as the list of environments and proxied kernels running.  It
 inspects `execute_request` messages to see if they might contain a
 `;;guix` magic, handles that if needed, and otherwise passes them on to
 the relevant proxied kernel.  Other messages such as `complete_request`
-(for code completion) are treated similarly.
+(for code completion) are treated similarly.  Processes in separate
+[namespaces](http://man7.org/linux/man-pages/man7/user_namespaces.7.html)
+are created [using Guix’s container
+API](https://gitlab.inria.fr/guix-hpc/guix-kernel/blob/master/guix/jupyter/containers.scm).
 
 As a bonus, there’s, of course, a built-in kernel for [GNU
 Guile](https://gnu.org/software/guile), the great Scheme implementation
-that powers Guix.  Pictures, delimited continuations, and whatnot in
-your notebook!
+that powers Guix.
+[Pictures](http://hpc.guix.info/package/guile-picture-language),
+[relational programming](http://hpc.guix.info/package/guile-minikanren),
+delimited continuations, and whatnot in your notebook!
 
-TODO: Picture language image.
-
-There is one downside we’re aware of to the proxying approach: since a
-notebook is normally monolingual, there’s no way to let Jupyter know
-that some cells are Python, while others are R, Guile, and so on.
+One downside to the proxying approach is that since a notebook is
+normally monolingual, there’s no way to tell Jupyter that some cells are
+Python, while others are R, Guile, and so on.
 
 It must be said though that we’re much more familiar with Guix than with
 Jupyter.  So if you’re a Jupyter hacker, do share any piece of advice
 you may have!
 
-# The Future
+# Conclusion
 
-The Guix Jupyter kernel is still “beta” but it already demonstrate most
+The Guix Jupyter kernel is still “beta” but it already demonstrates most
 of the things we had in mind when we toyed with the idea of “notebooks
-with reproducible deployment built-in”.  It remains to be seen how
-convenient it is for “real-world” notebooks, and we’d very much like to
-hear from intrepid Jupyter users who’d want to try and add `;;guix`
-annotations to their favorite notebooks.
+with reproducible deployment built-in”.  There’s many improvements we
+can make, notably to the user interface: things like showing a progress
+bar when an environment is being built, providing widgets to navigate
+environments or packages, etc.
+
+It remains to be seen how convenient Guix-Jupyter is for “real-world”
+notebooks, and we’d very much like to hear from intrepid Jupyter users
+who’d want to try and add `;;guix` annotations to their favorite
+notebooks.
+
+A practical question is: what happens if you publish a notebook for the
+Guix-Jupyter kernel but your collaborators don’t have that kernel?  If
+your notebook uses a single environment (say, a single Python
+environment), they’ll be able to run it provided they remove or skip the
+`;;guix` annotations.  But then, of course, they’re on their own when it
+comes to deploying the environment of that notebook.  If you use `;;guix
+download` or multiple environments, then the notebook won’t be readily
+usable to someone who doesn’t have Guix-Jupyter.  That’s a limitation,
+but one that’s probably hard to avoid.
 
 Is a kernel the right approach to adding reproducible deployment to
-Jupyter?  Shouldn’t it be a built-in feature of Notebook or of Jupyter
-Lab?  Maybe.  There’s an engineering argument that Jupyter probably
-shouldn’t be tied to a specific deployment tool, and in that sense,
-handling it as a kernel or as an extension leaves Jupyter users a
-freedom of choice.
+Jupyter?  Should it be a built-in feature of Notebook or of Jupyter Lab?
+Maybe.  There’s an engineering argument that Jupyter probably shouldn’t
+be tied to a specific deployment tool, and in that sense, handling it as
+a kernel or as an extension leaves Jupyter users a freedom of choice.
 
-No matter what approach is used, we believe that our best-practices book
-must be updated so that Jupyter Notebooks lacking deployment information
-become a thing of the past!
+No matter what approach is used, our best-practices book should be
+updated so that Jupyter notebooks lacking deployment information become
+a thing of the past!
 
 # Notes
 
