@@ -93,7 +93,7 @@ that you are welcome to use and contribute to!
 
 # Cluster Deployments
 
-Here are deployments of Guix on clusters and contact information:
+Here are known deployments of Guix on clusters and contact information:
 
   - [Max Delbrück Center for Molecular Medicine](https://www.mdc-berlin.de) (Germany)
       - 250-node cluster + workstations
@@ -104,12 +104,15 @@ Here are deployments of Guix on clusters and contact information:
   - [Australian Centre for Ecogenomics](http://ecogenomic.org/) (Australia)
       - 21-node cluster (1,000 cores)
       - contact: Ben Woodcroft
-  - [PlaFRIM cluster](https://www.plafrim.fr/en/home/) (France)
+  - [PlaFRIM](https://www.plafrim.fr/en/home/) (France)
 	  - 120-node heterogeneous cluster (3,000+ cores)
 	  - contact: Ludovic Courtès
   - [GriCAD](https://gricad.univ-grenoble-alpes.fr/) (France)
 	  - 72-node “Dahu” cluster (1,000+ cores)
 	  - contact: Violaine Louvet, Pierre-Antoine Bouttier
+  - [CCIPL](https://ccipl.univ-nantes.fr/) (France)
+      - 230-node cluster (4,000+ cores)
+      - contact: Yann Dupont
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 
