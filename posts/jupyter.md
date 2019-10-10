@@ -124,7 +124,7 @@ Rouby wrote a first version of the Guix kernel for Jupyter.
 > of the [Guix-Jupyter, a Guix kernel for
 > Jupyter](https://gitlab.inria.fr/guix-hpc/guix-kernel)!
 
-![Guix-Jupyter logo.](/static/images/blog/guix-jupyter/guix-jupyter.png)
+![Guix-Jupyter logo.](https://hpc.guix.info/static/images/blog/guix-jupyter/guix-jupyter.png)
 
 The Guix kernel is still very much a work-in-progress but it already
 lays the foundation for _self-contained, reproducible
@@ -148,7 +148,7 @@ In fact, a single notebook can define several environments, each with a
 possibly different Jupyter kernel, which allows you to create a
 _multi-lingual_ notebook:
 
-![Multi-lingual notebook.](/static/images/blog/guix-jupyter/multi-env.gif)
+![Multi-lingual notebook.](https://hpc.guix.info/static/images/blog/guix-jupyter/multi-env.gif)
 
 (The IPython kernel has a [built-in mechanism to interface with
 languages other than
@@ -167,7 +167,7 @@ space](https://guix.gnu.org/blog/2018/multi-dimensional-transactions-and-rollbac
 you can not only specify packages to include in the environment, but
 also _pin_ a specific revision of the Guix channels:
 
-![Pinning a Guix revision.](/static/images/blog/guix-jupyter/pin.gif)
+![Pinning a Guix revision.](https://hpc.guix.info/static/images/blog/guix-jupyter/pin.gif)
 
 How do you obtain the commit ID that you want to pin to in the first
 place?  If you’re using Guix, you can obtain it by running [`guix
@@ -198,7 +198,7 @@ wondering: how do I get my data in that environment?  To refer to data,
 the notebook must use a `;;guix download` directive containing a URL and
 expected SHA256 hash of the data:
 
-![The download magic.](/static/images/blog/guix-jupyter/download.gif)
+![The download magic.](https://hpc.guix.info/static/images/blog/guix-jupyter/download.gif)
 
 In practice, data is only downloaded the first time.  Subsequent
 executions reuse the pre-downloaded data.  In Nix/Guix terms, this is a
@@ -240,7 +240,7 @@ jupyter notebook
 
 … and select the “Guix” kernel.
 
-![Selecting the kernel.](/static/images/blog/guix-jupyter/select-kernel.png)
+![Selecting the kernel.](https://hpc.guix.info/static/images/blog/guix-jupyter/select-kernel.png)
 
 Then you don’t need to explicitly install any other Jupyter kernel since
 you can just add them to your notebook _via_ `;;guix environment`
@@ -311,70 +311,3 @@ a kernel or as an extension leaves Jupyter users a freedom of choice.
 No matter what approach is used, our best-practices book should be
 updated so that Jupyter notebooks lacking deployment information become
 a thing of the past!
-
-# Notes
-
-http://willcrichton.net/notes/lessons-from-jupytercon/
-
-https://learninglab.inria.fr/en/mooc-recherche-reproductible-principes-methodologiques-pour-une-science-transparente
-
-https://mybinder.org
-[share your notebook with Binder](https://reproducible-science-curriculum.github.io/sharing-RR-Jupyter/02-sharing-binder/)
-
-[Reproducible Research in Computational Science](http://science.sciencemag.org/content/334/6060/1226.full)
-
-http://reproducibility.cs.arizona.edu/
-
-[Deploying JupyterHub with Kubernetes on OpenStack](https://blog.jupyter.org/how-to-deploy-jupyterhub-with-kubernetes-on-openstack-f8f6120d4b1)
-
-[Zero to JupyterHub with
-Kubernetes](https://zero-to-jupyterhub.readthedocs.io/en/latest/index.html)
-
-[romeoLab & Jupyter (JCAD 2018)](https://jcad2018.sciencesconf.org/resource/page/id/7)
-
-[Jupyter Notebook as a service](https://www.egi.eu/services/applications-on-demand/)
-https://marketplace.egi.eu/applications-on-demand-beta/65-jupyter.html
-
-[list of
-kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
-
-[1 kernel != 1 language, "magics"](https://blog.jupyter.org/i-python-you-r-we-julia-baf064ca1fb6)
-
-[Nextjournal uses
-Docker](https://nextjournal.com/nextjournal/environments)
-[Using Guix with R](https://nextjournal.com/jsierles/using-guix-with-R)
-[Bootstrapping a Guix store for Nextjournal](https://nextjournal.com/jsierles/bootstrapping-a-guix-store-for-nextjournal)
-
-[IDE integration with Jupyter](https://blog.godatadriven.com/write-less-terrible-notebook-code)
-
-[A Large-Scale Study about Quality and Reproducibility of Jupyter
-Notebooks](http://www.ic.uff.br/~leomurta/papers/pimentel2019a.pdf) (MSR2019)
-
-https://binderhub.readthedocs.io/
-
-[jupyter-repo2docker, the tool used by BinderHub to build images on demand](https://repo2docker.readthedocs.io/en/latest/index.html)
-
-[pip install in a notebook](https://twitter.com/danielskatz/status/1150761250403565570)
-
-[voilà (QuantStack), turns notebooks into standalone and secure web applications](https://voila-gallery.org)
-
-[Whole Tale](http://docs.wholetale.org/en/stable/README.html#) does
-Jupyter + Docker (+ data)
-
-[JupyterLab Package Installer](https://github.com/jupytercalpoly/jupyterlab-pkginstaller)
-
-Similar to Whole Tale:
-
- - https://codeocean.com/
- - https://gigantum.com/
-
-
-https://blog.khinsen.net/posts/2017/04/06/reproducible-research-in-the-python-ecosystem-a-reality-check/
-
-# context
-
-screenshot "kernel not found"
-
-# example notebooks
-
-[lz4 compression](https://gist.github.com/kif/abba6883fe0317e312aeecb777d69228)
