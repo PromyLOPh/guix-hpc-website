@@ -28,7 +28,7 @@ practices](https://www.dataone.org/webinars/reproducible-science-jupyter-changin
 
 In this post we explore a solution to Jupyter Notebook’s Achille’s heel:
 software deployment.  We have been working on a solution to this dubbed
-[Guix-Kernel](https://gitlab.inria.fr/guix-hpc/guix-kernel) that we’re
+[Guix-Jupyter](https://gitlab.inria.fr/guix-hpc/guix-kernel) that we’re
 releasing today, but first, let us explain how Jupyter’s promises for
 reproducible research are hindered by a lack of support for reproducible
 software deployment.
