@@ -13,6 +13,13 @@ programming](https://en.wikipedia.org/wiki/Literate_programming), they
 also make it easy to interact with the code and, thus, build on the work
 of each other.
 
+> Update: The
+> [slides](https://jcad2019.sciencesconf.org/data/talkLCourtes.pdf) and
+> [video](https://prismes.univ-toulouse.fr/player.php?code=s5cfr0Ue&width=100%&height=100%)
+> of my talk (in French) on this topic at [JCAD
+> 2019](https://jcad2019.sciencesconf.org/resource/page/id/6) are now
+> available on-line.
+
 To give a few examples, Jupyter notebooks are one of the topics of
 [Inria Learning Lab’s new MOOC on reproducible
 science](https://learninglab.inria.fr/en/mooc-recherche-reproductible-principes-methodologiques-pour-une-science-transparente)
