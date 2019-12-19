@@ -51,7 +51,7 @@ with the idea that MPI implementations would use those interfaces
 instead of talking directly to the lower-level drivers that we’ve seen
 above.  [libfabric](https://hpc.guix.info/package/libfabric)
 (aka. OpenFabrics or OFI) is _one of_ these “unified” interfaces—I guess
-you can see the oxymoron, can’t you? :-) Libfabric actually bundles
+you can see the oxymoron, can’t you?  Libfabric actually bundles
 Verbs, PSM, PSM2, and more, and provides an unique interface over them.
 [UCX](https://hpc.guix.info/package/ucx) has a
 similar “unification” goal, but with a different interface.  In addition
@@ -178,9 +178,9 @@ Finally, with these changes in place, we are able to get the optimal
 performance on `mlx4`, InifiniPath, and Omni-Path networks on [our
 cluster](https://www.plafrim.fr/en/).  We also checked on the
 [GriCAD](https://gricad.univ-grenoble-alpes.fr/) and
-[MCIA](https://www.mcia.univ-bordeaux.fr/projects/mcia) and confirmed
-that we also achieve peak performance there.  The latter does not
-provide Guix (yet!), so we built a Singularity image with [`guix
+[MCIA](https://www.mcia.univ-bordeaux.fr/projects/mcia) clusters and
+confirmed that we also achieve peak performance there.  The latter does
+not provide Guix (yet!), so we built a Singularity image with [`guix
 pack`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html):
 
 ```
@@ -229,3 +229,10 @@ fashion, with a home-grown collection of
 [modules](http://modules.sourceforge.net/).
 
 # Acknowledgments
+
+I would like to thank Emanuel Agullo who was instrumental in starting
+this work as part of the [2019 Inria HPC
+School](https://agullo-teach.gitlabpages.inria.fr/school/school2019/program.html),
+Brice Goglin for tirelessly explaining Open MPI internals, and François
+Rue and Julien Lelaurain of the [PlaFRIM](https://www.plafrim.fr/en/)
+team for their support.
