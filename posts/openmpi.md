@@ -1,7 +1,8 @@
 title: Optimized and portable Open MPI packaging
 author: Ludovic Courtès
-date: 2019-12-19 14:00
---
+date: 2019-12-19 15:00
+tags: pre-built binaries, performance, MPI
+---
 
 High-performance networks have constantly been evolving, in sometimes
 hard-to-decipher ways.  Once upon a time, hardware vendors would
