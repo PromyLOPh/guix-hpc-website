@@ -83,6 +83,8 @@ a single Open MPI build (a single package) that will do the right thing
 whether it runs on machines with Omni-Path hardware or on machines with
 InfiniBand networking.  At least, that’s the theory…
 
+![Open MPI logo.](https://hpc.guix.info/static/images/blog/open-mpi-logo.png)
+
 # When reality gets in the way
 
 How can one check whether practice matches theory?  It turns out to be
@@ -199,17 +201,21 @@ salloc -N2 mpirun -np 2 --map-by node -- \
 
 # Conclusions
 
-We are glad that we were able to show that, with quite an effort, practice
-matches theory—that we can get an Open MPI package that achieves optimal
-performance for the available high-speed network interconnect.  We were
-only able to test the three most common interconnects
-available in the last years though, so we’d be happy to get your feedback if you’re
-using a different kind of hardware!
+We are glad that we were able to show that, with quite an effort,
+practice matches theory—that we can get an Open MPI package that
+achieves optimal performance for the available high-speed network
+interconnect.  Like [in the case of pre-built
+binaries](https://hpc.guix.info/blog/2018/01/pre-built-binaries-vs-performance/),
+and contrary to a common belief, software _is_ designed to support
+portable performance without requiring a custom build for the target
+machine.  We were only able to test the three most common interconnects
+available in the last years though, so we’d be happy to get your
+feedback if you’re using a different kind of hardware!
 
 There are other conclusions to be drawn.  First, we found it
 surprisingly difficult to get feedback from Open MPI.  It would be
-tremendously useful to have an easy way to have it display the transport
-components that it selected and used when running an application.  As
+tremendously useful to have an easy way to display the transport
+components that were selected and used when running an application.  As
 far as default priorities go, it is hard to have a global picture and
 ensure the various relative priorities all make sense.
 
