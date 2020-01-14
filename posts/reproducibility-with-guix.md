@@ -1002,4 +1002,4 @@ And now... congratulations for having survived to the end of this long
 journey! May all your computations be reproducible, with Guix.
 
 > _Originally published [on the Guix
-> blog](https://guix.gnu.org/blog/2020/reproducibility-with-guix)_
+> blog](https://guix.gnu.org/blog/2020/reproducible-computations-with-guix/)_
