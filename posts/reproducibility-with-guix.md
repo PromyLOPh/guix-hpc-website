@@ -789,7 +789,7 @@ is a hard problem!
 Get ready for your own analyses
 -------------------------------
 
-As promised, here is a [Guile script](show-dependencies.scm) that you
+As promised, here is a [Guile script](https://guix.gnu.org/static/blog/show-dependencies.scm) that you
 can download and run from the command line to do dependency analyses
 much like the ones I have shown. Just give the packages whose combined
 list of dependencies you want to analyze. For example:
