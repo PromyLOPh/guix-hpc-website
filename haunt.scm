@@ -103,7 +103,7 @@ they get properly displayed in blog articles."
   (format #t "~%Producing Web pages for local tests *only*!~%~%"))
 
 (site #:title %web-site-title
-      #:domain "//hpc.guixsd.org/"
+      #:domain "//hpc.guix.info"
       #:default-metadata
       '((author . "Guix-HPC Contributors")
         (email  . "guix-devel@gnu.org"))
@@ -127,7 +127,7 @@ deployment for high-performance computing — Blog"         ;title
              ;; Apparently the <link> tags of Atom entries must be absolute URLs,
              ;; hence this #:blog-prefix.
              (atom-feed #:file-name "blog/feed.xml"
-                        #:blog-prefix "https://hpc.guixsd.org/blog")
+                        #:blog-prefix "https://hpc.guix.info/blog")
 
              (static-directory "static")
 
