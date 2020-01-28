@@ -227,7 +227,7 @@ representation."
      ,(let ((email (post-ref post 'email)))
         (if email `(email ,email) '())))
     (updated ,(date->string* (post-date post)))
-    (link (@ (href ,(post-url post site))
+    (link (@ (href ,(string-append blog-prefix (post-url post site)))
              (rel "alternate")))
     (summary (@ (type "html"))
              ,(sxml->html-string (post-sxml post)))))
@@ -251,8 +251,8 @@ MAX-ENTRIES: The maximum number of posts to render in the feed"
                       (title ,(site-title site))
                       (subtitle ,subtitle)
                       (updated ,(date->string* (current-date)))
-                      (link (@ (href ,(string-append (site-domain site)
-                                                     "/" file-name))
+                      (link (@ (href ,(string-append blog-prefix
+                                                     file-name))
                                (rel "self")))
                       (link (@ (href ,(site-domain site))))
                       ,@(map (cut post->atom-entry site <>
