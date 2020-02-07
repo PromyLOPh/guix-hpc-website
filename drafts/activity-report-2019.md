@@ -69,7 +69,7 @@ Supporting reproducible computations requires addressing four aspects:
     reconstructed.
  4. Reproducing a computation from such a record.
 
-Step 1 is very situation-dependent and can therefore not be fully automatized. Step 2 is supported by [`guix environment`](https://guix.gnu.org/manual/en/guix.html#Invoking-guix-environment), step 3 by [`guix describe`](https://guix.gnu.org/manual/en/guix.html#Invoking-guix-describe). Step 4 used to require a rather unintuitive form of [`guix pull`](https://guix.gnu.org/manual/en/guix.html#Invoking-guix-pull) (whose main use case is updating Guix), but is now supported in a more straightforward way by `guix time-machine`, which provides direct access to older versions of Guix and all the packages it defines.
+Step 1 is very situation-dependent and can therefore not be fully automatized. Step 2 is supported by [`guix environment`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-environment.html), step 3 by [`guix describe`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-describe.html). Step 4 used to require a rather unintuitive form of [`guix pull`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pull.html) (whose main use case is updating Guix), but is now supported in a more straightforward way by [`guix time-machine`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-time_002dmachine.html), which provides direct access to older versions of Guix and all the packages it defines.
 
 A [post on the Guix HPC blog](https://hpc.guix.info/blog/2020/01/reproducible-computations-with-guix/) explains how to perform the four steps of reproducible computation, and also explains how Guix ensures bit-for-bit reproducibility through comprehensive dependency tracking.
 
