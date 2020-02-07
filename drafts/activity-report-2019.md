@@ -75,6 +75,35 @@ A [post on the Guix HPC blog](https://hpc.guix.info/blog/2020/01/reproducible-co
 
 ## Packaging
 
+The message passing interface (MPI) is a key component for our HPC users
+and an important factor for the performance of multi-node parallel
+applications.  We have worked on improving Open MPI support on for wide
+range or high-speed network devices, making sure it can our `openmpi`
+package achieves peak performance _by default_ on each of them—it is all
+about _portable performance_.  This work is described in our blog post
+entitled [_Optimized and portable Open MPI
+packaging_](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/).
+It led to improvements in packages for the high-speed network drivers
+and fabrics, such as UCX, PSM, and PSM2, improvements in the Open MPI
+package itself, and the addition of a package for the [Intel MPI
+Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks).
+
+TODO: List other key packages such as FeNICS?
+
+Many other key HPC packages have been added, upgraded, or improved,
+including the SLURM batch scheduler, the HDF5 data management suite, the
+LAPACK reference linear algebra package, the Julia programming language,
+and many more.
+
+In addition to the packages in core Guix, we have been developing
+[_channels_](https://guix.gnu.org/manual/devel/en/html_node/Channels.html)
+providing packages that are closely related to the research work of
+teams at our institutes.  One such example is [the Guix-HPC
+channel](https://gitlab.inria.fr/guix-hpc/guix-hpc/), developed by HPC
+research teams at Inria, and which now contains about forty packages.
+
+TODO: Other channels?
+
 # Cluster Usage
 
 # Outreach and User Support
