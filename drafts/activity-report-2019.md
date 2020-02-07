@@ -27,7 +27,7 @@ Technology](http://tourbillion-technology.com/).
 This report highlights key achievements of Guix-HPC between [our
 previous
 report](https://hpc.guix.info/blog/2019/02/guix-hpc-activity-report-2018/)
-a year ago today, February 2020.
+a year ago and today, February 2020.
 
 # Outline
 
@@ -105,6 +105,31 @@ research teams at Inria, and which now contains about forty packages.
 TODO: Other channels?
 
 # Cluster Usage
+
+TODO: More clusters here?  UTHSC?
+
+This year Guix has become the deployment tool of choice on more
+clusters.  We are notably aware of deployments at several academic
+clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
+(France) and [CCIPL](https://ccipl.univ-nantes.fr/) (France).
+Discussions are on-going with other academic and industrial partners who
+have shown interest in deploying Guix.
+
+We have further improved [`guix
+pack`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html)
+to support users who wish to take advantage of Guix while deploying
+software on machines where Guix is not available.  One noteworthy
+improvement is the addition of the `-RR` option, which we like to refer
+to as “really relocatable”: `guix pack -RR` would create a relocatable
+tarball that automatically falls back to using
+[PRoot](https://github.com/proot-me/PRoot) for relocation [when
+unprivileged user namespaces are not
+supported](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/),
+thereby providing a “universal” relocatable archive.  The Docker and
+Singularity back-ends of `guix pack` have also seen improvements, in
+particular the addition of the `--entry-point` option to specify the
+default entry point, and that of a `--save-provenance` option to save
+provenance meta-data in the container image.
 
 # Outreach and User Support
 
