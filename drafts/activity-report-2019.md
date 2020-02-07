@@ -73,6 +73,28 @@ Step 1 is very situation-dependent and can therefore not be fully automatized. S
 
 A [post on the Guix HPC blog](https://hpc.guix.info/blog/2020/01/reproducible-computations-with-guix/) explains how to perform the four steps of reproducible computation, and also explains how Guix ensures bit-for-bit reproducibility through comprehensive dependency tracking.
 
+## Ensuring Source Code Availability
+
+In April 2019, Software Heritage and GNU Guix [announced their
+collaboration](https://www.softwareheritage.org/2019/04/18/software-heritage-and-gnu-guix-join-forces-to-enable-long-term-reproducibility/)
+to enable long-term reproducibility.  Being able to rely on a long-term
+source code archive is crucial to support the use cases that matter to
+reproducible science: what good would it be if `guix time-machine` would
+fail because upstream source code vanished?  Starting from beginning of
+2019, Guix is [able to fall back to Software
+Heritage](https://hpc.guix.info/blog/2019/03/connecting-reproducible-deployment-to-a-long-term-source-code-archive/)
+should upstream source code vanish.
+
+We worked to improve coverage of the Software Heritage archive—making
+sure source code Guix packages refer to is archived.  That led to the
+addition of an `archival` tool to [`guix
+lint`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-lint.html),
+our helper for package developers, which instructs Software Heritage to
+archive source code it currently lacks, before the package even makes it
+in Guix itself.  We helped review work carried out by NixOS developer
+“lewo” to [further improve archive
+coverage](https://forge.softwareheritage.org/D2025/new/).
+
 ## Packaging
 
 The message passing interface (MPI) is a key component for our HPC users
