@@ -174,5 +174,7 @@ to the project, which we summarize here.
   - University of Tennessee Health Science Center (UTHSC): 0.3
     person-year (Pjotr Prins)
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
+  - Université de Paris: 0.5 person-year (Simon Tournier)
+  - CNRS: 0.5 person-year (Konrad Hinsen)
 
 # Perspectives
