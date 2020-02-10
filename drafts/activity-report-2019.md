@@ -179,6 +179,55 @@ provenance meta-data in the container image.
 
 # Outreach and User Support
 
+Guix-HPC is in part about “spreading the word” about our approach to
+reproducible software environments and how it can help further the goals
+of reproducible research and high-performance computing development.
+This section summarizes articles, talks, and training sessions given
+this year.
+
+## Articles
+
+The book [_Evolutionary
+Genomics_](https://link.springer.com/book/10.1007/978-1-4939-9074-0),
+published in July 2019, contains a chapter entitled [“Scalable Workflows
+and Reproducible Data Analysis for
+Genomics”](https://link.springer.com/protocol/10.1007%2F978-1-4939-9074-0_24),
+by Francesco Strozzi _et al._ that discusses workflow and deployment
+tools, in particular looking at the [GNU Guix Workflow
+Language](https://www.guixwl.org/), the Common Workflow Language,
+Snakemake, as well as Docker, CONDA, and Singularity.
+
+We have published [7 articles on the Guix-HPC
+blogs](https://hpc.guix.info/blog/) touching topics such as efficient
+Open MPI packaging, Guix-Jupyter, Software Heritage integration, and a
+hands-on tutorial using Guix for reproducible computations.
+
+## Talks
+
+Since last year, we gave the following talks at the following venues:
+
+  - [INRA MIA Seminar,
+    Feb. 2019](https://miat.inrae.fr/site/List_of_past_seminars)
+    (Ludovic Courtès)
+  - [IN2P3/CNRS ComputeOps Workshop, March
+    2019](https://indico.in2p3.fr/event/18626/) (Ludovic Courtès)
+  - [ARAMIS Plenary Session on Reproducibility, May
+    2019](https://aramis.resinfo.org/wiki/doku.php?id=pleniaires:pleniere23mai2019)
+    (Ludovic Courtès)
+  - [JCAD,
+    Oct. 2019](https://jcad2019.sciencesconf.org/resource/page/id/6)
+    (Ludovic Courtès)
+  - [FOSDEM, Feb. 2020](https://fosdem.org/2020/) (Ludovic Courtès,
+    Efraim Flashner, Pjotr Prins)
+
+## Training Sessions
+
+The [PRACE/Inria High-Performance Numerical Simulation
+School](https://project.inria.fr/hpcschool2019/) that took place in
+November 2019 contained an introduction to Guix and used it throughout
+its hands-on sessions.  A Guix training session also took place at Inria
+(Bordeaux) in October 2019.
+
 # Personnel
 
 TODO: Double-check!
