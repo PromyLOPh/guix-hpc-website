@@ -73,6 +73,30 @@ Step 1 is very situation-dependent and can therefore not be fully automatized. S
 
 A [post on the Guix HPC blog](https://hpc.guix.info/blog/2020/01/reproducible-computations-with-guix/) explains how to perform the four steps of reproducible computation, and also explains how Guix ensures bit-for-bit reproducibility through comprehensive dependency tracking.
 
+## Reproducible Deployment for Jupyter Notebooks
+
+[Jupyter Notebooks](https://jupyter.org) have become a tool of choice
+for scientists willing to share and reproduce computational experiments.
+Yet, nothing in a notebook specifies which software packages it relies
+on, which puts reproducibility at risk.
+
+Together with Pierre-Antoine Rouby as part of a four-month internship at
+Inria in 2018, [we started work on
+Guix-Jupyter](https://hpc.guix.info/blog/2019/02/guix-hpc-activity-report-2018/),
+a Guix “kernel” for Jupyter Notebook.  In a nutshell, Guix-Jupyter
+allows notebook writers to specify the software environment the notebook
+depends on: the Guix packages, and the Guix commit.  Furthermore, all
+the code in the notebook runs in an isolated environment (a
+“container”).  This ensures that someone replaying the notebook will run
+it in the right environment as the author intended.
+
+Guix-Jupyter reached its [first release in October
+2019](https://hpc.guix.info/blog/2019/10/towards-reproducible-jupyter-notebooks/).
+Many on Jupyter fora were enthusiastic about this approach.  Compared to
+other approaches, which revolve around building container images,
+Guix-Jupyter addresses the deployment problem at its root, providing a
+maximum level of transparency.
+
 ## Ensuring Source Code Availability
 
 In April 2019, Software Heritage and GNU Guix [announced their
