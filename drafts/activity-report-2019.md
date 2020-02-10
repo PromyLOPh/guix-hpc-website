@@ -27,7 +27,10 @@ Technology](http://tourbillion-technology.com/).
 This report highlights key achievements of Guix-HPC between [our
 previous
 report](https://hpc.guix.info/blog/2019/02/guix-hpc-activity-report-2018/)
-a year ago and today, February 2020.
+a year ago and today, February 2020.  This year was marked by a major
+milestone: the [release in May 2019 of GNU Guix 1.0, seven years and
+more than 40,000 commits after its
+inception](https://hpc.guix.info/blog/2019/05/gnu-guix-1.0-foundation-for-hpc-reproducible-science/).
 
 # Outline
 
