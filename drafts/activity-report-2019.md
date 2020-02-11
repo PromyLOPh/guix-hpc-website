@@ -159,6 +159,13 @@ the LAPACK reference linear algebra package, the Julia and Rust
 programming languages, the PyOpenCL Python interface to OpenCL, and many
 more.
 
+Statistical and bioinformatics packages for the R programming language
+in particular have seen regular comprehensive upgrades, closely
+following updates to the popular CRAN and Bioconductor repositories.
+At the time of this writing Guix provides a collection of more than
+1300 reproducibly built R packages, making R one of the best supported
+programming environments in Guix.
+
 In addition to the packages in core Guix, we have been developing
 [_channels_](https://guix.gnu.org/manual/devel/en/html_node/Channels.html)
 providing packages that are closely related to the research work of
