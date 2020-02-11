@@ -344,7 +344,7 @@ to the project, which we summarize here.
     Guix-HPC channel: Florent Pruvost, Gilles Marait, Marek Felsoci,
     Emmanuel Agullo, Adrien Guilbaud, and others)
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
-    (Ricardo Wurmus)
+    (Ricardo Wurmus and Mădălin Ionel Patrașcu)
   - Tourbillion Technology: 0.5 person-year (Paul Garlick)
   - University of Tennessee Health Science Center (UTHSC): 0.8
     person-year (Efraim Flashner and Pjotr Prins)
