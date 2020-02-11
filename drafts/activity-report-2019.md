@@ -101,6 +101,53 @@ Guix-Jupyter addresses the deployment problem at its root, providing a
 maximum level of transparency.  These Jupyter notebooks are being used in
 bioinformatics courses by, for example, the University of Tennessee.
 
+## The Guix Workflow Language
+
+The [Guix Workflow Language](https://workflows.guix.info) (or GWL), an
+extension of Guix for the description and execution of scientific
+workflows, has seen continuous improvements in the past year.  The
+[core idea remains
+unchanged](https://archive.fosdem.org/2019/schedule/event/guixinfra/):
+rather than grafting software deployment onto a workflow language,
+extend a mature software deployment solution just enough to accomodate
+the needs of users and authors of scientific workflows.
+
+User testing revealed a desire for a more familiar syntax for users of
+other workflow systems without compromising the benefits of embedding
+a domain specific language in a general purpose language, as
+demonstrated by Guix itself.  As a result of these tests and
+discussions, the Guix Workflow Language now accepts workflow
+definitions written in a pythonesque syntax called
+[Wisp](https://srfi.schemers.org/srfi-119/srfi-119.html) and provides
+about a dozen macros and procedures to simplify common tasks, such as
+embedding of foreign code snippets, string interpolation, file name
+expansion, etc.  Of course, workflows can also be written in plain
+Scheme or even in a mix of both styles.
+
+One of the benefits of "growing" a workflow language out of Guix is
+that non-trivial features implemented in Guix are readily available
+for co-option.  For example, the GWL now uses the mature
+implementation of containers in Guix to provide support for evaluating
+processes in isolated container environments.
+
+Work has begun to leverage the features of both [`guix
+pack`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html)
+and [`guix
+deploy`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-deploy.html)
+to not only execute workflows on systems that share a Guix
+installation but also to provision remote Guix systems from scratch to
+run a distributed workflow without a traditional HPC scheduler.  To
+that end, a [first
+prototype](https://git.elephly.net/software/guile-aws.git) of a Guile
+library to manage storage and compute resources through Amazon Web
+Services (AWS) has been developed, which will be integrated with the
+Guix Workflow Language in future releases.
+
+You can read more about the many changes to the GWL in the release
+notes of version 0.2.0.
+
+TODO: link to the release notes
+
 ## Ensuring Source Code Availability
 
 In April 2019, Software Heritage and GNU Guix [announced their
