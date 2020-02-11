@@ -98,8 +98,8 @@ Guix-Jupyter reached its [first release in October
 Many on Jupyter fora were enthusiastic about this approach.  Compared to
 other approaches, which revolve around building container images,
 Guix-Jupyter addresses the deployment problem at its root, providing a
-maximum level of transparency. These Jupyter notebooks are being used in
-bioinformatics courses by, for example, the University of Tennessee..
+maximum level of transparency.  These Jupyter notebooks are being used in
+bioinformatics courses by, for example, the University of Tennessee.
 
 ## Ensuring Source Code Availability
 
@@ -140,16 +140,16 @@ Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks).
 
 TODO: List other key packages such as FeNICS?
 
-In HPC environments typically an underlying Linux distribution is used
+In HPC environments typically an underlying GNU/Linux distribution is used
 such as Red Hat, Debian or Ubuntu. In addition user land build systems
 are used such as Conda which has the downside of not being
 reproducible because the bootstrap normally depends on the underlying
 distribution.  Guix, however, has support for a reproducible Conda
-bootstrap. This means that HPC managers can support distro software
-installs (e.g., through apt-get), but in addition users get empowered
-to install software themselves using thousands of GNU Guix supported
+bootstrap.  This means that HPC managers can support distro software
+installs (e.g., through `apt-get`), but in addition users get empowered
+to install software themselves using thousands of GNU Guix supported
 packages (and extra through Guix channels, see below) and thousands of
-Conda packages. In practise, as system administrators, we find we
+Conda packages. In practice, as system administrators, we find we
 hardly ever have to build packages from source again and system
 administrators hardly get bothered by their (scientific) users.
 
@@ -170,8 +170,7 @@ TODO: Other channels?
 For bioinformatics the following channels are actively maintained:
 
 1. https://github.com/BIMSBbioinfo
-2. https://github.com/UMCUGenetics/guix-additions
-3. https://github.com/ekg/guix-genomics
+2. https://github.com/ekg/guix-genomics
 
 Note some of these contain non-free software and even binary
 blobs. Importantly we don't encourage such binary software deployments
@@ -284,12 +283,5 @@ to the project, which we summarize here.
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
   - Université de Paris: 0.25 person-year (Simon Tournier)
   - CNRS: 0.25 person-year (Konrad Hinsen)
-
-# Other
-
-In 2019 the following GNU Guix related grants were awarded to
-
-- GNU Mes (Jan and Danny)
-- GNU Guix (Pierre)
 
 # Perspectives
