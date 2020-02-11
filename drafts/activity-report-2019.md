@@ -227,9 +227,9 @@ Language](https://www.guixwl.org/), the Common Workflow Language,
 Snakemake, as well as Docker, CONDA, and Singularity.
 
 We have published [7 articles on the Guix-HPC
-blogs](https://hpc.guix.info/blog/) touching topics such as efficient
+blog](https://hpc.guix.info/blog/) touching topics such as efficient
 Open MPI packaging, Guix-Jupyter, Software Heritage integration, and a
-hands-on tutorial using Guix for reproducible computations.
+hands-on tutorial using Guix for reproducible workflows and computations.
 
 ## Talks
 
