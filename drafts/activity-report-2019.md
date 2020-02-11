@@ -246,6 +246,18 @@ clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
 Discussions are on-going with other academic and industrial partners who
 have shown interest in deploying Guix.
 
+In order to improve the availability of [binary
+substitutes](https://guix.gnu.org/manual/en/html_node/Substitutes.html)
+for the more than 12,000 packages defined in Guix, the Max Delbrück
+Center for Molecular Medicine (MDC) in Berlin (Germany) generously
+provided funds to purchase 30 new servers to replace a number of
+outdated and failing build nodes in the [distributed build
+farm](https://ci.guix.gnu.org).  These new servers are now hosted at
+the MDC data center in Berlin and continuously build binaries for
+several of the architectures supported by Guix.  The binaries are
+archived on a dedicated storage array and offered for download to all
+users of Guix.
+
 We have further improved [`guix
 pack`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html)
 to support users who wish to take advantage of Guix while deploying
