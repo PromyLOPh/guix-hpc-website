@@ -98,7 +98,8 @@ Guix-Jupyter reached its [first release in October
 Many on Jupyter fora were enthusiastic about this approach.  Compared to
 other approaches, which revolve around building container images,
 Guix-Jupyter addresses the deployment problem at its root, providing a
-maximum level of transparency.
+maximum level of transparency. These Jupyter notebooks are being used in
+bioinformatics courses by, for example, the University of Tennessee..
 
 ## Ensuring Source Code Availability
 
@@ -139,10 +140,23 @@ Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks).
 
 TODO: List other key packages such as FeNICS?
 
+In HPC environments typically an underlying Linux distribution is used
+such as Red Hat, Debian or Ubuntu. In addition user land build systems
+are used such as Conda which has the downside of not being
+reproducible because the bootstrap normally depends on the underlying
+distribution.  Guix, however, has support for a reproducible Conda
+bootstrap. This means that HPC managers can support distro software
+installs (e.g., through apt-get), but in addition users get empowered
+to install software themselves using thousands of GNU Guix supported
+packages (and extra through Guix channels, see below) and thousands of
+Conda packages. In practise, as system administrators, we find we
+hardly ever have to build packages from source again and system
+administrators hardly get bothered by their (scientific) users.
+
 Many other key HPC packages have been added, upgraded, or improved,
-including the SLURM batch scheduler, the HDF5 data management suite, the
-LAPACK reference linear algebra package, the Julia programming language,
-and many more.
+including the SLURM batch scheduler, the HDF5 data management suite,
+the LAPACK reference linear algebra package, the Julia programming
+language, Rust crate packaging, and many more.
 
 In addition to the packages in core Guix, we have been developing
 [_channels_](https://guix.gnu.org/manual/devel/en/html_node/Channels.html)
@@ -153,14 +167,27 @@ research teams at Inria, and which now contains about forty packages.
 
 TODO: Other channels?
 
+For bioinformatics the following channels are actively maintained:
+
+1. https://github.com/BIMSBbioinfo
+2. https://github.com/UMCUGenetics/guix-additions
+3. https://github.com/ekg/guix-genomics
+
+Note some of these contain non-free software and even binary
+blobs. Importantly we don't encourage such binary software deployments
+as they contain a risk of introducing security exploits. Free and open
+source software is critical to security and reproducible science
+(TODO: citation).
+
 # Cluster Usage
 
-TODO: More clusters here?  UTHSC?
+TODO: More clusters here?
 
 This year Guix has become the deployment tool of choice on more
-clusters.  We are notably aware of deployments at several academic
+clusters.  We are notably aware of new deployments at several academic
 clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
-(France) and [CCIPL](https://ccipl.univ-nantes.fr/) (France).
+(France), [CCIPL](https://ccipl.univ-nantes.fr/) (France) and
+[UTHSC](http://uthsc.edu/).
 Discussions are on-going with other academic and industrial partners who
 have shown interest in deploying Guix.
 
@@ -223,6 +250,11 @@ Since last year, we gave the following talks at the following venues:
   - [FOSDEM, Feb. 2020](https://fosdem.org/2020/) (Ludovic Courtès,
     Efraim Flashner, Pjotr Prins)
 
+We also organised the
+[GNU Guix days](https://libreplanet.org/wiki/Group:Guix/FOSDEM2020)
+which attracted 35 Guix contributors and ran for two days before FOSDEM
+2020.
+
 ## Training Sessions
 
 The [PRACE/Inria High-Performance Numerical Simulation
@@ -247,10 +279,17 @@ to the project, which we summarize here.
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus)
   - Tourbillion Technology: 0.5 person-year (Paul Garlick)
-  - University of Tennessee Health Science Center (UTHSC): 0.3
-    person-year (Pjotr Prins)
+  - University of Tennessee Health Science Center (UTHSC): 0.8
+    person-year (Efraim Flashner and Pjotr Prins)
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
   - Université de Paris: 0.25 person-year (Simon Tournier)
   - CNRS: 0.25 person-year (Konrad Hinsen)
+
+# Other
+
+In 2019 the following GNU Guix related grants were awarded to
+
+- GNU Mes (Jan and Danny)
+- GNU Guix (Pierre)
 
 # Perspectives
