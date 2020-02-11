@@ -170,8 +170,9 @@ TODO: Other channels?
 
 For bioinformatics the following channels are actively maintained:
 
-1. https://github.com/BIMSBbioinfo
-2. https://github.com/ekg/guix-genomics
+1. https://github.com/BIMSBbioinfo/guix-bimsb
+2. https://github.com/BIMSBbioinfo/guix-bimsb-nonfree
+3. https://github.com/ekg/guix-genomics
 
 Note some of these contain non-free software and even binary
 blobs. Importantly we don't encourage such binary software deployments
