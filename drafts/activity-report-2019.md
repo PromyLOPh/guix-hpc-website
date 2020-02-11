@@ -185,8 +185,8 @@ TODO: More clusters here?
 This year Guix has become the deployment tool of choice on more
 clusters.  We are notably aware of new deployments at several academic
 clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
-(France), [CCIPL](https://ccipl.univ-nantes.fr/) (France) and
-[UTHSC](http://uthsc.edu/).
+(France), [CCIPL](https://ccipl.univ-nantes.fr/) (France), and
+[UTHSC](http://uthsc.edu/) (USA).
 Discussions are on-going with other academic and industrial partners who
 have shown interest in deploying Guix.
 
