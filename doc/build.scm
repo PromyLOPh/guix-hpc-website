@@ -33,7 +33,8 @@ directory containing Lout files."
       "cm-fonts.ld"
       "gentium-fonts.ld"
       "charis-fonts.ld"
-      "inria-fonts.ld"))
+      "inria-fonts.ld"
+      "fira-fonts.ld"))
 
   (define logo
     (local-file "../image-sources/guixhpc-logo-transparent-white.svg"))
@@ -184,6 +185,7 @@ directory containing Lout files."
                                "@Database @FontDef { gentium-fonts }\n"
                                "@Database @FontDef { charis-fonts }\n"
                                "@Database @FontDef { inria-fonts }\n"
+                               "@Database @FontDef { fira-fonts }\n"
                                "@Database @FontDef { cm-fonts }\n"))
 
           ;; Emit the Lout file.
@@ -231,6 +233,7 @@ directory containing Lout files."
 (define font-gentium (specification->package "font-sil-gentium"))
 (define font-charis (specification->package "font-sil-charis"))
 (define font-inria (specification->package "font-blackfoundry-inria"))
+(define font-fira-sans (specification->package "font-fira-sans"))
 (define texlive-lm (specification->package "texlive-lm")) ;Latin Modern
 (define coreutils (specification->package "coreutils"))
 (define ttf2pt1 (specification->package "ttf2pt1"))
@@ -263,7 +266,8 @@ directory containing Lout files."
 
 (define* (lout->pdf directory file #:key
                     (paper-size "A4")
-                    (fonts (list font-gentium font-charis font-inria)))
+                    (fonts (list font-gentium font-charis
+                                 font-inria font-fira-sans)))
   "Build Lout source FILE, taken from DIRECTORY, and return the resulting
 PDF."
   (define font-directory
