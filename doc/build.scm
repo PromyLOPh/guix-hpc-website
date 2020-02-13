@@ -128,7 +128,11 @@ directory containing Lout files."
               (#\” "''")
               (#\‘ "`")
               (#\’ "'")
-              (#\… "...")))
+              (#\… "...")
+
+              ;; Gross hack to work around Lout's lack of Unicode support.
+              (#\ă "{ { { Times Base } @Font @Char \"breve\" } |0.5ro a }")
+              (#\ș "{ { @Char \"cedilla\" } |0.5ro s }")))
 
           (define (make-front-cover doc engine)
             (format #t "{ @IncludeGraphic { ~s } }"
