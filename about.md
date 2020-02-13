@@ -86,7 +86,7 @@ inclusion in Guix:
   - This [Genenetwork
     repository](https://gitlab.com/genenetwork/guix-bioinformatics)
     contains bioinformatics and HPC packages used by
-    [Genenetwork](http://genenetwork.org/).
+    [Genenetwork](http://genenetwork.org/) at the University of Tennessee.
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
@@ -113,6 +113,10 @@ Here are known deployments of Guix on clusters and contact information:
   - [CCIPL](https://ccipl.univ-nantes.fr/) (France)
       - 230-node cluster (4,000+ cores)
       - contact: Yann Dupont
+  - [UTHSC](https://uthsc.edu/) (USA)
+      - 2-node test cluster (128 cores). In preparation
+        of 2020 research cluster and clinical cluster
+      - contact: [Pjotr Prins](http://thebird.nl/)
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 
