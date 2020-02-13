@@ -32,7 +32,8 @@ directory containing Lout files."
     '("doc-style.lout"
       "cm-fonts.ld"
       "gentium-fonts.ld"
-      "charis-fonts.ld"))
+      "charis-fonts.ld"
+      "inria-fonts.ld"))
 
   (define logo
     (local-file "../image-sources/guixhpc-logo-transparent-white.svg"))
@@ -138,16 +139,16 @@ directory containing Lout files."
             (format #t "{ @IncludeGraphic { ~s } }"
                     #+(svg->eps logo "guix-logo.eps"))
             (format #t "
-//0.3c { Helvetica Bold 9p } @Font \"darkgrey\" @Color
+//0.3c { InriaSans Bold 9p } @Font \"darkgrey\" @Color
 { Reproducible software deployment for high-performance computing. }
 
 //0.6rt
 @Center 0.3 @Scale { @IncludeGraphic { ~s } }\n"
                     #+(svg->eps lab-book "lab-book.eps"))
             (output (! "
-//0.8rt { Helvetica Bold 24p } @Font { Activity Report 2018--2019 }
+//0.8rt { InriaSans Bold 24p } @Font { Activity Report 2018--2019 }
 //1rt
-{ Helvetica Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
+{ InriaSans Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
 @NP\n
 @NP                                            # page 2 must be empty
 //.2bt\n"
@@ -182,6 +183,7 @@ directory containing Lout files."
                                (engine-custom lout-engine 'includes) "\n"
                                "@Database @FontDef { gentium-fonts }\n"
                                "@Database @FontDef { charis-fonts }\n"
+                               "@Database @FontDef { inria-fonts }\n"
                                "@Database @FontDef { cm-fonts }\n"))
 
           ;; Emit the Lout file.
@@ -228,6 +230,7 @@ directory containing Lout files."
 (define lout (specification->package "lout"))
 (define font-gentium (specification->package "font-sil-gentium"))
 (define font-charis (specification->package "font-sil-charis"))
+(define font-inria (specification->package "font-blackfoundry-inria"))
 (define texlive-lm (specification->package "texlive-lm")) ;Latin Modern
 (define coreutils (specification->package "coreutils"))
 (define ttf2pt1 (specification->package "ttf2pt1"))
@@ -260,7 +263,7 @@ directory containing Lout files."
 
 (define* (lout->pdf directory file #:key
                     (paper-size "A4")
-                    (fonts (list font-gentium font-charis)))
+                    (fonts (list font-gentium font-charis font-inria)))
   "Build Lout source FILE, taken from DIRECTORY, and return the resulting
 PDF."
   (define font-directory
