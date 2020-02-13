@@ -140,16 +140,16 @@ directory containing Lout files."
             (format #t "{ @IncludeGraphic { ~s } }"
                     #+(svg->eps logo "guix-logo.eps"))
             (format #t "
-//0.3c { InriaSans Bold 9p } @Font \"darkgrey\" @Color
+//0.3c { FiraSans SemiBold 9p } @Font \"darkgrey\" @Color
 { Reproducible software deployment for high-performance computing. }
 
 //0.6rt
 @Center 0.3 @Scale { @IncludeGraphic { ~s } }\n"
                     #+(svg->eps lab-book "lab-book.eps"))
             (output (! "
-//0.8rt { InriaSans Bold 24p } @Font { Activity Report 2018--2019 }
+//0.8rt { FiraSans Bold 24p } @Font { Activity Report 2018--2019 }
 //1rt
-{ InriaSans Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
+{ FiraSans Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
 @NP\n
 @NP                                            # page 2 must be empty
 //.2bt\n"
