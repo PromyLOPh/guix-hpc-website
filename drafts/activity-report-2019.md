@@ -155,8 +155,9 @@ administrators hardly get bothered by their (scientific) users.
 
 Many other key HPC packages have been added, upgraded, or improved,
 including the SLURM batch scheduler, the HDF5 data management suite,
-the LAPACK reference linear algebra package, the Julia programming
-language, Rust crate packaging, and many more.
+the LAPACK reference linear algebra package, the Julia and Rust
+programming languages, the PyOpenCL Python interface to OpenCL, and many
+more.
 
 In addition to the packages in core Guix, we have been developing
 [_channels_](https://guix.gnu.org/manual/devel/en/html_node/Channels.html)
