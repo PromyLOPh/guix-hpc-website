@@ -209,7 +209,8 @@ directory containing Lout files."
                             lout-files)
                     '#$lout-files))))
 
-  (computed-file (basename (local-file-name file) ".md")
+  (computed-file (string-append (basename (local-file-name file) ".md")
+                                "-lout")
                  build))
 
 (define (svg->eps svg name)
