@@ -1,7 +1,7 @@
 ;;; This module extends GNU Guix and is licensed under the same terms, those
 ;;; of the GNU GPL version 3 or (at your option) any later version.
 ;;;
-;;; Copyright © 2019 Inria
+;;; Copyright © 2019, 2020 Inria
 
 ;; To build the document, run:
 ;;
@@ -219,7 +219,7 @@ directory containing Lout files."
 (define lout (specification->package "lout"))
 (define font-gentium (specification->package "font-sil-gentium"))
 (define font-charis (specification->package "font-sil-charis"))
-(define texlive-fonts-lm (specification->package "texlive-fonts-lm"))
+(define texlive-lm (specification->package "texlive-lm")) ;Latin Modern
 (define coreutils (specification->package "coreutils"))
 (define ttf2pt1 (specification->package "ttf2pt1"))
 
@@ -275,7 +275,7 @@ PDF."
           (invoke #$(file-append lout "/bin/lout") "-a" "-r3"
                   "-I."
                   "-F" #$(file-append font-directory "/share/fonts/type1")
-                  "-F" #$(file-append texlive-fonts-lm
+                  "-F" #$(file-append texlive-lm
                                       "/share/texmf-dist/fonts/afm/public/lm")
                   "-s" #$file "-o" ps-file)
 
@@ -283,7 +283,7 @@ PDF."
                                       "/bin:" 'suffix))
           (setenv "GS_FONTPATH"
                   (string-append #$font-directory "/share/fonts/type1:"
-                                 #$texlive-fonts-lm
+                                 #$texlive-lm
                                  "/share/texmf-dist/fonts/type1/public/lm"))
           (invoke #$(file-append ghostscript "/bin/ps2pdf")
                   "-dPDFSETTINGS=/prepress"
