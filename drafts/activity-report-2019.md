@@ -319,8 +319,7 @@ Since last year, we gave the following talks at the following venues:
 
 We also organised the
 [GNU Guix days](https://libreplanet.org/wiki/Group:Guix/FOSDEM2020)
-which attracted 35 Guix contributors and ran for two days before FOSDEM
-2020.
+which attracted 35 Guix contributors and ran for two days before FOSDEM 2020.
 
 ## Training Sessions
 
