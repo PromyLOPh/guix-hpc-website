@@ -67,7 +67,7 @@ Guix has always supported reproducible computations by design, but there were tw
 Supporting reproducible computations requires addressing four aspects:
  1. Finding the dependencies of a computation.
  2. Ensuring that there are no hidden dependencies, such as
-    utility programs from the environment that are "just there".
+    utility programs from the environment that are “just there”.
  3. Providing a record of the dependencies from which they can be
     reconstructed.
  4. Reproducing a computation from such a record.
@@ -124,7 +124,7 @@ embedding of foreign code snippets, string interpolation, file name
 expansion, etc.  Of course, workflows can also be written in plain
 Scheme or even in a mix of both styles.
 
-One of the benefits of "growing" a workflow language out of Guix is
+One of the benefits of “growing” a workflow language out of Guix is
 that non-trivial features implemented in Guix are readily available
 for co-option.  For example, the GWL now uses the mature
 implementation of containers in Guix to provide support for evaluating
