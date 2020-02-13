@@ -84,6 +84,10 @@ directory containing Lout files."
                (itemize (map (lambda (item-body)
                                (item (map sxml->skribilo item-body)))
                              items)))
+              (('ol ('li . items) ...)
+               (enumerate (map (lambda (item-body)
+                                 (item (map sxml->skribilo item-body)))
+                               items)))
               (('a ('@ ('href url)) . body)
                (append (map sxml->skribilo body)
                        (list (footnote
