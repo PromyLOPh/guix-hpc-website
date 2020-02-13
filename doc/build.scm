@@ -145,7 +145,7 @@ directory containing Lout files."
 @Center 0.3 @Scale { @IncludeGraphic { ~s } }\n"
                     #+(svg->eps lab-book "lab-book.eps"))
             (output (! "
-//0.8rt { Helvetica Bold 24p } @Font { Activity Report 2017--2018 }
+//0.8rt { Helvetica Bold 24p } @Font { Activity Report 2018--2019 }
 //1rt
 { Helvetica Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
 @NP\n
@@ -302,6 +302,6 @@ PDF."
   (computed-file (basename file ".lout") build))
 
 
-(lout->pdf (markdown->lout (local-file "../posts/activity-report-2018.md"))
-           "activity-report-2018.lout"
+(lout->pdf (markdown->lout (local-file "../drafts/activity-report-2019.md"))
+           "activity-report-2019.lout"
            #:paper-size "A5")
