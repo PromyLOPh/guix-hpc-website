@@ -338,6 +338,7 @@ than 60 people every month—a 50% increase compared to last year.  As
 part of Guix-HPC, participating institutions have dedicated work hours
 to the project, which we summarize here.
 
+  - CNRS: 0.25 person-year (Konrad Hinsen)
   - Cray, Inc.: 0.4 person-year (Eric Bavier)
   - Inria: 3 person-years (Ludovic Courtès and the contributors to the
     Guix-HPC channel: Florent Pruvost, Gilles Marait, Marek Felsoci,
@@ -345,10 +346,9 @@ to the project, which we summarize here.
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus and Mădălin Ionel Patrașcu)
   - Tourbillion Technology: 0.5 person-year (Paul Garlick)
+  - Université de Paris: 0.25 person-year (Simon Tournier)
   - University of Tennessee Health Science Center (UTHSC): 0.8
     person-year (Efraim Flashner and Pjotr Prins)
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
-  - Université de Paris: 0.25 person-year (Simon Tournier)
-  - CNRS: 0.25 person-year (Konrad Hinsen)
 
 # Perspectives
