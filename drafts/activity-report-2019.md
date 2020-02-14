@@ -317,6 +317,9 @@ Since last year, we gave the following talks at the following venues:
   - [JCAD,
     Oct. 2019](https://jcad2019.sciencesconf.org/resource/page/id/6)
     (Ludovic Courtès)
+  - [SciCloj Web Meeting,
+    Jan. 2020](https://scicloj.github.io/pages/web_meetings/) (Ludovic
+    Courtès)
   - [FOSDEM, Feb. 2020](https://fosdem.org/2020/) (Ludovic Courtès,
     Efraim Flashner, Pjotr Prins)
 
