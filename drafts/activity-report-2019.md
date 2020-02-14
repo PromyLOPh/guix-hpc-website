@@ -172,6 +172,11 @@ coverage](https://forge.softwareheritage.org/D2025/new/).
 
 ## Packaging
 
+The core package collection that comes with Guix went from 9,000
+packages a year ago to more than 12,000 as of this writing.  This rapid
+growth benefits users of all application domains, notably HPC
+practitioners and scientists.
+
 The message passing interface (MPI) is a key component for our HPC users
 and an important factor for the performance of multi-node parallel
 applications.  We have worked on improving Open MPI support on for wide
@@ -219,8 +224,6 @@ providing packages that are closely related to the research work of
 teams at our institutes.  One such example is [the Guix-HPC
 channel](https://gitlab.inria.fr/guix-hpc/guix-hpc/), developed by HPC
 research teams at Inria, and which now contains about forty packages.
-
-TODO: Other channels?
 
 For bioinformatics the following channels are actively maintained:
 
