@@ -340,9 +340,10 @@ to the project, which we summarize here.
 
   - CNRS: 0.25 person-year (Konrad Hinsen)
   - Cray, Inc.: 0.4 person-year (Eric Bavier)
-  - Inria: 3 person-years (Ludovic Courtès and the contributors to the
+  - Inria: 3 person-years (Ludovic Courtès, Maurice Brémond,
+    and the contributors to the
     Guix-HPC channel: Florent Pruvost, Gilles Marait, Marek Felsoci,
-    Emmanuel Agullo, Adrien Guilbaud, and others)
+    Emmanuel Agullo, Adrien Guilbaud)
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus and Mădălin Ionel Patrașcu)
   - Tourbillion Technology: 0.5 person-year (Paul Garlick)
