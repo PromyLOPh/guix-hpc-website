@@ -359,3 +359,33 @@ to the project, which we summarize here.
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
 
 # Perspectives
+
+Making Guix more broadly usable on HPC clusters remains one of our top
+priorities.  Features added this year to `guix pack` are one way to
+approach it, and we will keep looking for ways to improve it.  In
+addition to this technical approach, we will keep working with cluster
+administrators to allow them to deploy Guix directly on their cluster.
+We have seen more cluster administrators deploy Guix this year and we
+are confident that this trend will continue.
+
+Last year, we advocated for tight integration of reproducible deployment
+capabilities through Guix in scientific applications.  The GNU Guix
+Workflow Language and Guix-Jupyter have since matured, giving us more
+insight into the benefits of the approach and opening new perspectives
+that we will explore.  We would additionally like to investigate a
+complementary approach: adding Guix support to existing tools, such as
+[`jupyter-repo2docker`](https://repo2docker.readthedocs.io/en/latest/).
+
+We have witnessed increasing awareness in the scientific community of
+the limitations of container-based tooling when it comes to building
+transparent and reproducible workflows.  We are happy to be associated
+with the [“Ten Years Reproducibility
+Challenge”](https://rescience.github.io/ten-years/) where we plan to
+demonstrate how Guix can help reproduce computational experiments.  In
+the same vein, we are also interested in adapting Mohammad Akhlaghi’s
+[reproducible paper
+template](https://gitlab.com/makhlaghi/reproducible-paper) to take
+advantage of Guix.
+
+There’s a lot we can do and we’d love to [hear your
+ideas](https://hpc.guix.info/about)!
