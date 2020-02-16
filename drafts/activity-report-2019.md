@@ -1,5 +1,5 @@
 title: Guix-HPC Activity Report, 2019
-author: Ludovic Courtès, Konrad Hinsen, Pjotr Prins, Ricardo Wurmus
+author: Ludovic Courtès, Konrad Hinsen, Pjotr Prins, Ricardo Wurmus, Paul Garlick
 date: 2020-02-12 14:00
 slug: guix-hpc-activity-report-2019
 ---
@@ -190,7 +190,22 @@ and fabrics, such as UCX, PSM, and PSM2, improvements in the Open MPI
 package itself, and the addition of a package for the [Intel MPI
 Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks).
 
-TODO: List other key packages such as FeNICS?
+Numerical simulation is one of the key activities on HPC systems.
+Within GNU Guix a `simulation` module has been established to gather
+together packages that are used in this field.  Popular packages such
+as [OpenFOAM](https://openfoam.org/) and
+[FEniCS](https://fenicsproject.org/) have already been included, with
+FEniCS having had a recent update.  The [Gmsh](http://gmsh.info/)
+package in the `maths` module allows for sophisticated grid generation
+and post-processing of results.  This year the
+[FreeCAD](https://www.freecadweb.org/) package was added to the
+`engineering` module.  This allows for the definition of complex
+two-dimensional and three-dimensional geometries, often needed as the
+first step in the simulation process.  Engineers and scientists using
+Guix can now conduct simulations and numerical experiments that span a
+spectacular range of applications.  Plans for the near future include
+updates to Gmsh and OpenFOAM and the addition of a specialised solver
+for the shallow water equations.
 
 In HPC environments typically an underlying GNU/Linux distribution is used
 such as Red Hat, Debian or Ubuntu. In addition user land build systems
@@ -351,7 +366,7 @@ to the project, which we summarize here.
     Emmanuel Agullo, Adrien Guilbaud)
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus and Mădălin Ionel Patrașcu)
-  - Tourbillion Technology: 0.5 person-year (Paul Garlick)
+  - Tourbillion Technology: 0.7 person-year (Paul Garlick)
   - Université de Paris: 0.25 person-year (Simon Tournier)
   - University of Tennessee Health Science Center (UTHSC): 0.8
     person-year (Efraim Flashner and Pjotr Prins)
