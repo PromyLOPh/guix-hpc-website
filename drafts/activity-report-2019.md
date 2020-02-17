@@ -238,18 +238,13 @@ providing packages that are closely related to the research work of
 teams at our institutes.  One such example is [the Guix-HPC
 channel](https://gitlab.inria.fr/guix-hpc/guix-hpc/), developed by HPC
 research teams at Inria, and which now contains about forty packages.
-
-For bioinformatics the following channels are actively maintained:
-
-1. https://github.com/BIMSBbioinfo/guix-bimsb
-2. https://github.com/BIMSBbioinfo/guix-bimsb-nonfree
-3. https://github.com/ekg/guix-genomics
-
-Note some of these contain non-free software and even binary
-blobs. Importantly we don't encourage such binary software deployments
-as they contain a risk of introducing security exploits. Free and open
-source software is critical to security and reproducible science
-(TODO: citation).
+Active bioinformatics channels include that of the [BIMSB group at the
+Max Delbrück Center for Molecular Medicine
+(MDC)](https://github.com/BIMSBbioinfo/guix-bimsb) (130+ packages), that
+of the [genetics group at UMC
+Utrecht](https://github.com/UMCUGenetics/guix-additions) (400+
+packages), and [the genomics channel by Erik
+Garrison](https://github.com/ekg/guix-genomics).
 
 # Cluster Usage
 
