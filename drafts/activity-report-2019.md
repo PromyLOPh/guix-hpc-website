@@ -278,7 +278,7 @@ pack`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html)
 to support users who wish to take advantage of Guix while deploying
 software on machines where Guix is not available.  One noteworthy
 improvement is the addition of the `-RR` option, which we like to refer
-to as “really relocatable”: `guix pack -RR` would create a relocatable
+to as “reliably relocatable”: `guix pack -RR` would create a relocatable
 tarball that automatically falls back to using
 [PRoot](https://github.com/proot-me/PRoot) for relocation [when
 unprivileged user namespaces are not
@@ -336,7 +336,7 @@ Since last year, we gave the following talks at the following venues:
     Efraim Flashner, Pjotr Prins)
 
 We also organised the
-[GNU Guix days](https://libreplanet.org/wiki/Group:Guix/FOSDEM2020)
+[GNU Guix Days](https://libreplanet.org/wiki/Group:Guix/FOSDEM2020),
 which attracted 35 Guix contributors and ran for two days before FOSDEM 2020.
 
 ## Training Sessions
