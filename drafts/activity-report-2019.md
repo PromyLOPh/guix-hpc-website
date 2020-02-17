@@ -386,6 +386,17 @@ that we will explore.  We would additionally like to investigate a
 complementary approach: adding Guix support to existing tools, such as
 [`jupyter-repo2docker`](https://repo2docker.readthedocs.io/en/latest/).
 
+For the Guix Workflow Language we will continue to explore its
+suitability in scheduler-less compute environments, such as ad-hoc
+clusters of short-lived virtual servers, that are becoming
+increasingly popular.  We think that the properties of
+bit-reproducible builds and package-level granularity unlock hitherto
+unavailable sharing among independent parts of workflow environments
+to an extent that is impossible when using monolithic container
+images.  This increase in storage and deployment efficiency is
+expected to result in significant cost savings when computations are
+offloaded to externally hosted and metered resources.
+
 We have witnessed increasing awareness in the scientific community of
 the limitations of container-based tooling when it comes to building
 transparent and reproducible workflows.  We are happy to be associated
