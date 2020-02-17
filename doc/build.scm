@@ -103,7 +103,7 @@ directory containing Lout files."
               ((? string? str) str)))
 
           (define (back-cover)
-            (! (format #f "@NP @NP @NP
+            (! (format #f "@NP @NP
 //1rt
 @Right 0.9 @Scale @IncludeGraphic { ~s }\n"
                        #+(svg->eps logo "guix-logo.eps"))))
