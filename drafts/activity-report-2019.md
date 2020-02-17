@@ -350,7 +350,7 @@ part of Guix-HPC, participating institutions have dedicated work hours
 to the project, which we summarize here.
 
   - CNRS: 0.25 person-year (Konrad Hinsen)
-  - Inria: 3 person-years (Ludovic Courtès, Maurice Brémond,
+  - Inria: 2 person-years (Ludovic Courtès, Maurice Brémond,
     and the contributors to the
     Guix-HPC channel: Florent Pruvost, Gilles Marait, Marek Felsoci,
     Emmanuel Agullo, Adrien Guilbaud)
