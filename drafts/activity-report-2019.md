@@ -179,8 +179,8 @@ practitioners and scientists.
 
 The message passing interface (MPI) is a key component for our HPC users
 and an important factor for the performance of multi-node parallel
-applications.  We have worked on improving Open MPI support on for wide
-range or high-speed network devices, making sure it can our `openmpi`
+applications.  We have worked on improving Open MPI support for a wide
+range of high-speed network devices, making sure our `openmpi`
 package achieves peak performance _by default_ on each of them—it is all
 about _portable performance_.  This work is described in our blog post
 entitled [_Optimized and portable Open MPI
