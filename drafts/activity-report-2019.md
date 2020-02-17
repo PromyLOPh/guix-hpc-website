@@ -50,6 +50,8 @@ these areas.
 
 # Reproducible Scientific Workflows
 
+![Lab book.](https://hpc.guix.info/static/images/blog/lab-book.svg)
+
 Supporting reproducible research in general remains a major goal for
 Guix-HPC.  The ability to _reproduce_ and _inspect_ computational
 experiments—today’s lab notebooks—is key to establishing a rigorous
@@ -248,6 +250,8 @@ Garrison](https://github.com/ekg/guix-genomics).
 
 # Cluster Usage
 
+![High-performance computing cluster.](https://hpc.guix.info/static/images/blog/hpc-cluster.svg)
+
 This year Guix has become the deployment tool of choice on more
 clusters.  We are notably aware of new deployments at several academic
 clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
@@ -285,6 +289,8 @@ default entry point, and that of a `--save-provenance` option to save
 provenance meta-data in the container image.
 
 # Outreach and User Support
+
+![Containers are like smoothies.](https://hpc.guix.info/static/images/blog/container-smoothie.png)
 
 Guix-HPC is in part about “spreading the word” about our approach to
 reproducible software environments and how it can help further the goals
