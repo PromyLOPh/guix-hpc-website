@@ -21,7 +21,8 @@ Molecular Medicine (MDC)](https://www.mdc-berlin.de/), and the [Utrecht
 Bioinformatics Center (UBC)](https://ubc.uu.nl/).  GNU Guix for HPC and
 reproducible science has received contributions from additional
 individuals and organizations, including [CNRS](https://www.cnrs.fr/en),
-[Cray, Inc.](https://www.cray.com) and [Tourbillion
+[Cray, Inc.](https://www.cray.com), the [University of Tennessee Health
+Science Center](https://uthsc.edu/) (UTHSC), and [Tourbillion
 Technology](http://tourbillion-technology.com/).
 
 This report highlights key achievements of Guix-HPC between [our
@@ -256,7 +257,7 @@ This year Guix has become the deployment tool of choice on more
 clusters.  We are notably aware of new deployments at several academic
 clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
 (France), [CCIPL](https://ccipl.univ-nantes.fr/) (France), and
-[UTHSC](http://uthsc.edu/) (USA).
+[UTHSC](https://uthsc.edu/) (USA).
 Discussions are on-going with other academic and industrial partners who
 have shown interest in deploying Guix.
 
