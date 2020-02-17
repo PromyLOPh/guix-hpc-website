@@ -143,10 +143,9 @@ library to manage storage and compute resources through Amazon Web
 Services (AWS) has been developed, which will be integrated with the
 Guix Workflow Language in future releases.
 
-You can read more about the many changes to the GWL in the release
-notes of version 0.2.0.
-
-TODO: link to the release notes
+You can read more about the many changes to the GWL in [the release
+notes of version
+0.2.0](https://lists.gnu.org/archive/html/info-gnu/2020-02/msg00011.html).
 
 ## Ensuring Source Code Availability
 
@@ -254,8 +253,6 @@ source software is critical to security and reproducible science
 
 # Cluster Usage
 
-TODO: More clusters here?
-
 This year Guix has become the deployment tool of choice on more
 clusters.  We are notably aware of new deployments at several academic
 clusters such as [GriCAD](https://gricad.univ-grenoble-alpes.fr/)
@@ -351,8 +348,6 @@ its hands-on sessions.  A Guix training session also took place at Inria
 (Bordeaux) in October 2019.
 
 # Personnel
-
-TODO: Double-check!
 
 GNU Guix is a collaborative effort, receiving contributions from more
 than 60 people every month—a 50% increase compared to last year.  As
