@@ -60,9 +60,8 @@ this use case.
 
 ## Better Support for Reproducible Research
 
-Guix has always supported reproducible computations by design, but there were two obstacles to using Guix for actually doing reproducible computations:
-  1. the user interface to reproducibility features was a bit clumsy
-  2. documentation, both practical and background, was scarce
+Guix has always supported reproducible computations by design, but there were two obstacles to using Guix for actually doing reproducible computations: the user interface to reproducibility features was a bit clumsy,
+and documentation, both practical and background, was scarce.
 
 Supporting reproducible computations requires addressing four aspects:
  1. Finding the dependencies of a computation.
