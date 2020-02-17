@@ -1,5 +1,5 @@
 title: Guix-HPC Activity Report, 2019
-author: Ludovic Courtès, Konrad Hinsen, Pjotr Prins, Ricardo Wurmus, Paul Garlick
+author: Ludovic Courtès, Paul Garlick, Konrad Hinsen, Pjotr Prins, Ricardo Wurmus
 date: 2020-02-12 14:00
 slug: guix-hpc-activity-report-2019
 ---
