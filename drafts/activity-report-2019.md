@@ -186,8 +186,9 @@ entitled [_Optimized and portable Open MPI
 packaging_](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/).
 It led to improvements in packages for the high-speed network drivers
 and fabrics, such as UCX, PSM, and PSM2, improvements in the Open MPI
-package itself, and the addition of a package for the [Intel MPI
-Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks).
+package itself, the addition of a package for the [Intel MPI
+Benchmarks](https://software.intel.com/en-us/articles/intel-mpi-benchmarks),
+and the addition of an [MPICH](https://www.mpich.org/) package.
 
 Numerical simulation is one of the key activities on HPC systems.
 Within GNU Guix a `simulation` module has been established to gather
