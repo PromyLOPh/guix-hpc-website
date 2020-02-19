@@ -388,7 +388,7 @@ matter for my topic, so I will just refer to \"inputs\" from now on.
 Another omission I will make is the possibility to define several
 outputs for a package. This is done for particularly big packages, in
 order to reduce the footprint of installations, but for the purposes of
-reproducibility, it\'s OK to treat all outputs of a package a single
+reproducibility, it\'s OK to treat all outputs of a package as a single
 unit.
 
 The following figure illustrates how the various pieces of information
@@ -598,7 +598,7 @@ Build systems are pieces of Guile code that are part of Guix. But this
 Guile code is only a shallow layer orchestrating invocations of other
 software, such as `gcc` or `make`. And that software is defined by
 packages. So in the end, from a reproducibility point of view, we can
-replace the \"build system\" item in our list of dependenies by \"a
+replace the \"build system\" item in our list of dependencies by \"a
 bundle of packages\". In other words: more inputs.
 
 Before Guix can build a package, it must gather all the required
@@ -720,7 +720,7 @@ programming language. They are a case of what mathematicians call
 starting with a set of packages, you extend the set repeatedly by adding
 the inputs of the packages that are already in the set, until there is
 nothing more to add. If you have a basic knowledge of Scheme, you should
-now be able to understand
+now be able to understand the
 [implementation](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/packages.scm#n817)
 of this function. Let\'s add it to our dependency analysis code:
 
@@ -779,7 +779,7 @@ Package closure: (84 (m4@1.4.18 libatomic-ops@7.6.10 gmp@6.1.2 libgc@7.6.12 libl
 ```
 
 That\'s 84 packages, just for printing \"Hello, world!\". As promised,
-it includes the boostrap seed, called `bootstrap-binaries`. It may be
+it includes the bootstrap seed, called `bootstrap-binaries`. It may be
 more surprising to see Perl and Python in the dependency list of what is
 a pure C program. The explanation is that the build process of `gcc` and
 `glibc` contains Perl and Python code. Considering that both Perl and
@@ -864,7 +864,7 @@ and what the result of each arithmetic operation must be. Floating-point
 arithmetic is thus perfectly deterministic and even perfectly portable
 between machines, if expressed in terms of the operations defined by the
 standard. However, high-level languages such as C or Fortran do not
-allow programmers to do that. Its designers assume (probably correctly)
+allow programmers to do that. Their designers assume (probably correctly)
 that most programmers do not want to deal with the intricate details of
 rounding. Therefore they provide only a simplified interface to the
 arithmetic operations of IEEE 754, which incidentally also leaves more
@@ -908,7 +908,7 @@ Generation 15 Jan 06 2020 13:30:45    (current)
     commit: 769b96b62e8c09b078f73adc09fb860505920f8f
 ```
 
-The critical information here is the unpleasantly looking string of
+The critical information here is the unpleasant looking string of
 hexadecimal digits after \"commit\". This is all it takes to uniquely
 identify a version of Guix. And to re-use it in the future, all you need
 is Guix\' time machine:
