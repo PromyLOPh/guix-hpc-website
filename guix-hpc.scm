@@ -150,8 +150,7 @@
                      (article ,body)))
 
            (div (@ (id "collaboration"))
-                (div (@ (id "collaboration-inner")
-                        (class "width-control"))
+                (div (@ (id "collaboration-inner"))
                      (div (@ (class "members"))
                           (ul
                            (li (img (@ (alt "MDC")
