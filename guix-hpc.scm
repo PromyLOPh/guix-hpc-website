@@ -1,7 +1,7 @@
 ;;; This module is part of Guix-HPC and is licensed under the same terms,
 ;;; those of the GNU GPL version 3 or (at your option) any later version.
 ;;;
-;;; Copyright © 2017 Inria
+;;; Copyright © 2017, 2020 Inria
 ;;; Copyright © 2017 Ludovic Courtès
 ;;; Copyright © 2015 David Thompson <davet@gnu.org>
 ;;; Copyright © 2016 Christopher Allan Webber <cwebber@dustycloud.org>
@@ -159,7 +159,9 @@
                            (li (img (@ (alt "Inria")
                                        (src ,(image-url "/inria.png")))))
                            (li (img (@ (alt "UBC")
-                                       (src ,(image-url "/ubc.png")))))))))
+                                       (src ,(image-url "/ubc.png")))))
+                           (li (img (@ (alt "UTHSC")
+                                       (src ,(image-url "/uthsc.png")))))))))
            (div (@ (id "footer-box")
                    (class "width-control"))
                 (p (a (@ (href "https://gitlab.inria.fr/guix-hpc/website"))
