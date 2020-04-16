@@ -1,6 +1,6 @@
 title: HPC & reproducible research in Guix 1.1.0
 author: Ludovic Courtès
-date: 2020-04-16 14:00
+date: 2020-04-16 12:30
 slug: hpc-reproducible-research-in-guix-1.1.0
 tags: packages, releases
 ---
