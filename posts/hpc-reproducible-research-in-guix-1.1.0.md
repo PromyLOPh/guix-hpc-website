@@ -113,6 +113,4 @@ upgraded since the previous release:
 
 Do not miss the [release
 notes](https://guix.gnu.org/blog/2020/gnu-guix-1.1.0-released/) for
-other goodies!
-
-Enjoy the new release!
+other goodies.  Enjoy the new release!
