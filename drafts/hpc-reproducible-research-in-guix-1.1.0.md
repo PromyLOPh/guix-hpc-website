@@ -72,6 +72,9 @@ upgraded since the previous release:
     provides [Guix integration for Jupyter
     notebooks](https://hpc.guix.info/blog/2019/10/towards-reproducible-jupyter-notebooks/),
     was added.
+  - The [Guix Workflow Language](https://hpc.guix.info/package/gwl),
+    which integrates workflows with reproducible software deployment,
+    has been upgraded to 0.2.1.
   - The [Open Cascade Technology Library
     (OCCT)](https://hpc.guix.info/package/opencascade-occt) is now
     packaged.
