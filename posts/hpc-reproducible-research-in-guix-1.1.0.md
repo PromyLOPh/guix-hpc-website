@@ -86,6 +86,14 @@ upgraded since the previous release:
     to achieve performance on a wide range of networking products.
   - [hwloc](https://hpc.guix.info/package/hwloc), the hardware locality
     library Open MPI depends on, is now at 2.2.0.
+  - [LAPACK](https://hpc.guix.info/package/lapack) was upgraded to
+    3.9.0.
+  - There’s a new
+    [`gfortran-toolchain`](https://hpc.guix.info/package/gfortran-toolchain)
+    package that pulls in GFortran and the whole tool chain (libc,
+    Binutils, etc.).
+  - [GCC](https://hpc.guix.info/package/gcc-toolchain) 9.3.0 is
+    available.
   - [FEniCS](https://hpc.guix.info/package/fenics) and related packages
     were updated to 2019.1.0.post0.
   - [Julia](https://hpc.guix.info/package/julia) has been upgraded to
