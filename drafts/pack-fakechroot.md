@@ -7,7 +7,7 @@ tags: reproducibility, user namespaces, pack
 The [`guix
 pack`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pack.html)
 command creates “application bundles” that can be used to deploy
-software on machines that do not run Guix, such as HPC clusters.  Since
+software on machines that do not run Guix (yet!), such as HPC clusters.  Since
 [its inception in
 2017](https://guix.gnu.org/blog/2017/creating-bundles-with-guix-pack/),
 it has seen a number of improvements, such as the ability to create
@@ -33,12 +33,13 @@ create a pack containing Python and NumPy, run:
 guix pack -RR python python-numpy -S /bin=bin
 ```
 
-The `-RR` flag asks for the creation of a “reliably relocatable” pack
+The `-RR` flag asks for the creation of what we jokingly refer 
+to as a _reliably relocatable_ pack
 (more on that below), while the `-S` flag asks for the creation of a
-`/bin` symlink in the tarball.
+`/bin` symbolic link in the tarball.
 
 The result of that command is a tarball that you can send on another
-machine, unpack, and the run Python directly from there without any
+machine, unpack, and then run Python directly from there without any
 special privileges:
 
 ```
@@ -47,12 +48,12 @@ tar xf pack.tar.gz
 ```
 
 That’s it!  All you need on the target machine is `tar`, and the rest
-just works.
+_just works_.
 
 # Relocation with PRoot
 
 `guix pack -R` (with a single `-R`) creates relocatable packs that
-require [unprivileged user
+require kernel support for [unprivileged user
 namespaces](http://man7.org/linux/man-pages/man7/user_namespaces.7.html).
 However, some systems have them disabled, and older systems do not
 support them at all—the `./bin/python` command above wouldn’t work on
@@ -61,7 +62,7 @@ them.
 The `-RR` option we saw above adds a universal fallback option: on a
 system where unprivileged user namespaces are not available, the
 `./bin/python` command above automatically falls back to using
-[PRoot](https://hpc.guix.info/package/proot) instead.  PRoot achieves
+[PRoot](https://hpc.guix.info/package/proot).  PRoot achieves
 file system virtualization by intercepting the process’ system calls
 with [`ptrace`](https://linux.die.net/man/2/ptrace).
 
@@ -70,18 +71,18 @@ kernel feature, `ptrace` has “always been there” so to speak.  The
 drawback is that it incurs significant overhead at _every_ system call.
 This is acceptable for an interactive program, or, say, for a
 single-threaded number-crunching application.  But the performance hit
-is prohibitive, for example, for an MPI application or a multi-threaded
+is prohibitive, for example, for an MPI or multi-threaded
 application—input/output and synchronization happen _via_ system calls.
 
 # Enter Fakechroot
 
-To address that, we added a third “execution engine” to relocatable
-packs relying on
+To address this performance issue, we have just added a third _execution
+engine_ to relocatable packs relying on
 [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
 trickery.  Users of relocatable packs can now choose at run time an
 execution engine by setting the `GUIX_EXECUTION_ENGINE` environment
 variable.  If you choose the `performance` engine, the application will
-choose either user namespaces or, if they are not supported, fallback to
+choose user namespaces or, if they are not supported, fall back to
 the new `fakechroot` engine:
 
 ```
@@ -90,7 +91,7 @@ export GUIX_EXECUTION_ENGINE=performance
 ```
 
 `guix pack -RR` wraps the application executables, in this case
-`python`; those wrappers are [small statically-linked programs that
+`python`.  Those wrappers are [small statically-linked programs that
 implement the execution
 engines](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/packages/aux-files/run-in-namespace.c).
 The new `fakechroot` engine works like that:
@@ -110,7 +111,7 @@ The new `fakechroot` engine works like that:
   3. The `RUNPATH` of Guix executables and shared libraries lists the
      `/gnu/store` directories that contain the libraries they depend on.
      The `open` calls that `ld.so` itself makes are not interposable, so
-     Fakechroot doesn’t help here.  However, the little-known [_audit_
+     Fakechroot doesn’t help here.  Fortunately, the little-known [_audit_
      interface of the GNU dynamic
      linker](https://linux.die.net/man/7/rtld-audit) comes in handy: its
      `la_objsearch` hook allows you to alter the way `ld.so` looks for
@@ -120,9 +121,9 @@ The new `fakechroot` engine works like that:
      names.  Neat!
 
 The `fakechroot` engine incurs very little overhead, and only on file
-system function calls, making it a viable option for HPC workloads.  The
+system function calls, making it a great option for HPC workloads.  The
 default engine remains user namespaces with a fallback to PRoot, so be
-sure to set `GUIX_EXECUTION_ENGINE=performance`!  See [the
+sure to set `GUIX_EXECUTION_ENGINE=performance`.  See [the
 manual](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pack.html)
 for more info.
 
@@ -131,7 +132,10 @@ for more info.
 `guix pack -RR` allows you to deploy software stacks on a Guix-less
 cluster that lacks both support for unprivileged user namespaces and a
 container facility such as Singularity, without loss of performance.
-It’s good to take a step back though, and look at the bigger picture.
+A similar combination of execution engines for unprivileged users can be
+found in [udocker](https://github.com/indigo-dc/udocker/), though the
+tool has different goals.  Having discussed these techniques,
+it’s good to take a step back and look at the bigger picture.
 
 All these shenanigans would be unnecessary if unprivileged user
 namespaces were universally available.  In fact, when we released `guix
@@ -150,11 +154,12 @@ RHEL 8 and derivatives are
 as having an easy way to set up user namespaces.
 
 We encourage HPC system administrators to consider enabling unprivileged
-user namespaces.  They are allow unprivileged users to deploy pre-built
-software, being through a relocatable Guix pack or _via_ [container
+user namespaces.  They allow unprivileged users to deploy pre-built
+software, be it through a relocatable Guix pack or _via_ [container
 run-time support tools like
 runC](https://github.com/opencontainers/runc/commit/d2f49696b09a60f5ab60f7db8259c52a2a2cdbed),
-without overhead.  More generally, they [enable reproducible software
+with virtually no overhead.  More generally, user namespaces [enable
+reproducible software
 environments](https://hpc.guix.info/blog/2017/09/reproducibility-and-root-privileges/),
 a prerequisite for reproducible scientific experiments!
 
