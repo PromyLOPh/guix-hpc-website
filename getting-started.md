@@ -61,8 +61,8 @@ To install it along with the latest GNU compiler tool chain:
 ```
 $ guix install mumps gcc-toolchain
 The following packages will be installed:
-   mumps	5.0.2	/gnu/store/gg55pn4nk3fl7fvxqqsgqr2w6fds7wa6-mumps-5.0.2
-   gcc-toolchain	9.1.0	/gnu/store/zs62l7rwvk5180cz3bykjprk2fymsnbs-gcc-toolchain-9.1.0
+   mumps         5.2.1
+   gcc-toolchain 10.1.0
 
 The following derivations will be built:
    /gnu/store/kipa9k61zkhw4s3frs92w683ps23hpjj-profile.drv
@@ -71,15 +71,16 @@ The following derivations will be built:
    /gnu/store/37jya2s4kwbkldwfc98x5jvsdynmzzz8-info-dir.drv
    /gnu/store/bihbksjnbhnaxkwbnh03drffmx85vcsm-manual-database.drv
 3.1 MB will be downloaded:
-   /gnu/store/gg55pn4nk3fl7fvxqqsgqr2w6fds7wa6-mumps-5.0.2
+   /gnu/store/gg55pn4nk3fl7fvxqqsgqr2w6fds7wa6-mumps-5.2.1
 
 …
 
-2 packages in profile
-The following environment variable definitions may be needed:
-   export PATH="$HOME/.guix-profile/bin:$HOME/.guix-profile/sbin${PATH:+:}$PATH"
-   export CPATH="$HOME/.guix-profile/include${C_INCLUDE_PATH:+:}$C_INCLUDE_PATH"
-   export LIBRARY_PATH="$HOME/.guix-profile/lib${LIBRARY_PATH:+:}$LIBRARY_PATH"
+hint: Consider setting the necessary environment variables by running:
+
+     GUIX_PROFILE="$HOME/.guix-profile"
+     . "$GUIX_PROFILE/etc/profile"
+
+Alternately, see `guix package --search-paths -p "$HOME/.guix-profile"'.
 ```
 
 # Spawning One-Off Environments
