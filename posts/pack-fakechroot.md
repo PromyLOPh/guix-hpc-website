@@ -1,6 +1,6 @@
 title: Faster relocatable packs with Fakechroot
 author: Ludovic Courtès
-date: 2020-05-18 14:30
+date: 2020-05-18 15:30
 tags: reproducibility, user namespaces, pack
 ---
 
