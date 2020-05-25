@@ -297,14 +297,14 @@ a {
     color: #000000;
     outline: none;
     border-style: none none dashed none;
-    border-width: thin;
+    border-width: 2px;
     border-color: #ffbf2d;
     text-decoration: none;
 }
 a:visited {
     color: #433;
     border-style: none none solid none;
-    border-width: thin;
+    border-width: 2px;
     text-decoration: none;
 }
 a img { outline : none; }
