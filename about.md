@@ -21,6 +21,9 @@ The material below covers our work and motivation for Guix-HPC:
   - [_[Re] _Storage Tradeoffs in a Collaborative Backup Service for
     Mobile > Devices_](https://doi.org/10.5281/zenodo.3886739),
     ReScience C, June 2020
+  - [Towards reproducible Jupyter
+    notebooks](https://fosdem.org/2020/schedule/event/reprod_jupyter_guix/),
+    [FOSDEM](https://fosdem.org/2020/), Feb. 2020
   - [_PiGx: Reproducible Genomics Analysis Pipelines with
     GNU Guix_](https://doi.org/10.1093/gigascience/giy123), GigaScience
     [ICG-13](http://www.icg-13.org/)
