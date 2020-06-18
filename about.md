@@ -87,6 +87,8 @@ inclusion in Guix:
     repository](https://gitlab.com/genenetwork/guix-bioinformatics)
     contains bioinformatics and HPC packages used by
     [Genenetwork](http://genenetwork.org/) at the University of Tennessee.
+  - The [Guix Past](https://gitlab.inria.fr/guix-hpc/guix-past)
+    channel contains definitions for old core packages.
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
