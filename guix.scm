@@ -1,7 +1,7 @@
 ;;; This module is part of Guix-HPC and is licensed under the same terms,
 ;;; those of the GNU GPL version 3 or (at your option) any later version.
 ;;;
-;;; Copyright © 2017, 2019 Inria
+;;; Copyright © 2017, 2019, 2020 Inria
 
 ;; Run 'guix build -f guix.scm' to build the web site.
 
@@ -37,11 +37,11 @@
         ;; For Haunt.
         (setenv "GUILE_LOAD_PATH"
                 (string-append
-                 #+(file-append guile-commonmark
-                                "/share/guile/site/2.2")
+                 #+(file-append guile-commonmark "/share/guile/site/"
+                                (effective-version))
                  ":"
-                 #+(file-append guile-syntax-highlight
-                                "/share/guile/site/2.2")))
+                 #+(file-append guile-syntax-highlight "/share/guile/site/"
+                                (effective-version))))
 
         ;; So we can read/write UTF-8 files.
         (setenv "GUIX_LOCPATH"
