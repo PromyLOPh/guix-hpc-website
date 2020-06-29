@@ -95,10 +95,10 @@ inclusion in Guix:
     [Genenetwork](http://genenetwork.org/) at the University of Tennessee.
   - The [Guix Past](https://gitlab.inria.fr/guix-hpc/guix-past)
     channel contains definitions for old core packages.
-  - The [Leibniz Psychology
-    channel](https://github.com/leibniz-psychology/guix-zpid) contains
-    tools such as JupyterLab and RStudio Web, which are currently not
-    available in Guix proper.
+  - The [Guix-ZPID](https://github.com/leibniz-psychology/guix-zpid) contains
+    packages in use at the [Leibniz Institute for Psychology
+    Information](https://leibniz-psychology.org/en/); especially package
+    variants of JupyterLab and RStudio Web.
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
