@@ -1,0 +1,39 @@
+-*- mode: org -*-
+
+#+TITLE: Guix HPC website
+
+The Guix HPC website available at https://hpc.guix.info is a static website
+built with [[https://haunt.dthompson.us/][Haunt]].  This directory contains the source files of the website.
+
+This website is developed using the [[https://www.gnu.org/software/guix/download/][GNU Guix]] package manager.
+
+* Building the website
+
+Run the following command in the website folder (=cd path/to/website=):
+
+#+BEGIN_EXAMPLE
+  guix environment -C -m manifest.scm \
+       -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
+       -- haunt build
+#+END_EXAMPLE
+
+Or to build directly in ~/gnu/store/~: =guix build -f guix.scm=.
+
+* Running the website
+
+To try out the website locally while you work on it, run the following
+command:
+
+#+BEGIN_EXAMPLE
+  guix environment -C -N -m manifest.scm \
+       -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
+       -- haunt serve -w
+#+END_EXAMPLE
+
+Then, visit http://localhost:8080 in a web browser.
+
+You can stop the server pressing ~Ctrl + C~ twice.
+
+* Copying
+
+See [[file:COPYING][COPYING]].
