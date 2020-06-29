@@ -6,10 +6,9 @@ tags: Reproducible Science
 
 Several submissions to the recent [Ten Years Reproducibility
 Challenge](https://rescience.github.io/ten-years/) organized by
-[ReScience](https://rescience.github.io), which is concerned with publishing
-replications of previously-published articles, have took advantages of [GNU
-Guix](https://guix.gnu.org), for example this effort: [from source code to
-PDF](https://hpc.guix.info/blog/2020/06/reproducible-research-articles-from-source-code-to-pdf/).
+[ReScience](https://rescience.github.io) took advantage of GNU Guix, [as
+discussed
+earlier](https://hpc.guix.info/blog/2020/06/reproducible-research-articles-from-source-code-to-pdf/).
 
  This challenge helped highlight
 [again](https://en.wikipedia.org/wiki/Replication_crisis) ways in which
@@ -17,12 +16,12 @@ research practices can and must be improved.  For instance, one review
 explains that [_archival of the source code is not
 enough_](https://github.com/ReScience/submissions/issues/20#issuecomment-636458152)
 and another points evolutions and breaking changes of [well-known scientific
-library](https://github.com/ReScience/submissions/issues/14#issuecomment-583528044).
+libraries](https://github.com/ReScience/submissions/issues/14#issuecomment-583528044).
 
-We propose to collectively tackle some of the issues by dedicating the
-**Friday, July 3rd** to work on:
+We propose to collectively tackle some of the issues on
+**Friday, July 3rd**:
 
- - identify the blocking points,
+ - identify stumbling blocks in using Guix to write end-to-end pipelines,
  - document how to do, maybe it could lead to a Cookbook recipe,
  - feed the [Guix-Past](https://gitlab.inria.fr/guix-hpc/guix-past) channel
     by other old packages,
