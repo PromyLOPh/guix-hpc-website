@@ -1,6 +1,6 @@
 title: Reproducible Research Hackathon
 author: Simon Tournier
-date: 2020-06-29 14:00
+date: 2020-06-30 12:00
 tags: Reproducible Science
 ---
 
@@ -22,26 +22,25 @@ We propose to collectively tackle some of the issues on
 **Friday, July 3rd**:
 
  - identify stumbling blocks in using Guix to write end-to-end pipelines,
- - document how to do, maybe it could lead to a Cookbook recipe,
+ - document how to achieve this,
  - feed the [Guix-Past](https://gitlab.inria.fr/guix-hpc/guix-past) channel
     by other old packages,
  - provide `guix.scm` for some of the [Ten-Year
     papers](https://github.com/ReScience/ten-years/issues/1).
 
-Feel free to join us.
+Feel free to contact us at [`guix-hpc@gnu.org`](mailto:guix-hpc@gnu.org) if
+you would like to hack with us.
 
- - [`guix-devel@gnu.org`](mailto:guix-devel@gnu.org) 
- -  the `#guix` channel on irc.freenode.net
-    [http://guix.gnu.org/contact/irc/](http://guix.gnu.org/contact/irc/)
-
-And we plan to live discuss over a video chat for sharing progress, sucesss or
-failure, maybe screen or more.  Link will be published on `#guix` and
-`guix-devel@gnu.org`.
-
+We will meet at **9:30 CEST** on the `#guix-hpc` channel of irc.freenode.net.
+You can use this [web client](http://guix.gnu.org/contact/irc/) (tweaking the
+channel) to reach us.
 
 ---
 
-Here is a non-exhaustive list of ideas:
+Here is a non-exhaustive list of ideas, inspired by contributions to the
+[Ten-Year Reproducibility
+Challenge](https://github.com/rescience/submissions/issues?q=is%3Aissue++label%3A%22Ten+Years+Challenge%22+)
+run by the journal [ReScience C](https://rescience.github.io/):
 
  1. Package old software that is of sufficiently wide interest.
     - Fortran `g77`, see this [example](https://github.com/ReScience/submissions/issues/41).
