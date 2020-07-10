@@ -1,7 +1,7 @@
 title: Reproducible research hackathon: experience report
 author: Simon Tournier, Ludovic Courtès
-date: 2020-07-10 12:00
-tags: Reproducible Science
+date: 2020-07-10 15:20
+tags: Reproducible Science, Hackathon
 ---
 
 Last week, on July 3rd, we held an [on-line
