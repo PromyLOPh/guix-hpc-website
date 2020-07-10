@@ -117,18 +117,7 @@ The hackathon was the occasion to add over 16 commits:
    2.4.2](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/cc38fa0220ff0453f2dc56af42d9618692abb9a1)
    and [Argparse](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/a7d444c10a3cdeecacc5a8e0a19041989ba5f355)
 
-An interesting issue left to explore is why Python 2.4 compiled with today’s current
-GCC toolchain has a bug that it definitely did not have back then.  It
-should probably be related to the many intentional ambiguities in the `C`
-language standard.  This raised again the missing ability to replace the
-_implicit dependencies_ used by the
-[build system](https://guix.gnu.org/manual/en/guix.html#Build-Systems).  It is
-the opportunity to think if it is best to add `package-with-explicit-`
-procedures for each build-system, [as they already exist for
-Python](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build-system/python.scm#n73)
-and
-[OCaml](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build-system/ocaml.scm#n99),
-for example, or if it is best to _parametrize_ the build systems.
+So much for vintage Python!
 
 # Towards long-term and archivable reproducibility
 
