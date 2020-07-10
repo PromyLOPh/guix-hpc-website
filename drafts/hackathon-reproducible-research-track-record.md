@@ -98,12 +98,12 @@ require it.
 
 The hackathon was the occasion to add over 16 commits:
 
- - [Numpy
+ - [NumPy/numarray
    1.5.2](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/92bed98f7b0a411af695365e2e9ee2fdca470cab),
    [1.1.1](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/1050a67af1e04d300490eceb47dbb1d3569726ef),
-   [1.0.4](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/2df4784cdb772667dcfd15638d32873b14c30262)
-   and
+   [1.0.4](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/2df4784cdb772667dcfd15638d32873b14c30262), and
    [1.2.1](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/53b992ae097cfb32972fe4de00f0a85cedb14235)
+   (numarray is one of the two predecessors of NumPy)
  - [Matplotlib
    1.1.0](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/ec24146a409ea05d793bca3ee315b954cd63e739)
    and [this](https://gitlab.inria.fr/guix-hpc/guix-past/-/commit/b04954f7048656a09a7397aacffb2420ed14192a)
