@@ -136,21 +136,16 @@ The ambition of [Software Heritage](https://www.softwareheritage.org/) is to
 collect, preserve, and share all software that is publicly available in source
 code form.  And Guix is able to interact with this archive.
 
-Firstly, Guix can submit request for archiving via `guix lint -c archival`.
+Guix can submit request for archiving via `guix lint -c archival`.
 Once the package is ready, if the
 [origin](https://guix.gnu.org/manual/en/guix.html#origin-Reference) is
 `git-fetch`, linting ensures the source code is saved on Software
 Heritage.  The hackathon reminded us that support of other version control
 systems, such as Subversion and Mercurial, is missing from `guix lint`.
 
-Moreover, the hackathon highlighted the
-[work](https://forge.softwareheritage.org/source/swh-loader-core/browse/master/swh/loader/package/nixguix/)
-in [progress](https://forge.softwareheritage.org/T2485) about archiving the
-tarballs and the question is [raised](https://forge.softwareheritage.org/T2430).
-
-Secondly, in the long term, it is hard to predict if the upstream server will
-be always running, for [an example](http://issues.guix.gnu.org/42162).  In
-such case, Guix falls back to Software Heritage and downloads from there if
+In the long run, one cannot assume that source code hosting sites
+will remain available—here’s [a fresh example](http://issues.guix.gnu.org/42162).  In
+such cases, Guix falls back to Software Heritage and downloads from there if
 the source code is archived.  During the hackathon, we found
 a [regression](http://issues.guix.gnu.org/42286) in that fall-back path and [fixed
 it](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=722ad41c44a499d2250c79527ef7d069ca728de0).
