@@ -135,7 +135,10 @@ If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
 # Join us!
 
 If you are using Guix in an HPC context at your workplace, or if you
-would like to discuss ways to address your own HPC use cases, or if you are
-an HPC vendor interested in improving the software deployment experience
-for your users, please consider joining us!  Email us at
-`guix-hpc@gnu.org`.
+would like to discuss ways to address your own HPC use cases, or if you
+are an HPC vendor interested in improving the software deployment
+experience for your users, please consider joining us!
+
+Subscribe to the [`guix-science` mailing
+list](https://lists.gnu.org/mailman/listinfo/guix-science) or email us
+at `guix-hpc@gnu.org`.
