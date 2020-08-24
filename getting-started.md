@@ -33,7 +33,7 @@ Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
 # Installing Packages
 
 Say you’re searching for a sparse solver among the
-[13,000+ packages](/browse) that come with Guix:
+[14,000+ packages](/browse) that come with Guix:
 
 ```
 $ guix search sparse solver
@@ -62,16 +62,11 @@ To install it along with the latest GNU compiler tool chain:
 $ guix install mumps gcc-toolchain
 The following packages will be installed:
    mumps         5.2.1
-   gcc-toolchain 10.1.0
+   gcc-toolchain 10.2.0
 
-The following derivations will be built:
+The following derivation will be built:
    /gnu/store/kipa9k61zkhw4s3frs92w683ps23hpjj-profile.drv
-   /gnu/store/73lzwjvr6wx4gb3l9a7vlx6759kcgp7h-fonts-dir.drv
-   /gnu/store/3zkyjqg8wsxvypj6ivjpfp9h4lpf9cyg-ca-certificate-bundle.drv
-   /gnu/store/37jya2s4kwbkldwfc98x5jvsdynmzzz8-info-dir.drv
-   /gnu/store/bihbksjnbhnaxkwbnh03drffmx85vcsm-manual-database.drv
-3.1 MB will be downloaded:
-   /gnu/store/gg55pn4nk3fl7fvxqqsgqr2w6fds7wa6-mumps-5.2.1
+3.1 MB will be downloaded
 
 …
 
@@ -96,13 +91,8 @@ scikit-learn, run:
 $ python3
 bash: python3: Command not found
 $ guix environment --ad-hoc python@3 python-numpy python-scikit-learn
-The following derivations will be built:
+The following derivation will be built:
    /gnu/store/2g3mj1xdlq2rj8j0crl4sa68bqhmfsmd-profile.drv
-The following profile hooks will be built:
-   /gnu/store/wd0ma3xjq25w2qcnn3x0dgjyrck3dnk0-info-dir.drv
-   /gnu/store/n97xqbig6rfliqrw0qbkb1zbnh8v0dis-fonts-dir.drv
-   /gnu/store/igdhg9hm5n4npvf41zvznm06c226kx4a-ca-certificate-bundle.drv
-   /gnu/store/my4m438264jyq5awk39j20xhdf6symha-manual-database.drv
 building directory of Info manuals...
 building database for manual pages...
 [env]$ python3
