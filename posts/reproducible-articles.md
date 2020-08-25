@@ -18,6 +18,10 @@ opportunity to devise new practices and tools to ensure reproducibility
 and provenance tracking for articles, end-to-end: from source code to
 PDF.
 
+> Update: Nature [reports on the
+> challenge](https://www.nature.com/articles/d41586-020-02462-7) (August
+> 2020).
+
 Over fifty people [took up on the
 challenge](https://github.com/ReScience/ten-years/issues/1).  My
 personal challenge was a paper from 2006; I [successfully reproduced its
