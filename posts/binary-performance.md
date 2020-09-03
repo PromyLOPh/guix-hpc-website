@@ -103,7 +103,7 @@ code can benefit from FMV.  The article links to [this script to
 automatically annotate FMV candidates with
 `target_clones`](https://github.com/clearlinux/make-fmv-patch); there’s
 even a
-[tutorial](https://clearlinux.org/documentation/clear-linux/tutorials/fmv)!
+[tutorial](https://docs.01.org/clearlinux/latest/tutorials/fmv.html)!
 
 Problem solved?
 
@@ -204,7 +204,7 @@ course, that’s something we can always do in the background, but it
 takes time.  It does work in the long run though; for instance, BLIS has
 [recently introduced support for run-time
 selection](https://github.com/flame/blis/issues/129).  [Like Clear
-Linux](https://clearlinux.org/documentation/clear-linux/tutorials/fmv),
+Linux](https://docs.01.org/clearlinux/latest/tutorials/fmv.html),
 we can also start applying function multi-versioning based on compiler
 feedback in key packages and use that as a starting point when
 discussing with upstream.
