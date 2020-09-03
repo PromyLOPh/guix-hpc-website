@@ -161,7 +161,7 @@ distribute pre-built binaries.  What if you want Octave to use the
 AVX2-optimized FFTW?
 
 One option is to _rewrite the dependency graph_ of Octave, so that
-occurrences of the generic `fftw` package are replaced by `fftw`.  This
+occurrences of the generic `fftw` package are replaced by `fftw-avx`.  This
 can be done from the command line [using the `--with-input`
 option](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html):
 
