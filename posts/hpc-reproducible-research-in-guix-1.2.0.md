@@ -68,11 +68,11 @@ openblas@0.3.9
 cunit@2.1-3
 ```
 
-Moreover, the command [`guix
+Moreover, the [`guix
 repl`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-repl.html)
-can now be passed a script which ease [package exploratinon in
-Guile](https://hpc.guix.info/blog/2020/01/reproducible-computations-with-guix/)
-especially when dealing with the new Scheme `(guix transformation)` module for
+command can now be passed a script, which eases [package exploration in
+Guile](https://hpc.guix.info/blog/2020/01/reproducible-computations-with-guix/),
+notably when dealing with the new Scheme `(guix transformation)` module for
 package transformations.
 
 On the side of long-term archival of all the software Guix packages refer to,
