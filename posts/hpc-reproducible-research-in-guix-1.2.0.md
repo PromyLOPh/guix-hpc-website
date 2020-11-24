@@ -1,4 +1,4 @@
-title: DRAFT HPC & reproducible research in Guix 1.2.0
+title: HPC & reproducible research in Guix 1.2.0
 date: 2020-11-24 16:00:00
 author: Simon Tournier, Ludovic Courtès
 slug: hpc-reproducible-research-in-guix-1.2.0
