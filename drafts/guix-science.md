@@ -27,16 +27,19 @@ Guix channel](https://github.com/leibniz-psychology/guix-zpid).
 Since there is a demand for these kind of packages we at ZPID decided to
 move our package definitions of RStudio, JupyterLab and JASP into a
 vendor-neutral channel called
-[guix-science](https://github.com/guix-science/guix-science). The channel has
-a more relaxed inclusion policy than Guix itself and a non-free counterpart for
-proprietary software. It uses Guix’ authorization mechanism to
-build a trusted source of package definitions. Currently the three owners of
-the GitHub organization Ricardo Wurmus (BIMSB), Roel Janssen (UMCU) and me are
-also authorized committers. Binary substitutes, which we build for our own
-infrastructure, are publicly available at
-https://substitutes.guix.psychnotebook.org/.
+[guix-science](https://github.com/guix-science/guix-science). The channel has a
+more relaxed inclusion policy regarding usage of prebuilt components than Guix
+itself and thus can include software that is difficult to build from source. It
+uses Guix’ authorization mechanism to build a trusted source of package
+definitions. Currently the three owners of the GitHub organization Ricardo
+Wurmus (BIMSB), Roel Janssen (UMCU) and me are also authorized committers.
+Binary substitutes, which we build for our own infrastructure, are publicly
+available for everyone at https://substitutes.guix.psychnotebook.org/. See the
+[README
+file](https://github.com/guix-science/guix-science/blob/master/README.rst) on
+how to use them.
 
 We welcome contributions of new package definitions, as well as improvements to
 existing ones and hope to foster collaboration amongst scientific institutes
-using GNU Guix.
+who deploy software using GNU Guix.
 
