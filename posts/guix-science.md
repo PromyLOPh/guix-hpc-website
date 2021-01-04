@@ -1,6 +1,6 @@
-title: DRAFT Scientific packages for GNU Guix
+title: More scientific packages for GNU Guix
 author: Lars-Dominik Braun
-date: 2020-12-04 13:00:00
+date: 2021-01-04 13:00:00
 slug: guix-science
 tags: packages
 ---
@@ -34,8 +34,8 @@ uses Guix’ authorization mechanism to build a trusted source of package
 definitions. Currently the three owners of the GitHub organization Ricardo
 Wurmus (BIMSB), Roel Janssen (UMCU) and me are also authorized committers.
 Binary substitutes, which we build for our own infrastructure, are publicly
-available for everyone at https://substitutes.guix.psychnotebook.org/. See the
-[README
+available for everyone at `https://substitutes.guix.psychnotebook.org/`. See the
+[`README`
 file](https://github.com/guix-science/guix-science/blob/master/README.rst) on
 how to use them.
 
