@@ -70,6 +70,11 @@ inclusion in Guix:
   - [hpcguix-web](https://github.com/UMCUGenetics/hpcguix-web) is a web
     interface that allows users to search for packages and guides them
     the installation and the job submission process.
+  - The [Guix-Science
+    channel](https://github.com/guix-science/guix-science) is a joint
+    effort to provide free scientific packages that are not or not yet
+    available in Guix proper.  [Read
+    more](https://hpc.guix.info/blog/2021/01/guix-science/).
   - The [Guix-HPC repository](https://gitlab.inria.fr/guix-hpc/guix-hpc)
     currently contains packages for HPC tools and run-time support
     and linear algebra libraries developed by research teams
@@ -93,12 +98,11 @@ inclusion in Guix:
     repository](https://gitlab.com/genenetwork/guix-bioinformatics)
     contains bioinformatics and HPC packages used by
     [Genenetwork](http://genenetwork.org/) at the University of Tennessee.
-  - The [Guix Past](https://gitlab.inria.fr/guix-hpc/guix-past)
-    channel contains definitions for old core packages.
   - The [Guix-ZPID](https://github.com/leibniz-psychology/guix-zpid) contains
     packages in use at the [Leibniz Institute for Psychology
-    Information](https://leibniz-psychology.org/en/); especially package
-    variants of JupyterLab and RStudio Web.
+    Information](https://leibniz-psychology.org/en/).
+  - The [Guix Past](https://gitlab.inria.fr/guix-hpc/guix-past)
+    channel contains definitions for old core packages.
 
 All this is [free software](https://www.gnu.org/philosophy/free-sw.html)
 that you are welcome to use and contribute to!
