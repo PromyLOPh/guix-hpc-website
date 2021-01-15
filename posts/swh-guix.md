@@ -25,7 +25,7 @@ bit for bit](https://reproducible-builds.org/docs/definition/).
 
 Work on reproducibility at all levels has been making great progress.
 Guix, for instance, allows you to [travel back in
-time](https://www.gnu.org/software/guix/blog/2018/multi-dimensional-transactions-and-rollbacks-oh-my/).
+time](https://guix.gnu.org/blog/2018/multi-dimensional-transactions-and-rollbacks-oh-my/).
 That Guix can travel back in time _and_ build software reproducibly is a
 great step forward.  But there’s still an important piece that’s missing
 to make this viable: a stable source code archive.  This is where
@@ -35,7 +35,7 @@ comes in.
 # When source code vanishes
 
 Guix contains thousands of package definitions.  Each [package
-definition](https://www.gnu.org/software/guix/manual/en/html_node/Defining-Packages.html)
+definition](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html)
 specifies the package’s source code URL and hash, the package’s
 dependencies, and its build procedure.  Most of the time, the package’s
 source code is an archive (a “tarball”) fetched from a web site, but
@@ -53,7 +53,7 @@ hosting services that come and go.
 
 By default Guix would look up source code by hash in the caches of our
 build farms.  This comes for free: the [“substitute”
-mechanism](https://www.gnu.org/software/guix/manual/en/html_node/Substitutes.html)
+mechanism](https://guix.gnu.org/manual/en/html_node/Substitutes.html)
 extends to all “build artifacts”, including downloads.  However, with
 limited capacity, our build farms do not keep all the source code of all
 the packages for a long time.  Thus, one could very well find oneself
@@ -72,7 +72,7 @@ control history.  Its archive already periodically ingests release
 tarballs from the GNU servers, repositories from GitHub, packages from
 PyPI, and much more.
 
-![Software Heritage logo](https://www.gnu.org/software/guix/static/blog/img/software-heritage-logo-title.svg)
+![Software Heritage logo](https://guix.gnu.org/static/blog/img/software-heritage-logo-title.svg)
 
 We quickly settled on a scheme where Guix would fall back to the
 Software Heritage archive whenever it fails to download source code from
@@ -245,4 +245,4 @@ revisions of packages it provides…  There are still technical challenges
 to overcome, but that vision is shaping up.
 
 > _Originally published [on the Guix
-> blog](https://www.gnu.org/software/guix/blog/2019/connecting-reproducible-deployment-to-a-long-term-source-code-archive/)._
+> blog](https://guix.gnu.org/blog/2019/connecting-reproducible-deployment-to-a-long-term-source-code-archive/)._

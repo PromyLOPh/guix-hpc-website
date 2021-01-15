@@ -119,14 +119,14 @@ experimentation_.
 We believe that app bundles fall short on this requirement.  Conversely,
 Guix supports both bit-for-bit reproducibility _and_ experimentation.
 In Guix,
-[package definitions](https://www.gnu.org/software/guix/manual/html_node/Defining-Packages.html)
+[package definitions](https://guix.gnu.org/manual/html_node/Defining-Packages.html)
 express software composition in unambiguous terms.  Given a commit of
 the [Guix repository](https://git.savannah.gnu.org/cgit/guix.git/),
 anyone building a set of packages as defined in Guix will get _the exact
 same result_, usually [bit-for-bit](https://reproducible-builds.org/).
 Yet, Guix also allows users to define _package variants_, either
 programmatically or
-[from the command line](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html).
+[from the command line](https://guix.gnu.org/manual/html_node/Package-Transformation-Options.html).
 These properties get us closer to having both reproducible _and_
 customizable software deployments.
 
@@ -173,7 +173,7 @@ or
 [that one](https://github.com/LLNL/spack/issues/2055#issuecomment-255560039).
 It is the kind of discrepancy that Guix tries hard to avoid.  It runs
 each build
-[in isolated environments](https://www.gnu.org/software/guix/manual/html_node/Features.html)
+[in isolated environments](https://guix.gnu.org/manual/html_node/Features.html)
 where only the build’s inputs are accessible.  Unless the software or
 its build procedure is non-deterministic, this ensures that a given
 build process _produces the same result on any machine_.  In other
@@ -193,7 +193,7 @@ deployments on HPC clusters.  One of them is that Guix is only 4 years
 old, and it was not specifically written as a tool for HPC and research
 scientists—it just happens to have useful properties in this context.
 The other reason is the fact that, to achieve build isolation,
-[it relies on features of the kernel Linux](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix_002ddaemon.html#Invoking-guix_002ddaemon)
+[it relies on features of the kernel Linux](https://guix.gnu.org/manual/html_node/Invoking-guix_002ddaemon.html#Invoking-guix_002ddaemon)
 usually only available to system administrators.
 
 The Guix-HPC effort will attempt to address this, both through technical
@@ -208,7 +208,7 @@ Guix-HPC expect from this project, and how they take advantage of Guix.
 We’ll also describe concrete actions we’ve identified to achieve these
 goals.  So please stay tuned, and share your ideas, comments, and
 criticism with us on the
-[`guix-devel` mailing list](https://www.gnu.org/software/guix/about/#contact)!
+[`guix-devel` mailing list](https://guix.gnu.org/about/#contact)!
 If you are already using Guix and would like to join the effort, or if
 you have questions about training sessions or deployment on your
 cluster, please email us on the `guix-hpc@gnu.org` private alias.

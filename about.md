@@ -38,7 +38,7 @@ The material below covers our work and motivation for Guix-HPC:
   - [_Tying software deployment to scientific
     workflows_](https://fosdem.org/2018/schedule/event/guix_workflows/),
     [FOSDEM](https://fosdem.org/2018/), Feb. 2018
-  - [_Reproducible and user-controlled software management in HPC with GNU Guix_](https://www.youtube.com/watch?v=cH6wCL6GeOQ&list=PLir-OOQiOhXZX_2zmUJz0fx8RLALi3tkK&index=26) ([PDF](https://www.gnu.org/software/guix/guix-bosc-20170724.pdf)),
+  - [_Reproducible and user-controlled software management in HPC with GNU Guix_](https://www.youtube.com/watch?v=cH6wCL6GeOQ&list=PLir-OOQiOhXZX_2zmUJz0fx8RLALi3tkK&index=26) ([PDF](https://guix.gnu.org/guix-bosc-20170724.pdf)),
     [BOSC](https://www.open-bio.org/wiki/BOSC_2017_Schedule), July 2017
   - [_Optimized and Reproducible HPC Deployment_](https://archive.fosdem.org/2017/schedule/event/hpc_deployment_guix/),
 	[FOSDEM](https://fosdem.org/2017),
@@ -47,7 +47,7 @@ The material below covers our work and motivation for Guix-HPC:
 	[FOSDEM](https://fosdem.org/2017),
 	Feb. 2017
   - [_Reproducible and User-Controlled Software Environments in HPC with Guix_](https://hal.inria.fr/hal-01161771/en)
-    ([slides](https://www.gnu.org/software/guix/guix-reppar-20150825.pdf)),
+    ([slides](https://guix.gnu.org/guix-reppar-20150825.pdf)),
 	paper presented at the 2nd International Workshop on Reproducibility
 	in Parallel Computing ([RepPar](http://www.reppar.org/2015/)),
 	Aug. 2015

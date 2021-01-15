@@ -16,10 +16,10 @@ The recommended approach is to set up one *master node* running
 `guix-daemon` and exporting `/gnu/store` over NFS to compute nodes.
 
 Remember that
-[`guix-daemon`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix_002ddaemon.html)
+[`guix-daemon`](https://guix.gnu.org/manual/html_node/Invoking-guix_002ddaemon.html)
 is responsible for spawning build processes and downloads on behalf of
 clients, and more generally accessing
-[`/gnu/store`](https://www.gnu.org/software/guix/manual/html_node/The-Store.html),
+[`/gnu/store`](https://guix.gnu.org/manual/html_node/The-Store.html),
 which contains all the package binaries built by all the users.
 “Client” here refers to all the Guix commands that users see, such as
 `guix package`.  On a cluster, these commands may be running on the
@@ -28,7 +28,7 @@ compute nodes and we’ll want them to talk to the master node’s
 
 To begin with, the master node can be installed following the [binary
 installation
-instructions](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html),
+instructions](https://guix.gnu.org/manual/html_node/Binary-Installation.html),
 which should be straightforward.
 
 Since we want `guix-daemon` to be reachable not just from the master
@@ -77,7 +77,7 @@ to.
 
 It may be a good idea to periodically remove unused bits from
 `/gnu/store` by running [`guix
-gc`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-gc.html).
+gc`](https://guix.gnu.org/manual/html_node/Invoking-guix-gc.html).
 This can be done by adding a crontab entry on the master node:
 
 ```
@@ -118,7 +118,7 @@ export LC_ALL
 ```
 
 For convenience, `guix package` [automatically
-generates](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-package.html)
+generates](https://guix.gnu.org/manual/html_node/Invoking-guix-package.html)
 `~/.guix-profile/etc/profile`, which defines all the environment
 variables necessary to use the packages—`PATH`, `C_INCLUDE_PATH`,
 `PYTHONPATH`, etc.  Thus it’s a good idea to source it from
@@ -171,7 +171,7 @@ Inria](https://gitlab.inria.fr/guix-hpc/guix-hpc) or [that of
 MDC/BIMSB](https://github.com/BIMSBbioinfo/guix-bimsb) of course isn’t
 mirror on `mirror.hydra.gnu.org`.  For these packages, the situation is
 different.  One solution is to [run your own
-mirror](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-publish.html)
+mirror](https://guix.gnu.org/manual/html_node/Invoking-guix-publish.html)
 on the local network.  Another solution, as a last resort, is to let
 users download source on their workstation and add it to the cluster’s
 `/gnu/store`, like this:
@@ -187,7 +187,7 @@ cluster’s `guix-daemon` instance over SSH.
 Air-gapped clusters require more work.  At the moment, our suggestion
 would be to download all the necessary source code on a workstation
 running Guix.  For instance, using the [`--sources` option of `guix
-build`](https://www.gnu.org/software/guix/manual/html_node/Additional-Build-Options.html),
+build`](https://guix.gnu.org/manual/html_node/Additional-Build-Options.html),
 the example below downloads all the source code the `openmpi` package
 depends on:
 
@@ -213,7 +213,7 @@ $ guix build --sources=transitive openmpi
 source code.)
 
 We can then make a big
-[archive](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-archive.html)
+[archive](https://guix.gnu.org/manual/html_node/Invoking-guix-archive.html)
 containing all of this:
 
 ```
@@ -290,7 +290,7 @@ control of sysadmins.
 
 The Guix project has a good track record [delivering security updates in
 a timely
-fashion](https://www.gnu.org/software/guix/manual/html_node/Security-Updates.html).
+fashion](https://guix.gnu.org/manual/html_node/Security-Updates.html).
 To get security updates, users have to run `guix pull && guix package
 -u`.
 

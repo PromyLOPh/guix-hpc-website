@@ -6,7 +6,7 @@ tags: packages, releases
 ---
 
 Version 0.14.0 of Guix was [announced
-yesterday](https://www.gnu.org/software/guix/blog/2017/gnu-guix-and-guixsd-0.14.0-released/).
+yesterday](https://guix.gnu.org/blog/2017/gnu-guix-and-guixsd-0.14.0-released/).
 In this post we look at the many goodies that made it into Guix during
 this release cycle.
 
@@ -91,7 +91,7 @@ Changes to *core Guix* relevant to HPC include:
     recently](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/),
     and which is handy when installing Guix cluster-wide.
   - The new [`guix import
-    json`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-import.html)
+    json`](https://guix.gnu.org/manual/html_node/Invoking-guix-import.html)
     command provides a smooth way for newcomers to get started writing
     new package definitions.
   - aarch64 portability fixes were contributed by Eric Bavier of Cray,

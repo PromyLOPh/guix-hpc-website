@@ -5,7 +5,7 @@
 The Guix HPC website available at https://hpc.guix.info is a static website
 built with [[https://haunt.dthompson.us/][Haunt]].  This directory contains the source files of the website.
 
-This website is developed using the [[https://www.gnu.org/software/guix/download/][GNU Guix]] package manager.
+This website is developed using the [[https://guix.gnu.org/download/][GNU Guix]] package manager.
 
 * Building the website
 

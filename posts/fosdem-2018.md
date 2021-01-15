@@ -5,7 +5,7 @@ tags: FOSDEM
 ---
 
 GNU Guix [will be present at
-FOSDEM](https://www.gnu.org/software/guix/blog/2018/meet-guix-at-fosdem-2018/),
+FOSDEM](https://guix.gnu.org/blog/2018/meet-guix-at-fosdem-2018/),
 the main yearly free software developer conference in Europe, and in
 particular in the [HPC
 track](https://fosdem.org/2018/schedule/track/hpc,_big_data,_and_data_science/).

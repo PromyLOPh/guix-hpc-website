@@ -27,4 +27,4 @@ approach to computational reproducibility and the effectiveness of
 Guix in the pursuit of reproducible software management.
 
 > _Originally published [on the Guix
-> blog](https://www.gnu.org/software/guix/blog/2018/paper-on-reproducible-bioinformatics-pipelines-with-guix/)._
+> blog](https://guix.gnu.org/blog/2018/paper-on-reproducible-bioinformatics-pipelines-with-guix/)._

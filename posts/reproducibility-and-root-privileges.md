@@ -7,12 +7,12 @@ tags: reproducibility root-privileges namespaces singularity shifter easybuild s
 
 Guix is a good fit for multi-user environments such as clusters:
 it
-[allows non-root users to install packages at will without interfering with each other](https://www.gnu.org/software/guix/manual/html_node/Features.html).
+[allows non-root users to install packages at will without interfering with each other](https://guix.gnu.org/manual/html_node/Features.html).
 However, a common complaint is that installing Guix requires administrator
 privileges.  More precisely, `guix-daemon`, the system-wide daemon that
 spawns package builds and downloads on behalf of
 users,
-[must be running as `root`](https://www.gnu.org/software/guix/manual/html_node/Build-Environment-Setup.html).
+[must be running as `root`](https://guix.gnu.org/manual/html_node/Build-Environment-Setup.html).
 This is not much of a problem on one's laptop but it surely makes it
 harder to adopt Guix on an HPC cluster.
 
@@ -45,7 +45,7 @@ allows a process to run on behalf of a different user.
 build process are accessible, and it `setuid`s to a specific “build
 user” that does not run any process other than this one build process.
 For this reason, the manual instructs
-[to create a pool of build users upfront](https://www.gnu.org/software/guix/manual/html_node/Build-Environment-Setup.html).
+[to create a pool of build users upfront](https://guix.gnu.org/manual/html_node/Build-Environment-Setup.html).
 
 These two mechanisms are all it takes to achieve process isolation.  Of
 course processes still run under the same operating system kernel as

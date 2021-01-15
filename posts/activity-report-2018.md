@@ -11,7 +11,7 @@ booklet](https://hpc.guix.info/static/doc/activity-report-2018-booklet.pdf))._
 
 Guix-HPC is a collaborative effort to bring reproducible software
 deployment to scientific workflows and high-performance computing (HPC).
-Guix-HPC builds upon the [GNU Guix](https://www.gnu.org/software/guix/)
+Guix-HPC builds upon the [GNU Guix](https://guix.gnu.org/)
 software deployment tool and aims to make it a better tool for HPC
 practitioners and scientists concerned with reproducible research.
 
@@ -88,7 +88,7 @@ Builds](https://reproducible-builds.org) effort.  In 2018 we were again
 present at the Summit, along with a dozen of other projects concerned
 with software deployment.  Together we worked to further reproducible
 builds [and take advantage of
-them](https://www.gnu.org/software/guix/blog/2018/reproducible-builds-summit-4th-edition/).
+them](https://guix.gnu.org/blog/2018/reproducible-builds-summit-4th-edition/).
 This is ground work that, we believe, is key to enabling reproducible
 scientific workflows.
 
@@ -250,7 +250,7 @@ image that contains precisely the software environment they need, and
 then send it over to the cluster to run their application.  `guix pack`
 can generate images usable by both Singularity and Docker; it can also
 generate [tarballs containing relocatable
-executables](https://www.gnu.org/software/guix/blog/2018/tarballs-the-ultimate-container-image-format/).
+executables](https://guix.gnu.org/blog/2018/tarballs-the-ultimate-container-image-format/).
 This interoperability tool allows users to not give up on the
 reproducibility, transparency, and flexibility benefits offered by Guix.
 

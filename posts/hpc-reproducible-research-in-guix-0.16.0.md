@@ -6,7 +6,7 @@ tags: packages, releases
 ---
 
 Version 0.16.0 of Guix was [released
-yesterday](https://www.gnu.org/software/guix/blog/2018/gnu-guix-and-guixsd-0.16.0-released/).
+yesterday](https://guix.gnu.org/blog/2018/gnu-guix-and-guixsd-0.16.0-released/).
 It’s slated to be the last release before 1.0, and as usual, it brings
 noteworthy packages and features for HPC and reproducible research.
 
@@ -46,13 +46,13 @@ reproducible development and deployment workflows—a prerequisite, in our
 view, for reproducible research.
 
 The new [_channels_
-facility](https://www.gnu.org/software/guix/manual/en/html_node/Channels.html)
+facility](https://guix.gnu.org/manual/en/html_node/Channels.html)
 solves several problems:
 
   - It makes it easy to use a custom Guix, should you have specific
     needs.
   - It allows you to have [`guix
-    pull`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pull.html)
+    pull`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pull.html)
     pull not just Guix, but also external package repositories such as
     [the HPC and bioinfo repositories of our
     institutes](https://hpc.guix.info/about/).
@@ -76,7 +76,7 @@ Guix-HPC.
 Previously you could already replicate Guix using `guix pull
 --commit=XYZ` but integration with channels streamlines this.
 Specifically, the new [`guix
-describe`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-describe.html)
+describe`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-describe.html)
 command provides a complete description of the channels in use:
 
 
@@ -122,7 +122,7 @@ images” fail to provide.
 The good thing with having access to all the package definitions is that
 one can easily experiment with them, which is often a key aspect of
 research work.  The [package transformation
-options](https://www.gnu.org/software/guix/manual/en/html_node/Package-Transformation-Options.html)
+options](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.html)
 should serve that need, and the new `--with-branch` and `--with-commit`
 options that allow a package to be built straight from its Git
 repository are another step in that direction.
@@ -136,7 +136,7 @@ repositories, which is unfortunately not uncommon.  Along with
 this secures reproducible software deployment from source to binaries.
 
 Do not miss the [release
-notes](https://www.gnu.org/software/guix/blog/2018/gnu-guix-and-guixsd-0.16.0-released/)
+notes](https://guix.gnu.org/blog/2018/gnu-guix-and-guixsd-0.16.0-released/)
 to learn about the other goodies that the release brings.
 
 Enjoy the new release!

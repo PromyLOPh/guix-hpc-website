@@ -6,7 +6,7 @@ tags: packages, releases
 ---
 
 Version 0.15.0 of Guix was [released
-today](https://www.gnu.org/software/guix/blog/2018/gnu-guix-and-guixsd-0.15.0-released/).
+today](https://guix.gnu.org/blog/2018/gnu-guix-and-guixsd-0.15.0-released/).
 As usual, it brings packages and features that we hope HPC users and
 sysadmins will enjoy.  This release brings us close to our goals for
 1.0, so it’s probably one of the last zero-dot-something releases.
@@ -39,7 +39,7 @@ Over the 1,200+ packages added and 2,200+ packages updated since the
     [LaunchMON](https://hpc.guix.info/package/launchmon)
     tool are now available, thanks to Pierre-Antoine Rouby who is
     currently working as an [intern at
-    Inria](https://www.gnu.org/software/guix/blog/2018/guix-welcomes-outreachy-gsoc-and-guix-hpc-interns/).
+    Inria](https://guix.gnu.org/blog/2018/guix-welcomes-outreachy-gsoc-and-guix-hpc-interns/).
   - OpenCL headers,
     [POCL](https://hpc.guix.info/package/pocl), and
     [Beignet](https://hpc.guix.info/package/beignet) were
@@ -64,7 +64,7 @@ in particular Python and R packages.
 Changes to *core Guix* relevant to HPC include:
 
   - The `guix pack` command can now produce [relocatable
-    executables](https://www.gnu.org/software/guix/blog/2018/tarballs-the-ultimate-container-image-format/).
+    executables](https://guix.gnu.org/blog/2018/tarballs-the-ultimate-container-image-format/).
     The technique relies on _user namespaces_ so it’s unfortunately [not
     directly usable on some
     clusters](https://hpc.guix.info/blog/2017/09/reproducibility-and-root-privileges/).
@@ -75,7 +75,7 @@ Changes to *core Guix* relevant to HPC include:
     executed by [Singularity](http://singularity.lbl.gov), a lightweight
     “container engine” that specifically targets HPC usage.
   - The [`guix pull`
-    command](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pull.html),
+    command](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pull.html),
     which upgrades Guix and its package collection, now supports
     rollbacks (like `guix package`) and it has a new
     `--list-generations` option to visualize past upgrades.  This is
@@ -93,11 +93,11 @@ Changes to *core Guix* relevant to HPC include:
     the web interface to browse packages that you can see [on this
     site](https://hpc.guix.info/browse), is now available
     [as a Guix system
-    system](https://www.gnu.org/software/guix/manual/en/html_node/Web-Services.html#index-hpcguix_002dweb_002dservice_002dtype),
+    system](https://guix.gnu.org/manual/en/html_node/Web-Services.html#index-hpcguix_002dweb_002dservice_002dtype),
     thanks to the work of Pierre-Antoine Rouby at Inria.
 
 That’s it for the HPC side of things.  Do not miss the [release
-notes](https://www.gnu.org/software/guix/blog/2018/gnu-guix-and-guixsd-0.15.0-released/)
+notes](https://guix.gnu.org/blog/2018/gnu-guix-and-guixsd-0.15.0-released/)
 to learn about the other goodies that the release brings.
 
 Enjoy the new release!

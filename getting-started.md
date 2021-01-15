@@ -2,7 +2,7 @@ title: Reproducible software deployment for high-performance computing.
 frontpage: yes
 ---
 
-[GNU Guix](https://www.gnu.org/software/guix/) is a *transactional*
+[GNU Guix](https://guix.gnu.org/) is a *transactional*
 package manager, with support for *per-user* package installations.
 Users can install their own packages without interfering with each
 other, yet without unnecessarily increasing disk usage or rebuilding
@@ -25,7 +25,7 @@ Here’s how to get started.
 
 You can install Guix on your laptop in 5 minutes: just
 follow
-[the binary install instructions](https://www.gnu.org/software/guix/manual/en/html_node/Binary-Installation.html).
+[the binary install instructions](https://guix.gnu.org/manual/en/html_node/Binary-Installation.html).
 
 You’re a cluster sysadmin and would like to have a cluster-wide install?
 Read [this article](/blog/2017/11/installing-guix-on-a-cluster).
@@ -83,7 +83,7 @@ Alternately, see `guix package --search-paths -p "$HOME/.guix-profile"'.
 Sometimes all you want is to try out a program without installing it in
 your profile.  That’s
 where
-[`guix environment`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-environment.html) comes
+[`guix environment`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-environment.html) comes
 in.  To create an environment containing Python 3.x, NumPy, and
 scikit-learn, run:
 
@@ -108,7 +108,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Occasionally you’ll want to customize the way packages are
 built.
-[From the command line](https://www.gnu.org/software/guix/manual/en/html_node/Package-Transformation-Options.html),
+[From the command line](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.html),
 you can apply transformations, such as replacing one dependency
 with another one in the dependency graph.  The example below replaces
 `openmpi` with `openmpi-thread-multiple` in the dependency graph of
@@ -126,10 +126,10 @@ by writing your own package definitions.
 
 To add a package, you
 can
-[generate a template from a third-party repository using `guix import`](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-import.html),
+[generate a template from a third-party repository using `guix import`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-import.html),
 or you
 can
-[write a package definition](https://www.gnu.org/software/guix/manual/en/html_node/Defining-Packages.html),
+[write a package definition](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html),
 which looks like this:
 
 ```scheme
@@ -164,7 +164,7 @@ singular value problems.")
 ```
 
 You can have your own package collection published as a
-[channel](https://www.gnu.org/software/guix/manual/en/html_node/Channels.html).
+[channel](https://guix.gnu.org/manual/en/html_node/Channels.html).
 
 # Sending Packages to Guix-less Machines
 
@@ -172,7 +172,7 @@ What if the target supercomputer lacks Guix?  You can still enjoy Guix’s
 reproducibility and customizability by [sending your package binaries
 there](/blog/2017/10/using-guix-without-being-root/), leveraging
 [relocatable
-binaries](https://www.gnu.org/software/guix/blog/2018/tarballs-the-ultimate-container-image-format/):
+binaries](https://guix.gnu.org/blog/2018/tarballs-the-ultimate-container-image-format/):
 
 ```
 laptop$ scp `guix pack -RR hwloc -S /bin=bin` supercomputer:hwloc.tar.gz
@@ -183,22 +183,22 @@ supercomputer$ ~/.local/bin/lstopo
 ```
 
 Other options include building [Singularity or Docker
-images](https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-pack.html).
+images](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pack.html).
 
 # Learning More
 
 Find the main commands in the [quick reference
-card](https://www.gnu.org/software/guix/guix-refcard.pdf).  Learn more
+card](https://guix.gnu.org/guix-refcard.pdf).  Learn more
 in the reference manual:
-[Deutsch](https://www.gnu.org/software/guix/manual/de/html_node) |
-[English](https://www.gnu.org/software/guix/manual/en/html_node) |
-[español](https://www.gnu.org/software/guix/manual/es/html_node) |
-[français](https://www.gnu.org/software/guix/manual/fr/html_node).
+[Deutsch](https://guix.gnu.org/manual/de/html_node) |
+[English](https://guix.gnu.org/manual/en/html_node) |
+[español](https://guix.gnu.org/manual/es/html_node) |
+[français](https://guix.gnu.org/manual/fr/html_node).
 
 # Joining
 
 Read about on-going Guix-HPC developments [on our blog](/blog).
 
 [Guix-HPC](/about)
-and [GNU Guix](https://www.gnu.org/software/guix/) are collaborative
+and [GNU Guix](https://guix.gnu.org/) are collaborative
 efforts.  You are welcome to [join](/about)!

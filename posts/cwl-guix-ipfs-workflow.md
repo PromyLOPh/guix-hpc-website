@@ -139,7 +139,7 @@ you do not have to worry about messing up your Linux system!
 
 An [install script](https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh) can be run on the command line. That is the easy
 option.  More installation instructions are here at [GitLab](https://gitlab.com/pjotrp/guix-notes/blob/master/INSTALL.org) and here at
-[GNU.org](https://www.gnu.org/software/guix/manual/html_node/Binary-Installation.html). The short of it is that the Guix (daemon) needs to be installed
+[GNU.org](https://guix.gnu.org/manual/html_node/Binary-Installation.html). The short of it is that the Guix (daemon) needs to be installed
 as root, but runs with user land privileges. For those who cannot get
 access to root there are [workarounds](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/), including the use of
 Docker. Ricardo Wurmus describes how MDC deploys GNU Guix on their [HPC](https://guix.mdc-berlin.de/documentation.html)
@@ -646,7 +646,7 @@ time stamp at time of build. This is harmless, but who is to tell the
 difference is not caused by something else? This is why the
 [Reproducible Builds](https://reproducible-builds.org/) project exist
 [of which Guix is a
-member](https://www.gnu.org/software/guix/blog/2015/reproducible-builds-a-means-to-an-end/).
+member](https://guix.gnu.org/blog/2015/reproducible-builds-a-means-to-an-end/).
 
 The reference CWL runner does not have such an option (yet). I ran it by hand three times.
 The first time capture the MD5 values with:

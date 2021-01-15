@@ -31,7 +31,7 @@ exact same software on all these machines?
 # Creating bundles with `guix pack`
 
 Earlier this year, [we announced `guix
-pack`](https://www.gnu.org/software/guix/news/creating-bundles-with-guix-pack.html),
+pack`](https://guix.gnu.org/news/creating-bundles-with-guix-pack.html),
 a command that allows you to create a _binary bundle_ of a set of
 packages and all their dependencies.  For instance, we can create a
 tarball containing the [hwloc hardware topology
@@ -47,9 +47,9 @@ $ guix pack hwloc -S /bin=bin
 The `-S` switch here instructs `guix pack` to create a `/bin` symlink
 inside the tarball that points to hwloc’s `bin` directory (more on
 that in [this blog
-post](https://www.gnu.org/software/guix/news/creating-bundles-with-guix-pack.html)
+post](https://guix.gnu.org/news/creating-bundles-with-guix-pack.html)
 and in [the
-manual](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-pack.html)).
+manual](https://guix.gnu.org/manual/html_node/Invoking-guix-pack.html)).
 The tarball contains two directories at its root: this `/bin` symlink,
 and `/gnu/store`, which contains the actual binaries.
 
@@ -246,7 +246,7 @@ source_, and the binary they lead to are pretty much inert.
 
 In contrast, Guix describes the _complete_ dependency graph of the
 application—the [`guix
-graph`](https://www.gnu.org/software/guix/manual/html_node/Invoking-guix-graph.html)
+graph`](https://guix.gnu.org/manual/html_node/Invoking-guix-graph.html)
 command allows us to visualize that.  For each package in the graph, we
 know not only what packages it depends on, but also which patches,
 configure flags, compiler options, and so on are used to build it.
@@ -254,7 +254,7 @@ configure flags, compiler options, and so on are used to build it.
 Since Guix knows how to build everything, customizing the package graph
 and recreating a new bundle is easy.  For instance, using the
 [command-line package transformation
-options](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html),
+options](https://guix.gnu.org/manual/html_node/Package-Transformation-Options.html),
 we can produce a pack of hwloc built from a different source tarball,
 but otherwise with the same dependency graph and build options:
 
@@ -272,7 +272,7 @@ $ guix pack mumps -S /bin=bin --with-input=scotch=pt-scotch
 
 If the command-line options are not enough, we can always go further
 [using the
-API](https://www.gnu.org/software/guix/manual/html_node/Defining-Packages.html).
+API](https://guix.gnu.org/manual/html_node/Defining-Packages.html).
 
 # Wrap-up
 

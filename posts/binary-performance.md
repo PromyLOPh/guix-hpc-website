@@ -163,7 +163,7 @@ AVX2-optimized FFTW?
 One option is to _rewrite the dependency graph_ of Octave, so that
 occurrences of the generic `fftw` package are replaced by `fftw-avx`.  This
 can be done from the command line [using the `--with-input`
-option](https://www.gnu.org/software/guix/manual/html_node/Package-Transformation-Options.html):
+option](https://guix.gnu.org/manual/html_node/Package-Transformation-Options.html):
 
 ```
 guix package -i octave --with-input=fftw@3.3.5=fftw-avx
