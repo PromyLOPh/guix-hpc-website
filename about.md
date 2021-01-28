@@ -11,7 +11,7 @@ features or achievements.  Stay tuned!
 Guix-HPC is a joint software development project currently involving
 three research institutes: [Inria](https://www.inria.fr/en/centre/bordeaux/news/towards-reproducible-software-environments-in-hpc-with-guix),
 the
-[Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/47864296/en/news/2017/20170905-wissenschaftliches-rechnen-erfolgreich-reproduzieren),
+[Max Delbrück Center for Molecular Medicine (MDC)](https://www.mdc-berlin.de/47864296/en/news/2017/20170905-wissenschaftliches-rechnen-erfolgreich-reproduzieren), [University of Tennessee Health Science Center (UTHSC)](https://genenetwork.org/facilities/)
 and the [Utrecht Bioinformatics Center (UBC)](https://ubc.uu.nl/reproducible-software-environments-in-hpc-with-guix/).
 
 # Talks & Papers
@@ -94,10 +94,11 @@ inclusion in Guix:
   - The [ACE repository](https://github.com/Ecogenomics/ace-guix)
     provides packages used by the [Australian Centre for
     Ecogenomics](http://ecogenomic.org/).
-  - This [Genenetwork
+  - [Genenetwork
     repository](https://gitlab.com/genenetwork/guix-bioinformatics)
     contains bioinformatics and HPC packages used by
-    [Genenetwork](http://genenetwork.org/) at the University of Tennessee.
+    [Genenetwork](https://genenetwork.org/environments/) at the University of Tennessee.
+  - [Genomics repository](https://github.com/ekg/guix-genomics) for pangenome bioinformatics
   - The [Guix-ZPID](https://github.com/leibniz-psychology/guix-zpid) contains
     packages in use at the [Leibniz Institute for Psychology
     Information](https://leibniz-psychology.org/en/).
@@ -130,8 +131,7 @@ Here are known deployments of Guix on clusters and contact information:
       - 230-node cluster (4,000+ cores)
       - contact: Yann Dupont
   - [UTHSC](https://uthsc.edu/) (USA)
-      - 2-node test cluster (128 cores). In preparation
-        of 2020 research cluster and clinical cluster
+      - 11-node [HPC Octopus cluster 264 cores)](https://genenetwork.org/facilities/). Pangenome and genetics research cluster
       - contact: [Pjotr Prins](http://thebird.nl/)
 
 If you would like to be listed here, please email us at `guix-hpc@gnu.org`.
