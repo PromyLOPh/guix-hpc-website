@@ -121,7 +121,12 @@ time_.  Of course, the chosen articles were published before Guix even
 existed, but we thought it was a good opportunity to demonstrate how
 Guix will allow users to address these challenges from now on.  Among
 the fifty participants, some chose to address deployment issues using
-Docker or virtual machines (VMs), and several chose Guix.
+Docker or virtual machines (VMs), and several chose Guix.  The challenge
+and its contributions, including a discussion of software deployment
+issues and Guix, led to [an article in
+_Nature_](https://www.nature.com/articles/d41586-020-02462-7) (Jeffrey
+M. Perkel, _Challenge to scientists: does your ten-year-old code still
+run?_, August 2020).
 
 The [replication work by Ludovic
 Courtès](https://doi.org/10.5281/zenodo.3886739) is an attempt to show
