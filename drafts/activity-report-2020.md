@@ -29,9 +29,8 @@ This report highlights key achievements of Guix-HPC between [our
 previous
 report](https://hpc.guix.info/blog/2019/02/guix-hpc-activity-report-2019/)
 a year ago and today, February 2021.  This year was marked by two releases:
-[in April 20 of GNU Guix
-1.1](https://hpc.guix.info/blog/2020/11/hpc-reproducible-research-in-guix-1.2.0/)
-and [in November 20 of GNU Guix 1.2](https://hpc.guix.info/blog/2020/11/hpc-reproducible-research-in-guix-1.2.0/).
+[version 1.1.0 in April 2020](https://hpc.guix.info/blog/2020/04/hpc-reproducible-research-in-guix-1.1.0/)
+and [version 1.2.0 in November](https://hpc.guix.info/blog/2020/11/hpc-reproducible-research-in-guix-1.2.0/).
 
 # Outline
 
