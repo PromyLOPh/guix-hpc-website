@@ -122,20 +122,8 @@ directory containing Lout files."
              (back-cover)))
 
           (define %unicode-chars
-            ;; XXX: The Lout engine in Skribilo 0.9.4 doesn't automatically
-            ;; translate these Unicode characters, so here's a translation
-            ;; table.
-            `((#\  "~")                           ;no-break space
-              (#\— "---")
-              (#\– "--")
-              (#\“ "``")
-              (#\” "''")
-              (#\‘ "`")
-              (#\’ "'")
-              (#\… "...")
-
-              ;; Gross hack to work around Lout's lack of Unicode support.
-              (#\ă "{ { { Times Base } @Font @Char \"breve\" } |0.5ro a }")
+            ;; Gross hack to work around Lout's lack of Unicode support.
+            `((#\ă "{ { { Times Base } @Font @Char \"breve\" } |0.5ro a }")
               (#\ș "{ { @Char \"cedilla\" } |0.5ro s }")))
 
           (define (make-front-cover doc engine)
