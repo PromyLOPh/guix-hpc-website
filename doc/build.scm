@@ -1,7 +1,7 @@
 ;;; This module extends GNU Guix and is licensed under the same terms, those
 ;;; of the GNU GPL version 3 or (at your option) any later version.
 ;;;
-;;; Copyright © 2019, 2020 Inria
+;;; Copyright © 2019, 2020, 2021 Inria
 
 ;; To build the document, run:
 ;;
@@ -96,6 +96,8 @@ directory containing Lout files."
                               (ref #:url url #:text (it url))))))
               (('code . body)
                (tt (map sxml->skribilo body)))
+              (('blockquote . body)
+               (! "\n@ID { $1 }\n" (map sxml->skribilo body)))
               (((? string? strings) ...)
                (map sxml->skribilo strings))
               (('img . _)
@@ -147,7 +149,7 @@ directory containing Lout files."
 @Center 0.3 @Scale { @IncludeGraphic { ~s } }\n"
                     #+(svg->eps lab-book "lab-book.eps"))
             (output (! "
-//0.8rt { FiraSans Bold 24p } @Font { Activity Report 2018--2019 }
+//0.8rt { FiraSans Bold 24p } @Font { Activity Report 2019--2020 }
 //1rt
 { FiraSans Base 9p } @Font \"darkgrey\" @Color @OneRow { $1 //1.3fx $2 }
 @NP\n
@@ -310,6 +312,6 @@ PDF."
   (computed-file (basename file ".lout") build))
 
 
-(lout->pdf (markdown->lout (local-file "../posts/activity-report-2019.md"))
-           "activity-report-2019.lout"
+(lout->pdf (markdown->lout (local-file "../drafts/activity-report-2020.md"))
+           "activity-report-2020.lout"
            #:paper-size "A5")
