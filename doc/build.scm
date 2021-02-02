@@ -29,12 +29,18 @@
 directory containing Lout files."
 
   (define lout-files
-    '("doc-style.lout"
-      "cm-fonts.ld"
-      "gentium-fonts.ld"
-      "charis-fonts.ld"
-      "inria-fonts.ld"
-      "fira-fonts.ld"))
+    ;; Pass literal strings to 'local-file' so file names are resolved
+    ;; relative to this file.
+    (letrec-syntax ((files (syntax-rules ()
+                             ((_) '())
+                             ((_ file rest ...)
+                              (cons (local-file file) (files rest ...))))))
+      (files "doc-style.lout"
+             "cm-fonts.ld"
+             "gentium-fonts.ld"
+             "charis-fonts.ld"
+             "inria-fonts.ld"
+             "fira-fonts.ld")))
 
   (define logo
     (local-file "../image-sources/guixhpc-logo-transparent-white.svg"))
@@ -198,10 +204,8 @@ directory containing Lout files."
           ;; document.
           (for-each (lambda (file base)
                       (copy-file file (string-append #$output "/" base)))
-                    '#$(map (lambda (file)
-                              (local-file file))
-                            lout-files)
-                    '#$lout-files))))
+                    '#$lout-files
+                    '#$(map local-file-name lout-files)))))
 
   (computed-file (string-append (basename (local-file-name file) ".md")
                                 "-lout")
