@@ -169,12 +169,55 @@ for the challenge.
 
 TODO: sources.json, SWH and Nix
 
-## Package Transformations, Manifests
+## Package Transformations
 
-TODO
+HPC practitioners are often demanding when it comes to customizing
+software they deploy: choosing dependencies, versions, build flags, and
+so on.  Guix caters to these needs through its programming interfaces
+but also _via_ its easy-to-use [*package transformation
+options*](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.html).
 
-  - --with-c-toolchain, etc.
-  - --export-manifest
+Over the past year, several of them were added.  The
+`--with-c-toolchain` option allows users to build a package and all its
+dependents with a given C toolchain; this is useful for those willing to
+benefit from the latest improvements in optimizing compilers.  The
+`--with-patch` option applies a patch to a package and rebuilds it along
+with its dependent.  The `--with-debug-info` rebuilds a package in a way
+that preserves its debugging info (if it wasn’t already available) and
+without requiring a rebuild of its dependents.
+
+Furthermore, package transformation options passed to `guix install` and
+similar commands are now recorded in profiles and _replayed_ when
+running `guix upgrade`, thereby ensuring user customization is
+preserved.  Another novelty is that package transformations now apply to
+“implicit inputs” (package dependencies provided by the build system),
+giving users even more flexibility.
+
+The Guix reference manual now includes a section discussing the various
+[ways to define package
+variants](https://guix.gnu.org/manual/en/html_node/Defining-Package-Variants.html).
+
+## Declarative Deployment with Manifests
+
+In addition to the “imperative” management style where one runs `guix
+install` and related commands, Guix supports a _declarative_ style where
+the user provides a code snippet, called a _manifest_, that describes
+the packages to deploy.  The declarative approach has the advantage of
+being explicit and stateless: the manifest file can be put under version
+control and shared with others.  It is also flexible because users have
+access to the whole programming environment of Guix from within the
+manifest.
+
+To reduce the learning curve and make it easier to switch to the
+declarative style, we made two improvements.  First, users can now
+export a manifest from an existing profile by running `guix package
+--export-manifest`.  The output can be stored in a file and users can
+switch to running `guix package --manifest` with that file right away.
+
+Second, there is now a high-level programming interface giving access to
+package transformations, with a one-to-one mapping to their command-line
+syntax.  This interface can be used in manifests.  In fact, the manifest
+produced by `--export-manifest` uses it when needed.
 
 ## Packaging
 
