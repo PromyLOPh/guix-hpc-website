@@ -289,16 +289,26 @@ this year.
 
 ## Articles
 
-TODO
+The following articles were published in the [_Ten Years Reproducibility
+Challenge_ special issue of the ReScience C
+journal](https://rescience.github.io/read/#issue-1-ten-years-reproducibility-challenge)
+(volume 6, issue 1); they present different ways of using Guix to
+reproduce the software environment associated with a past computational
+experiment:
 
-  - ReScience Konrad
-  - ReScience Ludo
-  - ReScience Andreas
+  - [_[Re] Volume computation for polytopes: Vingt ans
+    après_](http://dx.doi.org/10.5281/zenodo.4242972), Andreas Enge
+  - [_[Rp] Structural flexibility in proteins — impact of the crystal
+    environment_](http://dx.doi.org/10.5281/zenodo.3886447), Konrad Hinsen
+  - [_[Re] Storage Tradeoffs in a Collaborative Backup Service for
+    Mobile Devices_](http://dx.doi.org/10.5281/zenodo.3886739), Ludovic Courtès
 
-We have published [8 articles on the Guix-HPC
-blog](https://hpc.guix.info/blog/) touching topics such as 
-fast relocatable packs, Software Heritage integration, and a
-hands-on tutorial using Guix for reproducible workflows and computations.
+We published [8 articles on the Guix-HPC
+blog](https://hpc.guix.info/blog/) touching topics such as fast
+relocatable packs, reproducible research article workflows, and Jupyter
+integration.
+
+TODO: More articles?
 
 ## Talks
 
