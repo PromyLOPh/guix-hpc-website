@@ -60,7 +60,8 @@ experiments.
 
 We have made further progress to ensure Guix addresses this use case.
 We work not only on deployment issues, but also _upstream_—ensuring
-source code is archived at Software Heritage—and _downstream_—devising
+source code is archived at Software Heritage—and
+_downstream_—devising
 tools and workflows for scientists to use.
 
 ## The Guix Workflow Language
@@ -71,15 +72,15 @@ TODO: extensions
 
 We [announced
 Guix-Jupyter](https://hpc.guix.info/blog/2019/10/towards-reproducible-jupyter-notebooks/)
-a bit more than a year ago with the goal of:
+a bit more than a year ago, with two goals: making notebooks
+_self-contained_ or “deployment-aware” so that they automatically
+deploy the software (and data!) that they need, and making said
+deployment _bit-reproducible_.
 
-  1. Making notebooks _self-contained_ or “deployment-aware”, so that they
-     automatically deploy the software (and data!) that they
-     need—effectively treating software deployment and data as a
-     first-class input to the computation described in the notebook.
-  2. Making said deployment _bit-reproducible_: run the notebook on one
-     machine or another, today or two years from now, and be sure it’s
-     running in the exact same software environment.
+In essence, Guix-Jupyter treats software deployment and data as a
+first-class input to the computation described in the notebook.  One can
+run the notebook on one machine or another, today or two years from now,
+and be sure it’s running in the exact same software environment.
 
 This Jupyter “kernel” builds on Guix support for reproducible builds and
 for “time travel”.  That very first version demonstrated what can be
@@ -104,7 +105,7 @@ GWL and Guix-Jupyter are both tools designed for a scientific audience,
 as close as possible to the actual scientific experiments and workflows.
 In the same vein, we participated in the [_Ten Years Reproducibility
 Challenge_](https://rescience.github.io/ten-years/) organized by
-ReScience C, an on-line open-access, peer-reviewed journal that targets
+ReScience C, an open-access, peer-reviewed journal that targets
 computational research and encourages the replication of already
 published research.
 
@@ -364,8 +365,9 @@ to the project, which we summarize here.
   - CNRS: 0.25 person-year (Konrad Hinsen)
   - Inria: 2 person-years (Ludovic Courtès, Maurice Brémond,
     and the contributors to the
-    Guix-HPC channel: Florent Pruvost, Gilles Marait, Marek Felsoci,
-    Emmanuel Agullo, Adrien Guilbaud)
+    Guix-HPC channel: Emmanuel Agullo, Florent Pruvost, Gilles Marait,
+    Nathalie Furmento, Marek Felšöci, Adrien Guilbaud, Philippe
+    Swartvagher, Matthieu Simonin)
   - Max Delbrück Center for Molecular Medicine (MDC): 2 person-years
     (Ricardo Wurmus and Mădălin Ionel Patrașcu)
   - Tourbillion Technology: 0.7 person-year (Paul Garlick)
@@ -375,3 +377,5 @@ to the project, which we summarize here.
   - Utrecht Bioinformatics Center (UBC): 1 person-year (Roel Janssen)
 
 # Perspectives
+
+TODO

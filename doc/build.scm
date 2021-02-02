@@ -132,6 +132,7 @@ directory containing Lout files."
           (define %unicode-chars
             ;; Gross hack to work around Lout's lack of Unicode support.
             `((#\ă "{ { { Times Base } @Font @Char \"breve\" } |0.5ro a }")
+              (#\š "{ { { Times Base } @Font @Char \"caron\" } |0.5ro s }")
               (#\ș "{ { @Char \"cedilla\" } |0.5ro s }")))
 
           (define (make-front-cover doc engine)
