@@ -244,11 +244,38 @@ TODO: all the other channels: bimbs, etc.
 
 # Cluster Usage
 
-TODO
+Over the last few years, we have been developing `guix pack` to support
+users who target supercomputers where Guix is unavailable.  `guix pack`
+creates “**application bundles**” as Docker or Singularity images, or as
+plain self-contained tarballs.  We previously implemented _relocatable
+packs_: archives that can be extracted anywhere on the file system while
+still allowing users to run the software therein.  The appeal of this
+option is that it allows users to run packaged software on machines that
+provide neither Guix nor a container run-time.
 
-  - G5K deployment
-  - UTHSC?
-  - relocatable packs fakechroot
+Relocatable packs were initially implemented by using the Linux
+“unprivileged user namespace” feature, with a fallback to PRoot when
+unprivileged user namespaces are unavailable.  In the latter case
+though, the overhead can be prohibitively high for some applications.
+To address that, `guix pack` can now build [**faster relocatable
+packs**](https://hpc.guix.info/blog/2020/05/faster-relocatable-packs-with-fakechroot/)
+that rely on a customization of the run-time linker (`ld.so`) along with
+the use of Fakechroot.  It provides the flexibility of packs with
+negligible overhead.
+
+Guix deployment on scientific clusters continues.  A notable example is
+work-in-progress to support Guix out-of-the-box on
+[**Grid’5000**](https://www.grid5000.fr/), a major French grid and HPC
+environment.  Installing Guix on Grid’5000 is quite different from
+installing it on a “regular” HPC cluster due to the unusual nature of
+this environment: Grid’5000 users have the option to deploy their own
+operating system images on compute nodes and have administration
+privileges on them.  This has required adjustments compared to our
+[cluster installation
+guide](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/).
+This should be in production in the coming weeks.
+
+  - TODO UTHSC?
 
 # Outreach and User Support
 
