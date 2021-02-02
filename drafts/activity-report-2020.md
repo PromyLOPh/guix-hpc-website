@@ -221,8 +221,24 @@ produced by `--export-manifest` uses it when needed.
 
 ## Packaging
 
+The package collection that comes with Guix keeps growing.  It now
+contains **16,000 packages**, including many scientific packages ranging
+from run-time support software such as implementations of the Message
+Passing Interface (MPI), to linear algebra software, to statistics and
+bioinformatics modules for R.  In addition to packages in Guix proper,
+we have been maintaining _channels_, which provide additional packages,
+usually specialized in one application domain.
+
+As part of the aforementioned _Ten Years Reproducibility Challenge_ and
+subsequent reproducible research hackathon, we created [the
+**Guix-Past** channel](https://gitlab.inria.fr/guix-hpc/guix-past), with
+the goal of collecting versions of software older than Guix itself, for
+use in reproducible research experiments.  It now contains sixty
+packages, including Python 2.4 (from 2008), Perl 5.14 (from 2011), and
+2006-era versions of the GNU “Autotools”.  We hope this can serve as the
+basis for future reproducible research endeavors.
+
 TODO: guix-science
-TODO: guix-past
 TODO: all the other channels: bimbs, etc.
 
 
