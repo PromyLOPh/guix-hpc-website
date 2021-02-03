@@ -239,7 +239,13 @@ packages, including Python 2.4 (from 2008), Perl 5.14 (from 2011), and
 2006-era versions of the GNU “Autotools”.  We hope this can serve as the
 basis for future reproducible research endeavors.
 
-TODO: guix-science
+A new [**Guix Science**
+channel](https://hpc.guix.info/blog/2021/01/guix-science/) has been established
+to collaborate on packaging and maintaining recent scientific software that
+currently cannot be included into Guix proper. JASP, RStudio and JupyterLab are
+available. A substitute server continuously builds these packages and serves
+binary substitutes for them.
+
 TODO: all the other channels: bimbs, etc.
 
 
@@ -277,6 +283,17 @@ guide](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/).
 This should be in production in the coming weeks.
 
   - TODO UTHSC?
+
+Guix is also the foundation for the data analysis platform
+[PsychNotebook](https://www.psychnotebook.org), which assists researchers and
+students in the preparation, analysis, and transparent documentation of
+psychological data. While a modern web interface hides most aspects of Guix
+from the user, under the hood channel files and manifests are used to create
+shareable and reproducible environments, which then can be shared with other
+users of the platform or exported and run on local hardware. After a testing
+period in the previous semester with about 15 students the system is now live
+and currently used to teach about 20 students the basics of R using RStudio
+Web.
 
 # Outreach and User Support
 
